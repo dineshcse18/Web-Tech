@@ -6,7 +6,7 @@
 
 h2
 {
-	color:red;
+	color:green;
 }
 p
 {
@@ -17,9 +17,13 @@ p
 s1
 {
 	font-size:22pt;
-	color:orange;
+	color:violet;
 }
-
+td
+{
+	text-align:center;
+	font-size:15pt;
+}
 </style>
 </head>
 <body>
@@ -30,13 +34,6 @@ s1
 	<li><p>The position number in square brackets is called <b> subscript</b></li>
 	<s1>*Syntax: var array_name=[item1,item2,....];<br>
 	*Example:var fruit=["apple","orange","mango"];</s1></ul>
-	<h2>DECLARING AND ALLOCATING ARRAYS</h2>
-	<ul> <li><p> Arrays occupy space in memory.</li>
-	<li><p><b>'new'</b>operator is used to allocate the memory dynamically.</li></p>
-	<li><p> The process of creating new objects is also known as <b>creating an instance or instantiating an object</b></p>
-	<li><p>operator new  is known as <b>the dynamic memory allocation operator</b></p>
-	<s1>*Syntax: var array_name=new Array(array_size);<br>
-	*Example:var c=new Array(12);</s1></ul>
 	<h2>PRECEDENCE AND ASSOCIATIVITY</h2>
 	<table border="2" align="center" height="500" width="800">
 	<thead> 
@@ -75,6 +72,32 @@ s1
 		<tr><td>= += -= *= /= %=</td>
 		<td>right to left </td>
 		<td>assignment </td></tr>
-		</tbody>
+		</tbody></table>
+	<h2>DECLARING AND ALLOCATING ARRAYS</h2>
+	<ul> <li><p> Arrays occupy space in memory.</li>
+	<li><p><b>'new'</b>operator is used to allocate the memory dynamically.</li></p>
+	<li><p> The process of creating new objects is also known as <b>creating an instance or instantiating an object</b></p>
+	<li><p>operator new  is known as <b>the dynamic memory allocation operator</b></p>
+	<s1>*Syntax: var array_name=new Array(array_size);<br>
+	*Example:var c=new Array(12);</s1></ul>
+	<h2>ACCESS THE ARRAY ELEMENTS OF AN ARRAY</h2>
+	<ul><li><p> you access an array element by referring to the index number.</li></p>
+	<s1>*Example:var fruit=["apple","orange","mango"];<br>
+		document.writeln(fruit[0]);<br>
+		<b> output</b>: apple</s1>
+	<li><p> you may also change the value of array element.</li></p>
+	<s1>*Example:var fruit=["apple","orange","mango"];<br>
+		fruit[0]="papaya";<br>
+		document.writeln(fruit[0]);<br>
+		<b> output</b>:papaya</s1>
+	<li><p> The full array can be accessed by referring to the array name.</li></p>
+	<s1>*Example:var fruit=["apple","orange","mango"];<br>
+		document.writeln(fruit);<br>
+		<b> output</b>:apple orange mango</s1>
+	<li><p>Arrays are a special type of objects.The typeof operator in JavaScript returns "object" for arrays.</li></p>
+	<li><p>Objects use names to access its "members"</li></p>
+	<s1>*Example:var fruit=[firstfruit:"apple",secondfruit:"orange",thirdfruit:"mango"];<br>
+		document.writeln(fruit["firstfruit"]);<br>
+		<b> output</b>:apple</s1></ul>
 </body>
 </html>
