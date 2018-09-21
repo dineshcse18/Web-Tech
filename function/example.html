@@ -3,14 +3,26 @@
 <script type="text/javascript">
 function myfunction()
 {
-alert("HELLO")
+alert("FUNCTION WITHOUT PARAMETER.")
+}
+function myfunction1(txt)
+{
+alert(txt)
+}
+function myFunction2() 
+{
+    return("FUNCTION WITH RETURN STATEMENT.")
 }
 </script>
 </head>
 <body>
+<h3>EXAMPLE FOR FUNCTIONS</h3>
 <form>
-<input type="button" onclick="myfunction()" value="Call function">
+<input type="button" onclick="myfunction()" value=" Function without parameter"><br><br> <!--function call without parameter-->
+<input type="button" onclick="myfunction1('FUNCTION WITHOUT PARAMETER.')" value="Function with parameter"><br><br> <!--function call with parameter-->
+<script type="text/javascript">
+document.write(myFunction2())<!--function call with return type-->
+</script>
 </form>
-<p>By pressing the button, a function will be called. The function will alert a message.
 </body>
 </html>
