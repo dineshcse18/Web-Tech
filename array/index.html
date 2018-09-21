@@ -3,29 +3,78 @@
 <head>
 <title> Array </title>
 <style type="text/css">
-body
-{
-	background-image:url("back2.jpg");
-	background-repeat:no-repeat;
-	background-size:1500px 1500px;
-}
+
 h2
 {
-	color:yellow;
+	color:red;
 }
 p
 {
 	font-size:20pt;
 	color:maroon;
+	line-height:1;
+}
+s1
+{
+	font-size:22pt;
+	color:orange;
 }
 
 </style>
 </head>
 <body>
 	<h2> WHAT IS ARRAY? </h2>
-	<p> *An array is a group of memory locations that all have the same name and normally are of the same type.<br>
-	*To refer to a particular location or element in an array,we specify the name of the array and the position number of the particular element in the array.<br>
-	*Consider,if 'c' is the array variable, the first element in c is the zeroth element (i.e) c[0], the second element as c[1], and so on.,</p>
-	
+	<ul> <li><p> An array is a group of memory locations that all have the same name and normally are of the same type.</li></p>
+	<li><p>To refer to a particular location or element in an array,we specify the name of the array and the position number of the particular element in the array.</li></p>
+	<li><p>Consider,if 'c' is the array variable, the first element in c is the zeroth element (i.e) c[0], the second element as c[1], and so on.,</li>
+	<li><p>The position number in square brackets is called <b> subscript</b></li>
+	<s1>*Syntax: var array_name=[item1,item2,....];<br>
+	*Example:var fruit=["apple","orange","mango"];</s1></ul>
+	<h2>DECLARING AND ALLOCATING ARRAYS</h2>
+	<ul> <li><p> Arrays occupy space in memory.</li>
+	<li><p><b>'new'</b>operator is used to allocate the memory dynamically.</li></p>
+	<li><p> The process of creating new objects is also known as <b>creating an instance or instantiating an object</b></p>
+	<li><p>operator new  is known as <b>the dynamic memory allocation operator</b></p>
+	<s1>*Syntax: var array_name=new Array(array_size);<br>
+	*Example:var c=new Array(12);</s1></ul>
+	<h2>PRECEDENCE AND ASSOCIATIVITY</h2>
+	<table border="2" align="center" height="500" width="800">
+	<thead> 
+		<tr><th>OPERATOR</th>
+			<th>ASSOCIATIVITY</th>
+			<th>TYPE</th></tr>
+	</thead>
+		<tbody><tr>
+		<td>() [] </td>
+		<td>left to right </td>
+		<td>highest </td></tr>
+		<tr><td>++ -- !</td>
+		<td>right to left </td>
+		<td>unary </td></tr>
+		<tr><td>* / %</td>
+		<td>left to right </td>
+		<td>multiplicative </td></tr>
+		<tr><td>+ -</td>
+		<td>left to right </td>
+		<td>additive </td></tr>
+		<tr><td>< <= > >=</td>
+		<td>left to right </td>
+		<td>relational </td></tr>
+		<tr><td>== !=</td>
+		<td>left to right </td>
+		<td>equality </td></tr>
+		<tr><td>&&</td>
+		<td>left to right </td>
+		<td>logical AND</td></tr>
+		<tr><td>||</td>
+		<td>left to right </td>
+		<td>logical OR </td></tr>
+		<tr><td>?:</td>
+		<td>right to left </td>
+		<td>conditional</td></tr>
+		<tr><td>= += -= *= /= %=</td>
+		<td>right to left </td>
+		<td>assignment </td></tr>
+		</tbody>
 </body>
 </html>
