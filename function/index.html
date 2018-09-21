@@ -1,6 +1,8 @@
 <html>
+
 <head>
 <title>functions</title>
+
   <style>
 b{
 color:blue;
@@ -8,52 +10,171 @@ color:blue;
 h4{
 font-size:20px;
 }
+
 </style>
+
+<script type="text/javascript">
+function myfunction()
+{
+alert("FUNCTION WITHOUT PARAMETER.")
+}
+function myfunction1(txt)
+{
+alert(txt)
+}
+function myFunction2() 
+{
+    return("FUNCTION WITH RETURN STATEMENT.")
+}
+function square()
+{
+	var n=window.prompt ("Enter the limit 'n' to generate the table of numbers from 1 to n:","");
+	var n=parseInt(n);
+	var msg="";
+	var res= "0";
+ 	for(var x= 1; x<=n;x++)
+	{
+		res = x * x;
+		msg = msg + " " + x + " * "+ x + " = " + res + "\n";
+	}	 
+	alert(msg);
+}
+function random()
+{
+	var ran= Math.floor(Math.random()*1001);
+	document.getElementById("demo");
+ 	document.writeln("<h2>THREE DIGIT RANDOM NUMBER:"+ran+"</h2>");
+	document.writeln("<b>Reload to get another new random number</b>");
+}
+
+</script>
 </head>
+
 <body>
+
 <a href="../index.html"/>Go back to Home Page</a>
 <h1>INTRODUCTION TO FUNCTIONS</h1>
-<h4>
-<ol>
-  <li>Modules in javascript are called <b><i>functions.</i></b></li><br>
-  <li>Prpakaged functions that belong to javascript objects(such as <b><i>Math.pow and Math.round</i></b>) are called<i>methods</i></li><br>
-  <li>Functions are <b><i>programmer-defined functions.</i></b></li><br>
-  <li>A function is <b><i>invoked </i></b>by a <b><i>function call.</i></b></li><br>
-  <li>Function call specifies the function name and provides information (as arguments) that the called function needs to perform its task.</li><br>
-  <li>All the variables inside the function definitions are <b><i>local variables</i></b>-thismeans that they can be accessed only in the function in which they define.</li><br>
-  <li>The <b><i>parantheses()</i></b>represents the <b><i>function-call operator.</i></b></li>
-</ol>
-</h4>
-<ul>
-<h1>FORMAT OF FUNCTIONS:</h1>
-<h4>
-<li><b>A FUNCTION WITHOUT ARGUMENTS.</b><br></li>
-<i>function</i> function_name()<br>
-{<br>
-declarations and statements<br>
-}<br>
 
-<li><b>HOW TO CALL FUNCTION:</b></li>
+<h4>
+
+<ol>
+
+ 	<li>Modules in javascript are called <b><i>functions.</i></b></li><br>
+ 
+ 	<li>Prpakaged functions that belong to javascript objects(such as <b><i>Math.pow and Math.round</i></b>) are called<i>methods</i></li><br>
+ 
+ 	<li>Functions are <b><i>programmer-defined functions.</i></b></li><br>
+  
+	<li>A function is <b><i>invoked </i></b>by a <b><i>function call.</i></b></li><br>
+  
+	<li>Function call specifies the function name and provides information (as arguments) that the called function needs to perform its task.</li><br>
+  
+	<li>All the variables inside the function definitions are <b><i>local variables</i></b>-thismeans that they can be accessed only in the function in which they define.</li><br>
+  
+	<li>The <b><i>parantheses()</i></b>represents the <b><i>function-call operator.</i></b></li>
+
+</ol>
+
+</h4>
+
+<ul>
+
+	<h1>FORMAT OF FUNCTIONS:</h1>
+
+	<h4>
+<li><b>A FUNCTION WITHOUT ARGUMENTS.</b><br>
+	</li>
+<i>function</i> function_name()<br>
+
+	{<br>
+
+	declarations and statements<br>
+
+	}<br>
+
+
+	<li><b>HOW TO CALL FUNCTION:</b></li>
 function_name()
 <hr>
-<li><b>A FUNCTION WITHOUT ARGUMENTS.:</b></li>
+
+	<li><b>A FUNCTION WITHOUT ARGUMENTS.:</b>
+	</li>
 <i>function</i> function_name(parameter_list)<br>
-{<br>
-declarations and statements<br>
-}<br>
-<li><b>HOW TO CALL FUNCTION:</b></li>
+
+	{<br>
+
+	declarations and statements<br>
+
+	}<br>
+
+	<li><b>HOW TO CALL FUNCTION:</b></li>
 function_name(parameter_list)
 <hr>
-<li><b>A FUNCTION WITHOUT RETURN TYPE.</b><br></li>
+
+	<li><b>A FUNCTION WITHOUT RETURN TYPE.</b><br>
+	</li>
 <i>function</i> result(a,b)<br>
-{<br>
-c=a+b<br>
-return c<br>
-}<br>
-<li><b>HOW TO CALL FUNCTION:</b></li>
+
+	{<br>
+
+	c=a+b<br>
+
+	return c<br>
+
+	}<br>
+
+	<li><b>HOW TO CALL FUNCTION:</b>
+	</li>
 sum=total(2,3)
 <hr>
+
 </ul>
+
 </h4>
+
+<hr>
+<br>
+<h3>EXAMPLE FOR FUNCTIONS</h3>
+<form>
+<input type="button" onclick="myfunction()" value=" Function without parameter"><br><br><!--function call without parameter-->
+<input type="button" onclick="myfunction1('FUNCTION WITHOUT PARAMETER.')" value="Function with parameter"><br><br><!--function call with parameter-->
+<script type="text/javascript">
+document.write(myFunction2())<!--function call with return type-->
+</script>
+<br>
+<hr>
+<h3>SQUARE OF A NUMBER</h3>
+<input type="button" onclick="square()" value=" Square of a number"><br><br>
+<hr>
+<h3>MINIMUM MAXIMUM OF 3 NUMBERS</h3>
+<input type="button" onclick="minmax()" value=" Minimum maximum "><br><br>
+<script>
+function minmax()
+{
+	var num1,num2,num3,maxnum,minnum;
+	num1=window.prompt("Enter first number:");
+	num2=window.prompt("Enter second number:");
+	num3=window.prompt("Enter third number:");
+	maxnum=maximum(num1,num2,num3);
+	minnum=minimum(num1,num2,num3);
+	document.writeln("<h3>"+"First number:"+num1+"<br>"+"Second number:"+num2+"<br>"+"Third number:"+num3+"<br>"+"MAXIMUM NUMBER:"+maxnum+"<br>"+"MINIMUM NUMBER:"+minnum+"</h3>");
+}
+function maximum(num1,num2,num3)
+{
+	return Math.max(num1,Math.max(num2,num3));	
+} 
+function minimum(num1,num2,num3)
+{
+	return Math.min(num1,Math.min(num2,num3));	
+} 
+
+</script>
+<hr>
+<h3>RANDOM NUMBER</h3>
+<button onclick="random()" >CLICK TO GET THREE DIGIT NUMBER</button><br><br>
+<hr>
+
+</form>
 </body>
+
 </html>
