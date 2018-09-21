@@ -16,8 +16,8 @@ p
 }
 s1
 {
-	font-size:22pt;
-	color:violet;
+	font-size:18pt;
+	color:orange;
 }
 td
 {
@@ -83,7 +83,7 @@ td
 	*Example:var c=new Array(12);</s1></ul>
 	<h2>ACCESS THE ARRAY ELEMENTS OF AN ARRAY</h2>
 	<ul><li><p> you access an array element by referring to the index number.</li></p>
-	<s1>*Example:
+	<s1>Example:<br>
 		&lt html &gt <br>
 		&lt head &gt  <br>
 		&lt title &gt Index &lt /title &gt <br>
@@ -94,22 +94,66 @@ td
 			document.writeln(fruit[0]); <br>
 			&lt/script&gt  <br>
 		&lt/body&gt <br>
-		&lt/html&gt
-
-		<b> output</b>: apple</s1>
+		&lt/html&gt <br>
+	<img src="index1.jpg" height="200" width="400">
 	<li><p> you may also change the value of array element.</li></p>
-	<s1>*Example:var fruit=["apple","orange","mango"];<br>
-		fruit[0]="papaya";<br>
-		document.writeln(fruit[0]);<br>
-		<b> output</b>:papaya</s1>
+	<s1>Example:<br>
+		&lthtml&gt 
+&lthead&gt <br>
+&lttitle&gt Index &lt/title &gt <br>
+&lt/head&gt <br>
+&ltbody&gt <br>
+	&ltscript type="text/javascript"&gt <br>
+	var fruit=["apple","orange","mango"]; <br>
+	fruit[0]="papaya"; <br>
+	document.writeln(fruit[0]); <br>
+	&lt/script&gt <br>
+&lt/body&gt <br>
+&lt/html&gt <br>
+	<img src="index2.jpg" height="200" width="400">
 	<li><p> The full array can be accessed by referring to the array name.</li></p>
-	<s1>*Example:var fruit=["apple","orange","mango"];<br>
-		document.writeln(fruit);<br>
-		<b> output</b>:apple,orange,mango</s1>
+	<s1>*Example:<br>
+	&lthtml&gt <br>
+&lthead&gt <br>
+&lttitle&gt Index &lt/title &gt <br>
+&lt/head&gt <br>
+&ltbody&gt <br>
+	&ltscript type="text/javascript"&gt <br>
+	var fruit=["apple","orange","mango"]; <br>
+	document.writeln(fruit); <br>
+	&lt/script&gt <br>
+&lt/body&gt <br>
+&lt/html&gt <br>
+
+	<img src="index3.jpg" height="200" width="400">	
 	<li><p>Arrays are a special type of objects.The typeof operator in JavaScript returns "object" for arrays.</li></p>
 	<li><p>Objects use names to access its "members"</li></p>
-	<s1>*Example:var fruit=[firstfruit:"apple",secondfruit:"orange",thirdfruit:"mango"];<br>
-		document.writeln(fruit["firstfruit"]);<br>
-		<b> output</b>:apple</s1></ul>
+	<s1>Example:<br>
+	&lthtml&gt  <br>
+&lthead&gt <br>
+&lttitle&gt Index &lt/title &gt <br>
+&lt/head&gt <br>
+&ltbody&gt <br>
+	&ltscript type="text/javascript"&gt <br>
+	var fruit={firstfruit:"apple",secondfruit:"orange",thirdfruit:"mango"}; <br>
+	document.writeln(fruit["firstfruit"]); <br>
+	&lt/script&gt <br>
+&lt/body&gt <br>
+&lt/html&gt <br>
+	<img src="index4.jpg" height="200" width="400">	<br>
+	<li><p>The length property of an array returns the length of an array (the number of array elements).</li></p>
+		Example:<br>
+	&lthtml&gt  <br>
+&lthead&gt <br>
+&lttitle&gt Index &lt/title &gt <br>
+&lt/head&gt <br>
+&ltbody&gt <br>
+	&ltscript type="text/javascript"&gt <br>
+	 var fruit=["apple","orange","mango"]; <br>
+	document.writeln(fruit.length); <br>
+	&lt/script&gt <br>
+&lt/body&gt <br>
+&lt/html&gt <br>
+	<img src="index5.jpg" height="200" width="400">	<br>
 </body>
 </html>
