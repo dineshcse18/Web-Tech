@@ -1,0 +1,22 @@
+<html >
+<head>
+<title> Square</title>
+<script type="text/javascript">
+function square()
+{
+	var n=window.prompt ("Enter the limit 'n' to generate the table of numbers from 1 to n:","");
+	var n=parseInt(n);
+	var msg="";
+	var res= "0";
+ 	for(var x= 1; x<=n;x++)
+	{
+		res = x * x;
+		msg = msg + " " + x + " * "+ x + " = " + res + "\n";
+	}	 
+	alert(msg);
+} 
+</script>
+</head>
+ <body onload="square()">
+</body>
+</html>
