@@ -1,0 +1,24 @@
+<html>
+<head>
+<title>maximum and minimum of 3 numbers</title>
+<script>
+var num1,num2,num3,maxnum,minnum;
+num1=window.prompt("Enter first number:");
+num2=window.prompt("Enter second number:");
+num3=window.prompt("Enter third number:");
+maxnum=maximum(num1,num2,num3);
+minnum=minimum(num1,num2,num3);
+function maximum(num1,num2,num3)
+{
+	return Math.max(num1,Math.max(num2,num3));	
+} 
+function minimum(num1,num2,num3)
+{
+	return Math.min(num1,Math.min(num2,num3));	
+} 
+document.writeln("<h3>"+"First number:"+num1+"<br>"+"Second number:"+num2+"<br>"+"Third number:"+num3+"<br>"+"MAXIMUM NUMBER:"+maxnum+"<br>"+"MINIMUM NUMBER:"+minnum+"</h3>");
+</script>
+</head>
+<body>
+</body>
+</html>
