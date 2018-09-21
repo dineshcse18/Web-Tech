@@ -1,0 +1,22 @@
+<html>
+<head>
+<title>Session Tracking</title>
+</head>
+<body>
+<center><h1>Session Tracking </h1></center>
+<h2>What is a PHP Session?</h2>
+<p>When you work with an application, you open it, do some changes, and then you close it. This is much like a Session. The computer knows who you are. It knows when you start the application and when you end. But on the internet there is one problem: the web server does not know who you are or what you do, because the HTTP address doesn't maintain state.<br>
+Session variables solve this problem by storing user information to be used across multiple pages (e.g. username, favorite color, etc). By default, session variables last until the user closes the browser.<br>So,Session variables hold information about one single user, and are available to all pages in one application.</br></p><hr>
+<h2>Start a PHP Session:</h2>
+<p>A session is started with the session_start() function.<br>
+Session variables are set with the PHP global variable: $_SESSION.<br>
+<span style="color:red;">Note:</span> The session_start() function must be the very first thing in your document. Before any HTML tags.</p>
+<h4>Example:</h4>
+<div><img src="start.png" alt="img" width="700" height="700"></div><hr>
+<h2>Destroy a PHP Session:</h2>
+<p>To remove all global session variables and destroy the session, use session_unset() and session_destroy()</p>
+<h4>Example:</h4>
+<div><img src="destroy.png" alt="img" width="700" height="700"></div>
+</body>
+</html>
+
