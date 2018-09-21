@@ -91,6 +91,32 @@ document.write(myFunction2())&lt!--function call with return type--&gt<br>
 &lt/form&gt<br>
 &lt/body&gt<br>
 &lt/html&gt<br>
+<hr>
+<h3>SQUARE OF THE NUMBER</h3>
+&ltp&gt<br>
+&lthtml &gt<br>
+&lthead&gt<br>
+&lttitle&gt Square.html &lt/title&gt<br>
+&ltscript type="text/javascript"&gt<br>
+function square()<br>
+{<br>
+	var n=window.prompt ("Enter the limit 'n' to generate the table of numbers from 1 to n:",""); <br>
+	var n=parseInt(n); <br>
+	var msg="";<br>
+	var res= "0";<br>
+ 	for(var x= 1; x&lt=n;x++)<br>
+	{<br>
+		res = x * x; <br>
+		msg = msg + " " + x + " * "+ x + " = " + res + "\n";<br>
+	}<br>
+	alert(msg); <br>
+} <br>
+&lt/script&gt<br>
+&lt/head&gt<br>
+ &ltbody &gt<br>
+&ltp&gt&ltinput type="button" onclick="square()" value=" Square of a number"&gt<br>
+&lt/body&gt<br>
+&lt/html&gt
 </h4>
 </body>
 </html>
