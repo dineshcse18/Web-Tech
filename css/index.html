@@ -6,6 +6,7 @@ h1{text-align:center;}
 h3{font-size:30px;}
 li{font-size:20px;font-family:timesnewroman;}
 p{font-size:25px;font-family:timesnewroman;}
+strong{font-size:25px;text-decoration:underline;font-family:timesnewroman;color:orange;}
 </style>
 </head>
 <body>
@@ -33,6 +34,120 @@ p{font-size:25px;font-family:timesnewroman;}
 <li>Embedded Style Sheet</li>
 </ol>
 <h3>INLINE STYLE SHEET</h3>
-<p>
+<p><bold>Inline style</bold> sheets allow you to add styles directly to an HTML element. 
+Inline style sheets is a term that refers to style sheet information being applied to the current element.</p>
+<h2>SYNTAX:</h2>
+<strong>  &ltp style="color: #ff9900"&gtThis text has been styled using inline style sheets.&lt/p&gt </strong>
+<h2>EXAMPLE:</h2>
+<p style="color: blue">This text has been styled using inline style sheets.</p>
+<h3>EMBEDDED STYLE SHEET</h3>
+<p>Embedded style sheets allow you to define styles for the whole HTML document in one place. 
+Embedded style sheets refer to when you embed style sheet information into an HTML document using the &ltstyle&gt element.</p>
+<h2>SYNTAX:</h2>
+<strong>&ltstyle&gt<br>
+   p {<br>
+        font-family: georgia, serif;<br> 
+        font-size: x-small;<br>
+    } <br>
+   hr {<br>
+        color: #ff9900; <br>
+        height: 1px; <br>
+    } <br>
+   a:hover {<br>
+        color: #ff0000; <br>
+        text-decoration: none;<br>
+    } <br>
+&lt/style&gt</strong>
+<h2>EXAMPLE:</h2>
+<p font-size:20px;>
+&lthtml&gt <br>
+&lthead&gt <br>
+&ltstyle type="text/css"&gt <br>
+p 
+{ <br>
+  font-family: georgia, serif;  <br>
+  font-size: x-large; <br>
+  color:#blue; <br>
+  } <br>
+a:hover { <br>
+  color: LimeGreen; <br>
+  text-decoration: none; <br>
+  } <br>
+&lt/style&gt <br>
+&lt/head&gt <br>
+&ltbody&gt <br>
+&ltp&gtThis paragraph tag has been preset using embedded style sheets. Same for the horizontal rule below and the hyperlink under that. &lt/p&gt <br>
+&lt/body&gt <br>
+&lt/html&gt <br> </p>
+<h2>OUTPUT:</h2>
+<html>
+<head>
+<style type="text/css">
+p {
+  font-family: georgia, serif; 
+  font-size: x-large; 
+  color:black; 
+  } 
+a:hover { 
+  color: LimeGreen;  
+  text-decoration: none; 
+  } 
+</style>
+</head>
+<body>
+<p color:blue;>This paragraph tag has been preset using embedded style sheets. Same for the horizontal rule below and the hyperlink under that. </p>
+</body>
+</html>
+<h3>INLINE STYLE SHEET</h3>
+<p>An external style sheet is a separate file where you can declare all the styles that you want to use on your website. 
+You then link to the external style sheet from all your HTML pages.</p>
+<h2>SYNTAX:</h2>
+body {<br>
+    background-color: darkslategrey; <br>
+    color: azure; <br>
+    font-size: 1.1em; <br>
+} <br>
+h1 { <br>
+    color: coral; <br>
+} <br>
+#intro { <br>
+    font-size: 1.3em; <br>
+} <br>
+.colorful { <br>
+    color: orange; <br>
+} <br>
+ Save the above code with the extension (.css)
+ 
+ Add the following code between the <head></head> tags of all HTML documents that you want to reference the external style sheet. 
+ This code uses the HTML <link> element to link to the external style sheet.
+ 
+ &ltlink rel="stylesheet" href="styles.css"&gt
+ 
+ <h2>EXAMPLE:</h2>
+ &lthtml&gt <br>
+    &lthead&gt <br>
+        &lttitle&gtMy Example&lt/title&gt <br>
+        &ltlink rel="stylesheet" href="styles.css"&gt <br>
+    &lt/head&gt <br>
+    &ltbody&gt <br>
+        &lth1&gtExternal Styles&lt/h1&gt <br>
+        &ltp id="intro"&gtAllow you to define styles for the whole website.&lt/p&gt <br>
+        &ltp class="colorful"&gtThis has a style applied via a class.&lt/p&gt <br>
+    &lt/body&gt <br>
+&lt/html&gt <br>
+<h2>OUTPUT:</h2>
+<html>
+    <head>
+        <title>My Example</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <h1>External Styles</h1>
+        <p id="intro">Allow you to define styles for the whole website.</p>
+        <p class="colorful">This has a style applied via a class.</p>
+    </body>
+</html>
+ 
+
 </body>
 </html>
