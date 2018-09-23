@@ -149,22 +149,21 @@ https://www.google.com/webhp?complete=1&hl=en</p><br>
 </head>
 <h1> EXAMPLES FOR AJAX USING MOUSEOVER</h1>
 
-&lthtml&gt
-&lthead&gt
-&lttitle&gt ajax script&lt/title&gt
-&ltstyle type="text/css"&gt
-body
-&lt/style&gt
-&ltp style="font-size:36px;color:black;text-align:center;"&gt
-&lt/p&gt
+&lthtml&gt<br>
+&lthead&gt<br>
+&lttitle&gt ajax script&lt/title&gt<br>
+&ltstyle type="text/css"&gt<br>
 
-&ltscript type="text/Javascript"&gt
-var asyncrequest;
-function getContent(url)
+&lt/style&gt<br>
+&ltp style="font-size:36px;color:black;text-align:center;"&gt<br>
+&lt/p&gt<br>
+&ltscript type="text/Javascript"&gt<br>
+var asyncrequest;<br>
+function getContent(url)<br>
 {
-	try
+	try<br>
 	{
-	asyncRequest=new XMLHttpRequest();
+	asyncRequest=new XMLHttpRequest();<br>
 	asyncRequest.addEventListener("readystatechange",stateChange,false);
 	asyncRequest.open("GET",url,true);
 	asyncRequest.send(null);
@@ -188,18 +187,18 @@ function clearContent()
 	document.getElementById('a').innerHTML="";
 }
 	
-&lt/script&gt
-&lt/head&gt
-&ltbody&gt
+&lt/script&gt<br>
+&lt/head&gt<br>
+&ltbody&gt<br>
 
 
-&ltp&gt&ltcenter&gt
-&ltimg src="ug.jpg"  width="200" height="200"; onmouseover='getContent("a.html")'onmouseout="clearContent()"&gt
-&ltimg src="pg.jpg" width="200" height="200";  onmouseover='getContent("a1.html")'onmouseout="clearContent()"&gt&lt/center&gt
-&lt/p&gt
-&ltp id="a"&gt&lt/p&gt
-&lt/body&gt
-&lt/html&gt
+&ltp&gt&ltcenter&gt<br>
+&ltimg src="ug.jpg"  width="200" height="200"; onmouseover='getContent("a.html")'onmouseout="clearContent()"&gt<br>
+&ltimg src="pg.jpg" width="200" height="200";  onmouseover='getContent("a1.html")'onmouseout="clearContent()"&gt&lt/center&gt<br>
+&lt/p&gt<br>
+&ltp id="a"&gt&lt/p&gt<br>
+&lt/body&gt<br>
+&lt/html&gt<br>
 
 	
 	
