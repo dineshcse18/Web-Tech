@@ -1,1 +1,219 @@
+<html>
+<head>
+<title>Ajax</title>
+<style type="text/css">
+p{font-size:20pt;}
+</style>
+</head>
+<body>
+<h1 style="text-align:center;font-size:50pt;"> AJAX</h1><br>
+
+<ul style type="square"><h1>AJAX stands for Asynchronous JavaScript and XML.</h1><br>
+<h1>AJAX DEFINITION:</h1><br>
+<li><p>AJAX is a technique for creating fast and dynamic web pages.</p></li><br>
+<li><p>AJAX allows web pages to be updated asynchronously by exchanging small amounts of data with the server behind the scenes.</p></li><br>
+<li><p>This means that it is possible to update parts of a web page,without reloading the whole page.</p></li><br>
+                                                     
+ 
+<h1>FEATURES AND ADVANTAGES:</h1><br>
+<li><p>Ajax uses XHTML for content, CSS for presentation, along with Document Object Model and JavaScript for dynamic content display.</p></li><br>
+<li><p>With AJAX, when you hit submit, JavaScript will make a request to the server, interpret the results, and update the current screen.</p></li><br>
+<li><p> In the  sense, the user would never know that anything was even transmitted to the server.</p></li><br>
+<li><p>AJAX is a web browser technology independent of web server software</p></li><br>
+<li><p>Reduce the traffic travels between the client and the server.</p></li><br>
+<li><p> Response time is faster so increases performance and speed.</p></li><br>
+
+
+<h1>STEPS FOR AJAX OPERATION:</h1><br>
+<p>1. An event occurs in a web page (the page is loaded, a button is clicked)</p>    
+<p>2. An XMLHttpRequest object is created by JavaScript</p>
+<p>3. The XMLHttpRequest object sends a request to a web server</p>    
+<p>4. The server processes the request</p>    
+<p>5. The server sends a response back to the web page</p>    
+<p>6. The response is read by JavaScript</p>    
+<p>7. Proper action (like page update) is performed by JavaScript</p>    
+
+
+<h1>AJAX - XMLHttpRequest</h1>
+<li><p>XMLHttpRequest (XHR) is an API in the form of an object whose methods transfer data between a web browser and a web server.</p></li><br>
+<li><p>XML data to and from a webserver using HTTP, establishing an independent connection channel between a webpage's Client-Side and Server-Side.</p></li><br>
+<li><p>XMLHttpRequest Methods</p></li>
+   <p>open( method, URL, async )
+   <p>The method parameter can have a value of "GET", "POST", or "HEAD".
+<li><p>The "async" parameter specifies whether the request should be handled asynchronously or not.</p></li>
+   <p>"True" means that the script processing carries on after the send() method without waiting for a response</p>
+  <p>"False" means that the script waits for a response before continuing script processing.</p>
+<li><p>send( content )</p></li>
+<li><p>Sends the request.</p></li><br>
+<h1>XMLHttpRequest Properties</h1>
+<h2>onreadystatechange</h2>
+<li><p>An event handler for an event that fires at every state change.</p></li>
+<h2>readyState</h2>
+<li><p>The readyState property defines the current state of the XMLHttpRequest object.</p></li>
+
+<caption><h2>The following table provides a list of the possible values for the readyState property −</h2></caption>
+<table border="1">
+<thead>
+<tr>
+<th>STATE</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>The request is not initialized.</td>
+</tr>
+<tr>
+<td>1</td>
+<td>The request has been set up.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>The request has been sent.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>The request is in process.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>The request is completed.</td>
+</tr>
+<tr>
+</tbody>
+</table>
+
+<caption><h2>PREDEFINED KEYWORDS TO DEVELOP AJAX</h2></caption>
+<table border="1">
+<thead>
+<tr>
+<th>READYSTATE</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>readyState = 0</td>
+<td>After you have created the XMLHttpRequest object, but before you have called the open() method.</td>
+</tr>
+<tr>
+<td>readyState = 1</td>
+<td>After you have called the open() method, but before you have called send().</td>
+</tr>
+<tr>
+<td>readyState = 2 </td>
+<td>After you have called send().</td>
+</tr>
+<tr>
+<td>readyState = 3</td>
+<td>After the browser has established a communication with the server, but before the server has completed the response.</td>
+</tr>
+<tr>
+<td>readyState = 4</td>
+<td>After the request has been completed, and the response data has been completely received from the server.</td>
+</tr>
+<tr>
+</tbody>
+</table><br>
+<h2>responseText</h2>
+<li><p>Returns the response as a string.</p></li><br>
+<h2>status</h2>
+<li><p>Returns the status as a number (e.g., 404 for "Not Found" and 200 for "OK").</p></li><br>
+
+
+
+<h2>AJAX Security: Server Side</h2><br>
+<li><p>AJAX-based Web applications are subject to the same security threats as regular Web applications in server side.</li></p><br>
+
+<h2>AJAX Security: Client Side</h2><br>
+<li><p>JavaScript code is visible to a user/hacker.</li></p>
+<li><p> Hacker can use JavaScript code for inferring server-side weaknesses.</li></p>
+<li><p>JavaScript code is downloaded from the server and executed ("eval") at the client and can compromise the client by mal-intended code.</li></p>
+<li><p>Downloaded JavaScript code is constrained by the sand-box security model and can be relaxed for signed JavaScript.</li></p><br>
+
+<h2>AJAX -  Issues</h2><br>
+<li><p>Complexity is increased</li></p>
+<li><p>AJAX-based applications can be difficult to debug, test, and maintain</li></p>
+<li><p>Toolkits/Frameworks are not mature yet</li></p>
+<li><p>No standardization of the XMLHttpRequest yet</li></p>
+<li><p>No support of XMLHttpRequest in old browsers</li></p>
+<li><p>JavaScript technology dependency and incompatibility</li></p>
+<li><p>JavaScript code is visible to a hacker</li></p><br>
+<h2>AJAX - Applications</h2><br>
+<p>GOOGLE MAPS:A user can drag an entire map by using the mouse, rather than clicking on a button. https://maps.google.com/</p><br>
+<p>GOOGLE SUGGEST:As you type, Google offers suggestions. Use the arrow keys to navigate the results.
+https://www.google.com/webhp?complete=1&hl=en</p><br>
+</ul>
+</body>
+</head>
+<h1> EXAMPLES FOR AJAX USING MOUSEOVER</h1>
+
+&lthtml&gt
+&lthead&gt
+&lttitle&gt ajax script&lt/title&gt
+&ltstyle type="text/css"&gt
+body
+&lt/style&gt
+&ltp style="font-size:36px;color:black;text-align:center;"&gt
+&lt/p&gt
+
+&ltscript type="text/Javascript"&gt
+var asyncrequest;
+function getContent(url)
+{
+	try
+	{
+	asyncRequest=new XMLHttpRequest();
+	asyncRequest.addEventListener("readystatechange",stateChange,false);
+	asyncRequest.open("GET",url,true);
+	asyncRequest.send(null);
+	}
+	catch(Exception)
+	{
+	alert('request failed');
+	}
+}
+
+function stateChange()
+{
+	if(asyncRequest.readyState==4&&asyncRequest.status==200)
+	{
+		document.getElementById('a').innerHTML=asyncRequest.responseText;
+	}
+}
+
+function clearContent()
+{
+	document.getElementById('a').innerHTML="";
+}
+	
+&lt/script&gt
+&lt/head&gt
+&ltbody&gt
+
+
+&ltp&gt&ltcenter&gt
+&ltimg src="ug.jpg"  width="200" height="200"; onmouseover='getContent("a.html")'onmouseout="clearContent()"&gt
+&ltimg src="pg.jpg" width="200" height="200";  onmouseover='getContent("a1.html")'onmouseout="clearContent()"&gt&lt/center&gt
+&lt/p&gt
+&ltp id="a"&gt&lt/p&gt
+&lt/body&gt
+&lt/html&gt
+
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
 
