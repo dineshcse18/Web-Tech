@@ -1,1 +1,344 @@
+<html>
+<head>
+<title>DOM</title>
+<style>
+h1{
+color:green;
+}
+body
+{
+border-color:red;
+}
+p
+{
+font-family:sans-serif;
+}
+div{
+text-align:center;
+}
+ul
+{
+display:inline-block;
+text-align:left;
+}
+
+</style>
+</head>
+<body>
+
+<h1 style="color:red"><center>DOCUMENT OF OBJECTS(DOM)</center></h1>
+<div>
+<ul>
+<li>WHAT IS DOM</li>
+<li>DOM NODES</li>
+<li>DOM METHODS</li>
+<li>HTML DOCUMENT OBJECTS</li>
+<li>FINDING HTML ELEMENTS</li>
+<li>DOM COLLECTIONS</li>
+<li>DOM EXAMPLE USING ONCLICK METHOD</li>
+</ul>
+</div>
+
+
+
+<h1>1)WHAT IS DOM?</h1>
+<ul>
+<li>DOM is a Document Object Model.</li>
+<li>It gives access to all the elements on a web page.</li>
+<li>Inside the browser,the whole web page,paragraphs,tables,forms is represented in a object hierarchy.</li>
+<li>Using javascript,one can create,modify and remove elements in the page dynamically.</li>
+<li>The HTML DOM model is constructed as a tree of Objects:</li>
+</ul>
+<p>
+<img src="dom.jpg" alt="dom">
+</p><br>
+<h1>2)DOM NODES</h1>
+<h3>According to the XML DOM, everything in an XML document is a node:</h1>
+<li>The entire document is a document node</li>
+<li>Every XML element is an element node</li>
+<li>The text in the XML elements are text nodes</li>
+<li>Every attribute is an attribute node</li>
+<li>Comments are comment nodes</li>
+</ul><br>
+
+<h1>3)DOM METHODS</h1>
+
+<p>HTML DOM methods are actions you can perform (on HTML Elements)</p>
+
+<p>HTML DOM properties are values (of HTML Elements) that you can set or change.</p>
+
+
+<h3>Example</h3>
+
+<h3>In the following eg,the content of p element is kavi and it is changed to HELLO WORLD....!</h3>
+<img src="eg2.jpg">
+
+<h2>The getElementById Method</h2>
+
+<p>The most common way to access an HTML element is to use the id of the element.</p>
+
+<p>In the example above the getElementById method used id="demo" to find the element.</p><br>
+
+<h2>The innerHTML Property</h2>
+
+<p>The easiest way to get the content of an element is by using the innerHTML property.</p>
+
+<p>The innerHTML property is useful for getting or replacing the content of HTML elements.</p>
+
+<h1>4)HTML DOCUMENT OBJECTS</h1>
+
+<p>The document object represents your web page.</p>
+
+<p>If you want to access any element in an HTML page, you always start with accessing the document object.</p>
+
+<p>Below are some examples of how you can use the document object to access and manipulate HTML.</p>
+
+<h2>5)FINDING HTML ELEMENTS</h2>
+<table>
+<table border="1">
+<thead>
+<tr>
+<th><h2 style="color:blue">Method</h2></th>
+<th><h2 style="color:blue">Description</h2></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><h3>document.getElementbyId(id)</h3></td>
+<td><h3>Find an element by element id</h3></td>
+</tr>
+<tr>
+<td><h3>document.getElementsByTagName(name)</h3></td>
+<td><h3>Find an element by tag name</h3></td>
+</tr>
+<tr>
+<td><h3>document.getElementsByClassName(name)</h3></td>
+<td><h3>Find an element by class name</h3></td>
+</tr>
+</tbody>
+</table>
+
+<h2>Changing HTML Elements</h2>
+
+<table>
+<table border="1">
+<thead>
+<tr>
+<th><h2 style="color:blue">Method</h2></th>
+<th><h2 style="color:blue">Description</h2></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><h3>element.innerHTML =  new html content</h3></td>
+<td><h3>Change the inner HTML of an element</h3></td>
+</tr>
+<tr>
+<td><h3>element.attribute = new value</h3></td>
+<td><h3>Change the attribute value of an HTML element</h3></td>
+</tr>
+<tr>
+<td><h3>element.setAttribute(attribute, value)</h3></td>
+<td><h3>Change the attribute value of an HTML element</h3></td>
+</tr>
+<tr>
+<td><h3>element.style.property = new style</h3></td>
+<td><h3>Change the style of an HTML element</h3></td>
+</tr>
+
+</tbody>
+</table>
+
+<h2>Adding and Deleting Elements</h2>
+<table>
+<table border="1">
+<thead>
+<tr>
+<th><h2 style="color:blue">Method</h2></th>
+<th><h2 style="color:blue">Description</h2></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><h3>document.createElement(element)</h3></td>
+<td><h3>Create an HTML element</h3></td>
+</tr>
+<tr>
+<td><h3>document.appendChild(element)</h3></td>
+<td><h3>Add an HTML element</h3></td>
+</tr>
+<tr>
+<td><h3>document.removeChild(element)</h3></td>
+<td><h3>Remove an HTML element</h3></td>
+</tr>
+<tr>
+<td><h3>document.replaceChild(element)</h3></td>
+<td><h3>Replace an HTML element</h3></td>
+</tr>
+<tr>
+<td><h3>document.write(text)</h3></td>
+<td><h3>Write into the HTML output stream
+</h3></td>
+</tr>
+
+</tbody>
+</table>
+
+<h3>Adding Events Handlers</h3>
+
+<table>
+<table border="1">
+<thead>
+<tr>
+<th><h2 style="color:blue">Method</h2></th>
+<th><h2 style="color:blue">Description</h2></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><h3>document.getElementById(id).onclick = function(){code}</h3></td>
+<td><h3>Adding event handler code to an onclick event
+</h3></td>
+</tr>
+
+
+</tbody>
+</table>
+
+
+
+
+
+
+<h1>5)FINDING HTML ELEMENTS</h1>
+
+
+
+<ul>
+<li>Finding HTML elements by id</li>
+<li>Finding HTML elements by tag name</li>
+<li>Finding HTML elements by class name</li>
+<li>Finding HTML elements by CSS selectors</li>
+<li>Finding HTML elements by HTML object collections</li>
+</ul>
+
+<h3>Finding HTML Element by Id</h3>
+
+<p>This example finds the element with id="intro"</p>
+<img src="byid.jpg">
+
+<h3>Finding HTML Elements by Tag Name</h3>
+<p>This example finds all <p> elements:</p>
+<img src="tag.jpg">
+<h3>Finding HTML Elements by Class Name</h3>
+
+
+
+<p> use getElementsByClassName()</p>
+<p>This example returns a list of all elements with class="intro"</p>
+<img src="class.jpg">
+
+<h1>6)DOM COLLECTIONS</h1>
+<h2>The HTMLCollection Object</h2>
+
+<p>The getElementsByTagName() method returns an HTMLCollection object.</p>
+<p>An HTMLCollection object is an array-like list (collection) of HTML elements.</p>
+
+
+<caption>The elements in the collection can be accessed by an index number</caption>
+<img src="C1.jpg">
+ <h2>HTMLCollection Length</h2>
+<p>The length property defines the number of elements in an HTMLCollection:</p>
+<img src="clen.jpg">
+
+
+<h2 style="color:green"><center>7)DOM EXAMPLE USING ONCLICK METHOD</center></h2>
+
+&lthtml&gt <br>
+&lthead&gt <br>
+&ltstyle type="text/css"&gt <br>
+.highlight{ <br>
+color:red; <br>
+} <br>
+&lt/style&gt <br>
+&lt/head&gt<br>
+&ltbody&gt<br>
+&ltdiv id="div1"&gt<br>
+&lth1 id="h1"&gt[h1]TWEAK SOFTWARE SOLUTION &lth1&gt<br>
+&lth3 id="h2"&gt[h2]CHENNAI&lt/h3&gt<br>
+&ltp id="p1"&gt[p1]GOOD MORNING&lt/p&gt<br>
+&ltp id="p2"&gt[p2]HAVE A NICE DAY&lt/p&gt<br>
+&ltul&gt<br>
+&ltli&gt
+jobsearch&lt/li&gt<br>
+&ltli&gtregister&lt/li&gt<br>
+&ltli&gtabout&lt/li&gt<br>
+&lt/ul&gt<br>
+&lt/div&gt<br>
+&ltform&gt<br>
+&ltinput type="text" id="i1" placeholder="Enter Message to be created"&gt<br>
+&ltinput type="button" value="Create" id="b1" onclick="create()"&gt&ltbr&gt&ltbr&gt<br>
+&ltinput type="text" id="i2" placeholder="Enter Id to be new text appended."&gt<br>
+&ltinput type="button" value="Append" id="b2" onclick="append()"&gt&ltbr&gt&ltbr&gt<br>
+&ltinput type="text" id="i3" placeholder="Enter Id to be removed"&gt<br>
+&ltinput type="button" value="Remove" id="b3" onclick="remove()"&gt&ltbr&gt&ltbr&gt<br>
+&ltinput type="text" id="i4" placeholder="Enter Id.But new text will appear before your entered Id"&gt<br>
+&ltinput type="button" value="InsertBefore" id="b4" onclick="insertbefore()"&gt<br>
+&lt/form&gt<br>
+&ltscript&gt<br>
+countId=3;<br>
+function create(){<br>
+var para = document.createElement("p");<br>
+var nodeId="newp"+countId;<br>
+countId++;<br>
+var node = document.createTextNode(document.getElementById("i1").value);<br>
+para.appendChild(node);<br>
+para.setAttribute("id",nodeId);<br>
+para.setAttribute("class","highlight");<br>
+var element = document.getElementById("div1");<br>
+var child = document.getElementById("p1");<br>
+element.appendChild(para,child);<br>
+}<br>
+function append(){<br>
+var i=document.getElementById("i2").value;<br>
+para=document.getElementById(i);<br>
+para.setAttribute("class","highlight");<br>
+var node = document.createTextNode("good day");<br>
+para.appendChild(node);<br>
+}<br>
+function remove(){<br>
+var i=document.getElementById("i3").value;<br>
+var parent = document.getElementById("div1");<br>
+var child = document.getElementById(i);<br>
+parent.removeChild(child);<br>
+}<br>
+function insertbefore(){<br>
+var nodeId="newp"+countId;<br>
+countId++;<br>
+var node = document.getElementById(document.getElementById("i4").value);<br>
+var element = document.getElementById("div1");<br>
+var child = document.createTextNode(" nice day");<br>
+element.insertBefore(child,node);<br>
+}<br>
+&lt/script&gt<br>
+
+&lt/body&gt<br>
+&lt/html&gt<br>
+
+<h3 style="color:red">OUTPUT</h3>
+
+
+
+
+<h1><img src="O1.png"></h1>
+
+<h1 ><img src="create.png"></h1>
+<h1><img src="Append.png"></h1>
+<h1><img src="Remove.png"></h1>
+<h1><img src="Insbef.png"></h1>
+
+</body>
+</html> 
+
+
 
