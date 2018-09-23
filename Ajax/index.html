@@ -158,34 +158,34 @@ https://www.google.com/webhp?complete=1&hl=en</p><br>
 &lt/p&gt<br>
 
 &ltscript type="text/Javascript"&gt<br>
-var asyncrequest;
-function getContent(url)
-{
-	try
-	{
-	asyncRequest=new XMLHttpRequest();
-	asyncRequest.addEventListener("readystatechange",stateChange,false);
-	asyncRequest.open("GET",url,true);
-	asyncRequest.send(null);
-	}
-	catch(Exception)
-	{
-	alert('request failed');
-	}
-}
+var asyncrequest;<br>
+function getContent(url)<br>
+{<br>
+	try<br>
+	{<br>
+	asyncRequest=new XMLHttpRequest();<br>
+	asyncRequest.addEventListener("readystatechange",stateChange,false);<br>
+	asyncRequest.open("GET",url,true);<br>
+	asyncRequest.send(null);<br>
+	}<br>
+	catch(Exception)<br>
+	{<br>
+	alert('request failed');<br>
+	}<br>
+}<br>
 
-function stateChange()
-{
-	if(asyncRequest.readyState==4&&asyncRequest.status==200)
-	{
-		document.getElementById('a').innerHTML=asyncRequest.responseText;
-	}
-}
+function stateChange()<br>
+{<br>
+	if(asyncRequest.readyState==4&&asyncRequest.status==200)<br>
+	{<br>
+		document.getElementById('a').innerHTML=asyncRequest.responseText;<br>
+	}<br>
+}<br>
 
-function clearContent()
-{
-	document.getElementById('a').innerHTML="";
-}
+function clearContent()<br>
+{<br>
+	document.getElementById('a').innerHTML="";<br>
+}<br>
 	
 &lt/script&gt<br>
 &lt/head&gt<br>
