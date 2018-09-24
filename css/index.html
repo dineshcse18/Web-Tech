@@ -5,8 +5,9 @@
 h1{text-align:center;}
 h3{font-size:30px;}
 li{font-size:20px;font-family:timesnewroman;}
-p{font-size:25px;font-family:timesnewroman;}
-strong{font-size:25px;text-decoration:underline;font-family:timesnewroman;color:orange;}
+p,#p1{font-size:25px;font-family:timesnewroman;}
+strong,#p2{font-size:25px;font-family:timesnewroman;color:orange;}
+#p3{color:blue;font-size:23pt;}
 </style>
 </head>
 <body>
@@ -39,7 +40,7 @@ Inline style sheets is a term that refers to style sheet information being appli
 <h2>SYNTAX:</h2>
 <strong>  &ltp style="color: #ff9900"&gtThis text has been styled using inline style sheets.&lt/p&gt </strong>
 <h2>EXAMPLE:</h2>
-<p style="color: blue">This text has been styled using inline style sheets.</p>
+<p id=p3>This text has been styled using inline style sheets.</p>
 <h3>EMBEDDED STYLE SHEET</h3>
 <p>Embedded style sheets allow you to define styles for the whole HTML document in one place. 
 Embedded style sheets refer to when you embed style sheet information into an HTML document using the &ltstyle&gt element.</p>
@@ -95,35 +96,38 @@ a:hover {
 </style>
 </head>
 <body>
-<p color:blue;>This paragraph tag has been preset using embedded style sheets. Same for the horizontal rule below and the hyperlink under that. </p>
+<p id=p3>This paragraph tag has been preset using embedded style sheets. Same for the horizontal rule below and the hyperlink under that. </p>
 </body>
 </html>
-<h3>INLINE STYLE SHEET</h3>
+<h3>EXTERNAL STYLE SHEET</h3>
 <p>An external style sheet is a separate file where you can declare all the styles that you want to use on your website. 
 You then link to the external style sheet from all your HTML pages.</p>
 <h2>SYNTAX:</h2>
+<p id=p2>
 body {<br>
     background-color: darkslategrey; <br>
-    color: azure; <br>
+    color:blue; <br>
     font-size: 1.1em; <br>
 } <br>
 h1 { <br>
-    color: coral; <br>
+    color: blue; <br>
 } <br>
 #intro { <br>
     font-size: 1.3em; <br>
 } <br>
 .colorful { <br>
-    color: orange; <br>
+    color:blue; <br>
 } <br>
- Save the above code with the extension (.css)
- 
+</p>
+<p style=font-size:19px;> Save the above code with the extension (.css)(eg:style.css)
+<br> 
  Add the following code between the <head></head> tags of all HTML documents that you want to reference the external style sheet. 
  This code uses the HTML <link> element to link to the external style sheet.
- 
- &ltlink rel="stylesheet" href="styles.css"&gt
- 
+<br>
+<h4 style=color:red;> &ltlink rel="stylesheet" href="styles.css"&gt</h4>
+ </p>
  <h2>EXAMPLE:</h2>
+<p id=p1>
  &lthtml&gt <br>
     &lthead&gt <br>
         &lttitle&gtMy Example&lt/title&gt <br>
@@ -135,7 +139,9 @@ h1 { <br>
         &ltp class="colorful"&gtThis has a style applied via a class.&lt/p&gt <br>
     &lt/body&gt <br>
 &lt/html&gt <br>
+</p>
 <h2>OUTPUT:</h2>
+<p id=p3>
 <html>
     <head>
         <title>My Example</title>
@@ -145,9 +151,101 @@ h1 { <br>
         <h1>External Styles</h1>
         <p id="intro">Allow you to define styles for the whole website.</p>
         <p class="colorful">This has a style applied via a class.</p>
-    </body>
+ </body>
 </html>
+ </p>
+<h3>BACKGROUND PROPERTY</h3>
+<p>The CSS background properties are used to define the background effects for elements.
+CSS background properties:
+<ul type=style:disc>
+<li>background-color</li>
+<li>background-image</li>
+<li>background-repeat</li>
+<li>background-attachment</li>
+<li>background-position</li>
+</ul>
+<ol type=style:"1">
+<li style=font-size:20pt;>Background-color:</li>
+          <p>The background-color property specifies the background color of an element.<br>
+            In CSS Background-color can be specified in three ways.There are:</p>
+	<ol type=style:"a">
+	<p>It can be defined by using </p>
+	<li>a valid color name - like "red".</li>
+	<li>a HEX value - like "#ff0000".</li>
+	<li>an RGB value - like "rgb(255,0,0)".</li>
+	</ol>
+<h3>SYNTAX</h3>
+<p id=p2>
+h1 {<br>
+    background-color: green;<br>
+}<br>
+
+div {<br>
+    background-color: lightblue;<br>
+}<br>
+
+p {<br>
+    background-color: yellow;<br>
+}	<br>
  
+ </p>
+
+<li  style=font-size:20pt;>Background-image:</li>
+		<p>The background-image property specifies an image to use as the background of an element.
+           By default, the image is repeated so it covers the entire element.</p>
+
+<h3>SYNTAX</h3>
+<p id=p2>
+ body {
+    background-image: url("bgdesert.jpg");
+}
+</p>	
+
+<li style=font-size:20pt;>Background-repeat:</li>
+<ul type=style:square; >
+		<li>As mentioned  earlier by default, the image is repeated.<br></li>
+		<li>Background-image can be repeated both horizontally and vertically.<br></li>
+		<li>To repeat an image vertically set<strong> background-repeat: repeat-y;</strong><br></li>
+		<li>To repeat an image horizontally set<strong> background-repeat:repeat-x;</strong><br></li>
+		<li>To repeat an only once set <strong> background-repeat:no repeat;</strong><br></li>
+		</ul>	
+		
+<p id=p2>body { <br>
+    background-image: url("img_tree.png");<br>
+    background-repeat: no-repeat  (or)  repeat-x  (or) repeat-y;<br>
+    
+} </p>
+</strong>
+<li style=font-size:20pt;>Background-position:</li>	
+      
+<p>	 We can also change the position of the image.<br>
+		The position of the image is specified by the<strong> background-position </strong>property.<br>
+		It Sets the starting position of a background image</p>
+
+<h3>SYNTAX</h3>
+<p id=p2>
+ body { <br>
+    background-position:right top;<br>
+}
+</p>	
+		   
+ <li style=font-size:20pt;>Background-attachment:</li>	
+ 
+  <p> <strong>Background-attachment</strong> property is used to Set whether a background image is fixed or scrolls with the rest of the page<br> </p>
+   
+   <h3>SYNTAX</h3>
+<p id=p2>
+ body { <br>
+    background-attachment:fixed;<br>
+	
+}
+</p>
+</ol>
+ </p>
+ <h3>BORDER PROPERTY</h3>
+ 
+ <p>
+
 
 </body>
 </html>
