@@ -9,13 +9,13 @@ p{font-size:20pt;}
 <h1 style="text-align:center;font-size:50pt;text-shadow:2px 2px pink"> AJAX</h1><br>
 
 <ul style type="square"><h1>AJAX stands for Asynchronous JavaScript and XML.</h1><br>
-<h1 style="font-size:36px;color:red;">AJAX DEFINITION:</h1><br>
+<h1 style="font-size:36px;color:red;">AJAX DEFINITION:</h1>
 <li><p>AJAX is a technique for creating fast and dynamic web pages.</p></li>
 <li><p>AJAX allows web pages to be updated asynchronously by exchanging small amounts of data with the server behind the scenes.</p></li>
 <li><p>This means that it is possible to update parts of a web page,without reloading the whole page.</p></li>
                                                      
  
-<h1 style="font-size:36px;color:red;">FEATURES AND ADVANTAGES:</h1><br>
+<h1 style="font-size:36px;color:red;">FEATURES AND ADVANTAGES:</h1>
 <li><p>Ajax uses XHTML for content, CSS for presentation, along with Document Object Model and JavaScript for dynamic content display.</p></li>
 <li><p>With AJAX, when you hit submit, JavaScript will make a request to the server, interpret the results, and update the current screen.</p></li>
 <li><p> In the  sense, the user would never know that anything was even transmitted to the server.</p></li>
@@ -24,7 +24,7 @@ p{font-size:20pt;}
 <li><p> Response time is faster so increases performance and speed.</p></li>
 
 
-<h1 style="font-size:36px;color:red;">STEPS FOR AJAX OPERATION:</h1><br>
+<h1 style="font-size:36px;color:red;">STEPS FOR AJAX OPERATION:</h1>
 <p>1. An event occurs in a web page (the page is loaded, a button is clicked)</p>    
 <p>2. An XMLHttpRequest object is created by JavaScript</p>
 <p>3. The XMLHttpRequest object sends a request to a web server</p>    
@@ -123,16 +123,16 @@ p{font-size:20pt;}
 
 
 
-<h2 style="font-size:36px;color:red;">AJAX Security: Server Side</h2><br>
+<h2 style="font-size:36px;color:red;">AJAX Security: Server Side</h2>
 <li><p>AJAX-based Web applications are subject to the same security threats as regular Web applications in server side.</li></p><br>
 
-<h2 style="font-size:36px;color:red;">AJAX Security: Client Side</h2><br>
+<h2 style="font-size:36px;color:red;">AJAX Security: Client Side</h2>
 <li><p>JavaScript code is visible to a user/hacker.</li></p>
 <li><p> Hacker can use JavaScript code for inferring server-side weaknesses.</li></p>
 <li><p>JavaScript code is downloaded from the server and executed ("eval") at the client and can compromise the client by mal-intended code.</li></p>
 <li><p>Downloaded JavaScript code is constrained by the sand-box security model and can be relaxed for signed JavaScript.</li></p>
 
-<h2 style="font-size:36px;color:red;">AJAX -  Issues</h2><br>
+<h2 style="font-size:36px;color:red;">AJAX -  Issues</h2>
 <li><p>Complexity is increased</li></p>
 <li><p>AJAX-based applications can be difficult to debug, test, and maintain</li></p>
 <li><p>Toolkits/Frameworks are not mature yet</li></p>
@@ -331,64 +331,76 @@ color:black; <br>
 
 <h1 style="font-size:36px;color:red;"> EXAMPLES FOR AJAX USING BUTTON</h1>
 
-
 &lthtml&gt<br>
 &lthead&gt<br>
 &lttitle&gt ajax script&lt/title&gt<br>
 &ltstyle type="text/css"&gt<br>
+body<br>
+{<br>
+background-image:url("bg2.jpg");<br>
+background-repeat:repeat;<br>
+background-size:cover;<br>
+background-attachment:fixed;<br>
+height:100%;<br>
+}<br>
+
 &lt/style&gt<br>
 &ltp style="font-size:36px;color:black;text-align:center;"&gt<br>
 &lt/p&gt<br>
-
 &ltscript type="text/Javascript"&gt<br>
 var asyncrequest;<br>
 function getContent(url)<br>
 {<br>
-	try<br>
-	{<br>
-	asyncRequest=new XMLHttpRequest();<br>
-	asyncRequest.addEventListener("readystatechange",stateChange,false);<br>
-	asyncRequest.open("GET",url,true);<br>
-	asyncRequest.send(null);<br>
-	}<br>
-	catch(Exception)<br>
-	{<br>
-	alert('request failed');<br>
-	}<br>
+try<br>
+{<br>
+asyncRequest=new XMLHttpRequest();<br>
+asyncRequest.addEventListener("readystatechange",stateChange,false);<br>
+asyncRequest.open("GET",url,true);<br>
+asyncRequest.send(null);<br>
 }<br>
-
+catch(Exception)<br>
+{<br>
+alert('request failed');<br>
+}<br>
+}<br>
 function stateChange()<br>
 {<br>
-	if(asyncRequest.readyState==4&&asyncRequest.status==200)<br>
-	{<br>
-		document.getElementById('a').innerHTML=asyncRequest.responseText;<br>
-	}<br>
+if(asyncRequest.readyState==4&&asyncRequest.status==200)<br>
+{<br>
+document.getElementById('a').innerHTML=asyncRequest.responseText;<br>
 }<br>
-
-
-	
+}<br>
 &lt/script&gt<br>
 &lt/head&gt<br>
 &ltbody&gt<br>
-
-
-&ltp&gt&ltcenter&gt<br>
-&ltinput type="button" onclick='getContent("click.html")'onmouseout="clearContent()" value="details"&gt<br>
+&ltcenter&gt&ltp style="font-size:20px;color:green;"&gtAJAX&lt/p&gt<br>
+&ltinput type="button" onclick='getContent("aclick.html")'onmouseout="clearContent()" value="details"&gt<br>
 &lt/center&gt<br>
-&lt/p&gt<br>
+
 &ltp id="a"&gt&lt/p&gt<br>
+<h2>OUTPUT</h2><br>
+<img src="ajax1.png"><br>
+<img src="ajax.png"><br>
+
+
 &lt/body&gt<br>
 &lt/html&gt<br>
 
-	
-	
-	
-	
+<h1 style="font-size:36px;color:red;"> PROGRAM FOR aclick.html</h1>
 
 
-
-
-
+&lthtml&gt<br>
+&lthead&gt<br>
+&lt/head&gt<br>
+&ltbody&gt<br>
+&ltcenter&gt<br>
+&ltp&gtAJAX = Asynchronous JavaScript And XML.&lt/p&gt<br>
+&ltp&gtAJAX is not a programming language.&lt/p&gt<br>
+&ltp&gtAll modern browsers support the XMLHttpRequest object.&lt/p&gt<br>
+&ltp&gtAJAX is a technique for accessing web servers from a web page.&lt/p&gt<br>
+&lt/center&gt<br>
+&lt/body&gt<br>
+&lt/html&gt<br>
 
 
 
