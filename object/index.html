@@ -1,1 +1,741 @@
+<html>
+<head>
+<title>
+objects
+</title>
+<style type="text/css">
+h1
+{
+color:green;
+font-size:35pt;
+}
+h2{
+color:red;
+font-size:30pt;}
+ol{
+color:brown;
+font-size:20pt;}
+caption{color:red;}
+p{
+font-size:18pt;}
+ul{
+font-size:18pt;}
+table{
+font-size:15pt;}
+</style>
+</head>
+<body>
+<center><h1>Javascript Native objects</h1></center>
+
+<p style="font-size:18pt;">JavaScript has several built-in or native objects. These objects are accessible anywhere in your program and will work the same way in any browser running in any operating system.
+The list of all important JavaScript Native Objects </p>
+<ol>
+  <b> <li> JavaScript Number Object</li>
+
+   <li>JavaScript Boolean Object</li>
+
+   <li>JavaScript String Object</li>
+
+   <li> JavaScript Array Object</li>
+
+   <li> JavaScript Data Object</li>
+
+   <li>JavaScript Math Object</li>
+
+   <li>JavaScript RegExp Object</li></b>
+</ol>
+
+<h2>JavaScript String Object</h2>
+<p style="font-size:18pt;">JavaScript strings are used for storing and manipulating text.
+</p>
+<ul>
+<li>Strings are created as primitives:<b> var firstName="John"</b></li>
+<li>But strings can also be created as objects using the new keyword: <b>var firstName = new String("John")</b></li></p>
+<table border="1">
+<caption style="color:red;"><b>String Properties</b></caption>
+<thead>
+<tr><th>s.no</th>
+<th>Property</th>
+<th>Syntax</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Constructor</td>
+<td>string.constructor</td>
+<td>Returns a reference to the String function that created the object.</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>Length</td>
+<td>string.length</td>
+<td>Returns the length of the string.</td>
+</tr>
+
+<tr>
+<td>3</td>
+<td>Prototype</td>
+<td>object.prototype.name = value</td>
+<td>The prototype property allows you to add properties and methods to an object.</td>
+</tr>
+ </tbody> 
+</table> 
+<br>
+<br>
+<h3 style="color:red;">Program for String properties</h3>		
+
+	<i style="font-size:18pt;color:navy;"> &lt script type="text/javascript" &gt <br>
+         var str = new String( "This is string" );<br>
+         document.write("str.constructor is:" + str.constructor);<br>
+         document.write("str.length is:" + str.length); <br>		 
+      &lt/script&gt
+</i>
+<img src="strng.png"alt="hii">
+
+<table border="1">
+<caption  style="color:red;"><b>String Method</b></caption>
+	<thead>
+		<tr>
+		<th>S.no</th>
+		<th>Method</th>
+		<th>Syntax</th>
+		<th>Description</th> 
+		</tr>		
+	</thead>
+	<tbody>
+		<tr>
+		<td>1</td>
+		<td>charAt()</td>
+		<td>string.charAt(index);</td>
+		<td>Returns the character at the specified index.</td>
+		</tr>
+		<tr>
+		<td>2</td>
+		<td>charCodeAt()</td>
+		<td>string.charCodeAt(index);</td>
+		<td>Returns a number indicating the Unicode value of the character at the given index.</td>
+		</tr>
+		<tr>
+		<td>3</td>
+		<td>concat()</td>
+		<td>string.concat(string2, string3[, ..., stringN]);</td>
+		<td>Combines the text of two strings and returns a new string.</td>
+		</tr>
+		<tr>
+		<td>4</td>
+		<td>indexOf()</td>
+		<td>string.indexOf(searchValue[, fromIndex])</td>
+		<td>Returns the index within the calling String object of the first occurrence of the specified value, or -1 if not found.</td>
+		</tr>
+		<tr>
+		<td>5</td>
+		<td>lastIndexOf()</td>
+		<td>string.lastIndexOf(searchValue[, fromIndex])</td>
+		<td>Returns the index within the calling String object of the last occurrence of the specified value, or -1 if not found.</td>
+		</tr>
+		<tr>
+		<td>6</td>
+		<td>localCompare()</td>
+		<td>string.localeCompare( param )</td>
+		<td>Returns a number indicating whether a reference string comes before or after or is the same as the given string in sort order.</td>
+		</tr>
+		<tr>
+		<td>7</td>
+		<td>match()</td>
+		<td>string.match( param )</td>
+		<td>Used to match a regular expression against a string.</td>
+		</tr>
+		<tr>
+		<td>8</td>
+		<td>replace()</td>
+		<td>string.replace(regexp/substr, newSubStr/function[, flags]);</td>
+		<td>Used to find a match between a regular expression and a string, and to replace the matched substring with a new substring.</td>
+		</tr>
+		<tr>
+		<td>9</td>
+		<td>search()</td>
+		<td>string.search(regexp);</td>
+		<td>Executes the search for a match between a regular expression and a specified string.</td>
+		</tr>
+		<tr>
+		<td>10</td>
+		<td>slice()</td>
+		<td>string.slice( beginslice [, endSlice] );</td>
+		<td>Extracts a section of a string and returns a new string.</td>
+		</tr>
+		<tr>
+		<td>11</td>
+		<td>split()</td>
+		<td>string.split([separator][, limit]);
+			</td>
+		<td>Splits a String object into an array of strings by separating the string into substrings.</td>
+		</tr>
+		<tr>
+		<td>12</td>
+		<td>substr()</td>
+		<td>string.substr(start[, length]);</td>
+		<td>Returns the characters in a string beginning at the specified location through the specified number of characters.</td>
+		</tr>
+		<tr>
+		<td>13</td>
+		<td>subString()</td>
+		<td>string.substring(indexA, [indexB])<br>
+		</td>
+		<td>Returns the characters in a string between two indexes into the string.</td>
+		</tr>
+		<tr>
+		<td>14</td>
+		<td>toLocalLowerCase()</td>
+		<td>string.toLocaleLowerCase( )</td>
+		<td>The characters within a string are converted to lower case while respecting the current locale.</td>
+		</tr>
+		<tr>
+		<td>15</td>
+		<td>toLocalUpperCase()</td>
+		<td>string.toLocaleUpperCase( )</td>
+		<td>The characters within a string are converted to upper case while respecting the current locale.</td>
+		</tr>
+		<tr>
+		<td>16</td>
+		<td>toLowerCase()</td>
+		<td>string.toLowerCase( )</td>
+		<td>Returns the calling string value converted to lower case.</td>
+		</tr>
+		<tr>
+		<td>17</td>
+		<td>toUpperCase()</td>
+		<td>string.toUpperCase( )</td>
+		<td>Returns the calling string value converted to uppercase.</td>
+		</tr>
+		<tr>
+		<td>18</td>
+		<td>toString()</td>
+		<td>string.toString( )</td>
+		<td>Returns a string representing the specified object.</td>
+		</tr>
+		<tr>
+		<td>19</td>
+		<td>valueOf()</td>
+		<td>string.valueOf( )</td>
+		<td>Returns the primitive value of the specified object.</td>
+		</tr>
+		</tbody>
+		</table>
+<h3 style="color:red;">Program for String Object</h3>		
+<i style="font-size:18pt;color:navy;">	&lt html&gt<br>
+    &lt head &gt<br>
+    &lt title>JavaScript String charAt() Method <br>
+	&lt/title &gt<br>
+    &lt /head&gt<br>
+    &lt body&gt<br>
+        &lt script type="text/javascript"&gt<br>
+        var str = new String( "My brother is very naughty" );<br>
+		document.writeln( "String object" );<br>
+		document.writeln( "My brother is very naughty" );<br>
+		document.writeln("1)str.charAt(0) is:" + str.charAt(0)); <br>
+        document.writeln("2)str.charCodeAt(0) is(ascii value):" + str.charCodeAt(0)); <br>
+        document.writeln("3)str.indexOf(l) is:" + str.indexOf("l"));<br>
+		document.writeln("4)str.indexOf(t) is:" + str.indexOf("t")); <br>
+        document.writeln("5)str.lastIndexOf(t) is:" + str.lastIndexOf("t")); <br>
+        document.writeln("6)str.toLowerCase() is:" + str.toLowerCase()); <br>
+		document.writeln("7)str.toUpperCase is:" + str.toUpperCase()); <br>
+		document.writeln("8)str.substring(0,10)) is:" + str.substring(0,10));<br>
+		document.writeln("9)str.substr(0,10) is:" + str.substr(0,10)); <br>
+		document.writeln("10)str.substring(11) is:" + str.substring(11)); <br>
+		document.writeln("11)str.substr(11) is:" + str.substr(11)); <br>
+		document.writeln("12)str.split(h) is:" + str.split("h")); <br>
+		document.writeln("13)str.replace(naughty,crazy) is:" + str.replace("naughty","crazy")); <br>
+		document.writeln("14)str.toString() is:" + str.toString()); <br>
+		document.writeln("15)str.valueOf() is:" + str.valueOf()); <br>
+		document.writeln("16)str.search(bro) is:" + str.search("bro")); <br>
+        var re=/bro/;<br>
+		if ( str.search(re) == -1 )<br>
+			{<br>
+               document.write("Does not contain bro" );<br>
+            }<br>
+        else<br>
+            {<br>
+               document.write("Contains bro" );<br>
+            }<br>
+    &lt/script&gt<br>
+&lt/body&gt<br>
+&lt/html&gt<br>
+</i>
+<img src="string.png"alt="hii">
+<hr>
+<h2 style="color:red;">Javascript Math Object</h2>
+<ul>
+<li>The Math object allows you to perform mathematical tasks.</li>
+<li>All the properties and methods of <b><i>Math</i></b> are static and can be called by using Math as an object without creating it.</li>
+<li>Math is not a constructor.</li>
+<li>It provides you <b><i>properties</i></b> and <b><i>methods</i></b> for mathematical constants and functions.</li>
+</ul>
+<h3 style="color:red;">Syntax</h3>
+<p>The syntax to call the properties and methods of Math are as follows</p>
+<caption><center  style="color:red;">Math Object Properties</center></caption>
+<center>
+<table border="1">
+<thead>
+<tr>
+<th>S.No</th>
+<th>Properties</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>E</td>
+<td>Euler's constant and the base of natural logarithms, approximately 2.718</td>
+</tr>
+<tr>
+<td>2</td>
+<td>LN2</td>
+<td>Natural logarithm of 2, approximately 0.693</td>
+</tr>
+<tr>
+<td>3</td>
+<td>LN10</td>
+<td>Natural logarithm of 10, approximately 2.302</td>
+</tr>
+<tr>
+<td>4</td>
+<td>LOG2E</td>
+<td>Base 2 logarithm of E, approximately 1.442</td>
+</tr>
+<tr>
+<td>5</td>
+<td>LOG10E</td>
+<td>Base 10 logarithm of E, approximately 0.434</td>
+</tr>
+<tr>
+<td>6</td>
+<td>PI</td>
+<td>Ratio of the circumference of a circle to its diameter, approximately 3.14159</td>
+</tr>
+<tr>
+<td>7</td>
+<td>SQRT1_2</td>
+<td>Square root of 1/2; equivalently, 1 over the square root of 2, approximately 0.707</td>
+</tr>
+<tr>
+<td>8</td>
+<td>SQRT2</td>
+<td>Square root of 2, approximately 1.414</td>
+</tr>
+</tbody>
+</table></center><br><br>
+<h3 style="color:red;">Program for Math Properties</h3>
+<i style="font-size:18pt;color:navy;">
+&lt html &gt<br>
+&lt head &gt<br>
+&lt title>Math Properties &lt/title &gt<br>
+ &lt script type="text/javascript" &gt<br>
+		document.writeln("Some of the Math Properties are");<br>
+        var a = Math.E<br>
+        document.write("The Value of Math.E is :" + a);<br>
+		var b = Math.LN2 <br>
+        document.write("The Value of Math.LN2 is : " + b);<br>
+        var c = Math.LN10<br>
+        document.write("The Value of Math.LN10 is : " + c); <br>
+        var d = Math.LOG2E<br>
+        document.write("The Value of Math.LOG2E is : " + d); <br>
+        var e = Math.LOG10E <br>
+        document.write("The Value of Math.LOG10E is : " + e);<br>
+        var f = Math.PI<br>
+        document.write("The Value of Math.PI is : " + f); <br>
+		var g = Math.SQRT1_2<br>
+        document.write("The Value of Math.SQRT1_2 is : " + g);<br> 
+        var h = Math.SQRT2<br>
+        document.write("The Value of Math.SQRT2 is : " + h);<br>
+      &lt /script &gt<br>
+      &lt /head &gt<br>
+   &lt body &gt &lt/body &gt<br>
+&lt /html &gt<br>
+</i>
+<h3>Output</h3>
+<img src="mprop.jpg">
+<caption><center style="color:red;">Math Object Methods</center></caption>
+<center>
+<table border="1">
+<thead>
+<tr>
+<th>S.No</th>
+<th>Method</th>
+<th>Decription</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>abs(x)</td>
+<td>Returns the absolute value of x</td>
+</tr>
+<tr>
+<td>2</td>
+<td>acos(x)</td>
+<td>Returns the arccosine of x, in radians</td>
+</tr>
+<tr>
+<td>3</td>
+<td>asin(x)</td>
+<td>Returns the arcsine of x, in radians</td>
+</tr>
+<tr>
+<td>4</td>
+<td>atan(x)</td>
+<td>Returns the arctangent of x as a numeric value between -PI/2 and PI/2 radians</td>
+</tr>
+<tr>
+<td>5</td>
+<td>atan2(y,x)</td>
+<td>Returns the arctangent of the quotient of its arguments</td>
+</tr>
+<tr>
+<td>6</td>
+<td>ceil(x)</td>
+<td>Returns the value of x rounded up to its nearest integer</td>
+</tr>
+<tr>
+<td>7</td>
+<td>cos(x)</td>
+<td>Returns the cosine of x (x is in radians)</td>
+</tr>
+<tr>
+<td>8</td>
+<td>exp(x)</td>
+<td>Returns the value of Ex</td>
+</tr>
+<tr>
+<td>9</td>
+<td>floor(x)</td>
+<td>Returns the value of x rounded down to its nearest integer</td>
+</tr>
+<tr>
+<td>10</td>
+<td>log(x)</td>
+<td>Returns the natural logarithm (base E) of x</td>
+</tr>
+<tr>
+<td>11</td>
+<td>max(x,y,z,...,n)</td>
+<td>Returns the number with the highest value</td>
+</tr>
+<tr>
+<td>12</td>
+<td>min(x,y,z,...,n)</td>
+<td>Returns the number with the lowest value</td>
+</tr>
+<tr>
+<td>13</td>
+<td>pow(x,y)</td>
+<td>Returns the value of x to the power of y</td>
+</tr>
+<tr>
+<td>14</td>
+<td>random()</td>
+<td>Returns a random number between 0 and 1</td>
+</tr>
+<tr>
+<td>15</td>
+<td>round(x)</td>
+<td>Returns the value of x rounded to its nearest integer</td>
+</tr>
+<tr>
+<td>16</td>
+<td>sin(x)</td>
+<td>Returns the sine of x (x is in radians)</td>
+</tr>
+<tr>
+<td>17</td>
+<td>sqrt(x)</td>
+<td>Returns the square root of x</td>
+</tr>
+<tr>
+<td>18</td>
+<td>tan(x)</td>
+<td>Returns the square root of x</td>
+</tr>
+</thead>
+</table>
+</center>
+<h3 style="color:red;">Program for Math Methods</h3>
+<i style="font-size:18pt;color:navy;">
+&lt html &gt<br>
+&lt head &gt<br>
+&lt title&gt Math Methods&gt/title&gt<br>
+&ltscript type="text/Javascript"&gt<br>
+		document.writeln("Some of the Math Methods are");<br>
+		document.writeln("abs()");<br>
+		var a = Math.abs(7.25);<br>
+		document.writeln("The absolute value of 7.25 is:"+a);<br>
+		var b = Math.abs(-7.25);<br>
+		document.writeln("The absolute value of -7.25 is:"+b);<br>
+		var c = Math.abs(null);<br>
+		document.writeln("The absolute value of null is:"+c);<br>
+		var d = Math.abs("Hello");<br>
+		document.writeln("The absolute value of hello is:"+d);<br>
+		var e = Math.abs(2+3);<br>
+		document.writeln("The absolute value of 2+3 is:"+e);<br>
+		document.writeln("acos()");<br>
+		var a1 = Math.acos(-1);<br>
+        document.write("The Value of acos(-1) is: " + a1 ); <br>
+        var b1 = Math.acos(null);<br>
+        document.write("The Value of acos(null) is : " + b1); <br>
+        var c1 = Math.acos(30);<br>
+        document.write("The Value of acos(30) is: " + c1 );<br> 
+        var d1 = Math.acos("string");<br>
+        document.write("The Value of acos(string) is: " + d1 );<br>
+		document.writeln("asin()");<br>
+        var a2 = Math.asin(-1);<br>
+        document.write("The Value of asin(-1) is : " + a2);<br>
+        var b2 = Math.asin(null);<br>
+        document.write("The Value of asin(null) is: " + b2); <br>
+        var c2 = Math.asin(30);<br>
+        document.write("The Value of asin(30) is: " + c2 ); <br>
+        var d2 = Math.asin("string");<br>
+        document.write("The Value of asin(string) is: " + d2);<br>
+		document.writeln("atan()");<br>
+        var a3 = Math.atan(-1);<br>
+        document.write("The Value of atan(-1) is: " + a3 );<br>
+        var b3 = Math.atan(.5);<br>
+        document.write("The Value of atan(.5) is : " + b3 );<br> 
+        var c3 = Math.atan(30);<br>
+        document.write("The Value of atan(30) is: " + c3 ); <br>
+        var d3 = Math.atan("string");<br>
+        document.write("The Value of atan(string) is: " + d3 ); <br>
+		document.writeln("atan2()");<br>
+        var a4 = Math.atan2(90,15);<br>
+        document.write("The Value of atan2(90,15) is: " + a4 ); <br>
+        var b4 = Math.atan2(15,90);<br>
+        document.write("The Value of atan2(15,90) is: " + b4 ); <br>
+        var c4 = Math.atan2(0, -0);<br>
+        document.write("The Value of atan2(0,-0) is: " + c4 ); <br>
+        var d4 = Math.atan2(+Infinity, -Infinity);<br>
+        document.write("The Value of atan2(+Infinity, -Infinity) is: " + d4 ); <br>
+		document.writeln("ceil()");<br>
+        var a5 = Math.ceil(45.95);<br>
+        document.write("The Value of ceil(45.95) is : " + a5 );<br> 
+        var b5 = Math.ceil(45.20);<br>
+        document.write("The value of ceil(45.20) is : " + b5 ); <br>
+        var c5 = Math.ceil(-45.95);<br>
+        document.write("The Value of ceil(-45.95) is : " + c5 ); <br>
+        var d5 = Math.ceil(-45.20);<br>
+        document.write("The Value of ceil(-45.20) is : " + d5 );<br>
+&lt/script&gt<br>
+&lt/head&gt<br>
+&lt body&gt<br>
+&lt/body&gt<br>
+&lt/html&gt<br>
+</i>
+<h3>Output</h3>
+<img src="mmethod1.jpg">
+<h3 style="color:red;">Program</h3>
+<i style="font-size:18pt;color:navy;">
+&lt html&gt<br>
+&lthead&gt<br>
+&lttitle&gtMath Methods&lt/title&gt<br>
+&ltscript type="text/Javascript"&gt<br>
+		document.writeln("Some of the Math Methods are");<br>
+		document.writeln("cos()");<br>
+        var a6 = Math.cos(90);<br>
+        document.write("The Value of cos(90) is : " + a6 ); <br>
+        var b6 = Math.cos(30);<br>
+        document.write("The Value of cos(30) is : " + b6 );<br> 
+        var c6 = Math.cos(-1);<br>
+        document.write("The Value of cos(-1) is: " + c6 ); <br>
+        var d6 = Math.cos(2*Math.PI);<br>
+        document.write("The Value of(2*Math.PI) is : " + d6 ); <br>
+		document.writeln("exp()");<br>
+        var a7 = Math.exp(1);<br>
+        document.write("The Value of exp(1) is : " + a7 );<br>
+        var b7 = Math.exp(30);<br>
+        document.write("The Value of exp(30) is : " + b7 ); <br>
+        var c7 = Math.exp(-1);<br>
+        document.write("The Value of exp(-1) is: " + c7 ); <br>
+        var d7 = Math.exp(.5);<br>
+        document.write("The Value of exp(.5) is : " + d7 );<br>
+		document.writeln("floor()");<br>
+        var a8 = Math.floor(10.3);<br>
+        document.write("The Value of floor(10.3) is: " + a8 );<br>
+        var b8 = Math.floor(30.9);<br>
+        document.write("The Value of floor(30.9) is : " + b8 ); <br>
+        var c8 = Math.floor(-2.9);<br>
+        document.write("The Value of floor(-2.9) is : " + c8 );<br> 
+        var d8 = Math.floor(-2.2);<br>
+        document.write("The Value of floor(-2.2) is : " + d8 );<br>
+		document.writeln("log()");<br>
+        var a9= Math.log(10);<br>
+        document.write("The Value of log(10) is: " + a9 ); <br>
+        var b9 = Math.log(0);<br>
+        document.write("The Value of log(0) is: " + b9 ); <br>
+        var c9 = Math.log(-1);<br>
+        document.write("The Value of log(-1) is: " + c9 ); <br>
+        var d9 = Math.log(100);<br>
+        document.write("The Value of log(100) is: " + d9 );<br>
+		document.writeln("max()");<br>
+        var a10 = Math.max(10, 20, -1, 100);<br>
+        document.write("The Value of max(10, 20, -1, 100) is: " + a10 ); <br>
+        var b10 = Math.max(-1, -3, -40);<br>
+        document.write("The Value of max(-1, -3, -40) is: " + b10 ); <br>
+        var c10 = Math.max(0, -1);<br>
+        document.write("The Value of max(0, -1) is: " + c10 ); <br>
+        var d10 = Math.max(100);<br>
+        document.write("The Value of max(100) is: " + d10 );<br>
+		document.writeln("min()");<br>
+        var a11 = Math.min(10, 20, -1, 100);<br>
+        document.write("The Value of min(10, 20, -1, 100) is : " + a11 );<br>
+        var b11 = Math.min(-1, -3, -40);<br>
+        document.write("The Value of min(-1, -3, -40) is : " + b11 );<br> 
+        var c11 = Math.min(0, -1);<br>
+        document.write("The Value of min(0, -1) is: " + c11 ); <br>
+        var d11 = Math.min(100);<br>
+        document.write("The Value of min(100) is: " + d11 );<br>
+&lt/script&gt<br>
+&lt/head&gt<br>
+&ltbody&gt<br>
+&lt/body&gt<br>
+&lt/html&gt<br></i>
+<h3>Output</h3>
+<img src="mmethod2.jpg">
+<h3 style="color:red;">Program</h3>
+<i style="font-size:18pt;color:navy;">
+&lthtml&gt<br>
+&lthead&gt<br>
+&lttitle&gtMath Methods&lt/title&gt<br>
+&ltscript type="text/Javascript"&gt<br>
+		document.writeln("Some of the Math Methods are");<br>
+		document.writeln("pow()");<br>
+        var a12 = Math.pow(7, 2);<br>
+        document.write("The Value of pow(7, 2) is : " + a12 );<br> 
+        var b12 = Math.pow(8, 8);<br>
+        document.write("The Value of pow(8, 8) is : " + b12 ); <br>
+        var c12 = Math.pow(-1, 2);<br>
+        document.write("The Value of pow(-1, 2) is : " + c12 ); <br>
+        var d12 = Math.pow(0, 10);<br>
+        document.write("The Value of pow(0, 10) is : " + d12 );<br>
+		document.writeln("random()");<br>
+        var a13 = Math.random( );<br>
+        document.write("The Value of random() is: " + a13 ); <br>
+        var b13 = Math.random(12);<br>
+        document.write("The Value of random() is: " + b13 );<br>
+		document.writeln("round()");<br>
+        var a14 = Math.round( 0.5 );<br>
+        document.write("The Value of round( 0.5 ) is: " + a14 ); <br>
+        var b14 = Math.round( 20.7 );<br>
+        document.write("The Value of round( 20.7 ) is : " + b14 ); <br>
+        var c14 = Math.round( 20.3 );<br>
+        document.write("The Value of round( 20.3 ) is: " + c14 ); <br>
+        var d14 = Math.round( -20.3 );<br>
+        document.write("The Value of round( -20.3 ) is: " + d14 ); <br>
+		document.writeln("sin()");<br>
+        var a15 = Math.sin( 0.5 );<br>
+        document.write("The Value of sin( 0.5 ) is : " + a15 ); <br>
+        var b15 = Math.sin( 90 );<br>
+        document.write("The Value of sin( 90 ) is: " + b15 ); <br>
+        var c15 = Math.sin( 1 );<br>
+        document.write("The Value of sin( 1 ) is: " + c15 ); <br>
+        var d15 = Math.sin( Math.PI/2 );<br>
+        document.write("The Value of sin( Math.PI/2 ) is: " + d15 );<br> 
+		document.writeln("sqrt()");<br>
+        var a16 = Math.sqrt( 0.5 );<br>
+        document.write("The Value of sqrt( 0.5 ) is : " + a16 );<br>
+        var b16 = Math.sqrt( 81 );<br>
+        document.write("The Value of sqrt( 81 ) is: " + b16 ); <br>
+        var c16 = Math.sqrt( 13 );<br>
+        document.write("The Value of sqrt( 13 ) is: " + c16 ); <br>
+        var d16 = Math.sqrt( -4 );<br>
+        document.write("The Value of sqrt( -4 ) is: " + d16 );<br>
+		document.writeln("tan()");<br>
+        var a17 = Math.tan( -30 );<br>
+        document.write("The Value of tan( -30 ) is : " + a17 ); <br>
+        var b17 = Math.tan( 90 );<br>
+        document.write("The Value of tan( 90 ) is: " + b17 );<br> 
+        var c17 = Math.tan( 45 );<br>
+        document.write("The Value of tan( 45 ) is : " + c17 ); <br>
+        var d17 = Math.tan( Math.PI/180 );<br>
+        document.write("The Value of tan( Math.PI/180 ) is : " + d17 );<br>
+&lt/script&gt<br>
+&lt/head&gt<br>
+&lt body&gt<br>
+&lt/body&gt<br>
+&lt/html&gt<br>
+</i>
+<h3 style="color:red;">Output</h3>
+<img src="mmethod3.jpg">	    
+<hr>
+<h2 style="color:red;">Javascript Boolean Object</h2>
+<ul>
+<li>The  <b><i>Boolean </b></i> object represents two values, either "true" or "false".</li>
+<li>If value parameter is omitted or is 0, -0, null, false,  <b><i>NaN </b></i>, undefined, or the empty string (""), the object has an initial value of false.</li>
+</ul>
+<h3 style="color:red;">Syntax</h3>
+<p>The syntax to call the properties and methods of Boolean are as follows</p>
+<caption><center style="color:red;">Boolean Object Properties</center></caption>
+<center>
+<table border="1">
+<thead>
+<tr>
+<th>S.No</th>
+<th>Property</th>
+<th>Syntax</th>
+<th>Description</th>
+</tr>
+</thead>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>constructor</td>
+<td>boolean.constructor()</td>
+<td>Returns a reference to the Boolean function that created the object</td>
+</tr>
+<tr>
+<td>2</td>
+<td>prototype</td>
+<td>object.prototype.name = value</td>
+<td>The prototype property allows you to add properties and methods to an object</td>
+</tr>
+</tbody>
+</table></center><br><br>
+<caption><center style="color:red;">Boolean Object Methods</center></caption>
+<center>
+<table border="1">
+<thead>
+<tr>
+<th>S.No</th>
+<th>Method</th>
+<th>Syntax</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>toSource()</td>
+<td>boolean.toSource()</td>
+<td>Returns a string containing the source of the Boolean object; you can use this string to create an equivalent object</td>
+</tr>
+<tr>
+<td>2</td>
+<td>toString()</td>
+<td>boolean.toString()</td>
+<td>Returns a string of either "true" or "false" depending upon the value of the object</td>
+</tr>
+<tr>
+<td>3</td>
+<td>valueOf()</td>
+<td>boolean.valueOf()</td>
+<td>Returns the primitive value of the Boolean object</td>
+</tr>
+</tbody>
+</table></center><br><br>
+
+
+</body>
+</html>
+
 
