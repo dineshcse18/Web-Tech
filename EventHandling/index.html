@@ -1,0 +1,240 @@
+<html>
+<head>
+<title>Event Handling</title>
+<style type="text/css">
+h1{
+color:blue;}
+h2{
+color:green;
+}
+p
+{
+font-size:20pt;
+color:maroon;
+line-height:1;}
+</style>
+</head>
+<body>
+<a href="../index.html/">Go Back To Home Page</a>
+<center><h1>EVENT HANDLING </h1></center>
+<h2>INTRODUCTION TO EVENT HANDLING FUNCTIONS:</h2>
+<ul>
+<li><p>A function or method containing program statements that are executed in response to an event.</p></li>
+<li> <p>An event handler typically is a software routine that processes actions such as keystrokes and mouse movements.</p> </li>
+<li><p>With Web sites, event handlers make Web content dynamic.</p></li>
+<li> <p>JavaScript is a common method of scripting event handlers for Web content.</p></li>
+<li><p>Events are normally used in combination with functions, and the function will not be executed before the event occurs (such as when a user clicks a button).</p></li>
+</ul>
+<h2>EVENT HANDLERS:</h2>
+<ol>
+<li ><p>onload</p></li>
+<li><p>onclick</p></li>
+<li><p>onsubmit</p></li>
+<li><p>onmouseover</p></li>
+<li><p>onmouseout</p></li>
+<li><p>onmousemove</p></li>
+<li><p>onblur</p></li>
+<li><p>onsearch</p></li>
+<li><p>onfocus</p></li>
+</ol>
+<ol>
+	<li><h2>ONLOAD:</h2></li>
+	<ul>
+		<li><p>The onload event occurs when an object has been loaded.</p></li>
+		<li><p>onload is most often used within the <body> element to execute a script once a web page has completely loaded all content (including images, script files, CSS files, etc.).</p></li>
+	</ul>
+	<p>EXAMPLE:</p>
+	&lthtml&gt<br>
+	&lthead&gt<br>
+	&lttitle&gt load &lt/title&gt<br>
+	&lt/head&gt<br>
+	&lt body onload="addition()"&gt<br>
+	&lt center &gt<br>
+	&lt h2 style="color:blue"&gtEvent Handling-load()&lt/h2&gt<br>
+	&lt script type="text/javascript"&gt<br>
+	function addition(a,b)<br>
+	{<br>
+	var a=20;<br>
+	var b=30;<br>
+	alert("addition performed");<br>
+	var c=a+b;<br>
+	document.writeln(" &lt h3 &gt")<br>
+	document.writeln("the addition of a and b is:",c);<br>
+	document.writeln("&lt /h3 &gt");<br>
+	}<br>
+	&lt /script &gt &lt/center &gt<br>
+	&lt /body &gt <br>
+	&lt/html&gt<br>
+	<li><h2>ONCLICK:</h2></li>
+	<ul>
+		<li><p>The “onclick” event occurs when the user clicks on an element. </p></li>
+		<li><p>It runs a specified line of code when you click an HTML object that has the “onclick” attribute. </p></li>
+	</ul><p>EXAMPLE:</p>
+	&lthtml&gt<br>
+	&lthead&gt<br>
+	&lttitle&gtclick&lt/title&gt<br>
+	&lt/head&gt<br>
+	&ltbody&gt<br>
+	&ltcenter&gt&ltp id="a"&gt&lt/p&gt<br>
+	&lth2&gtON CLICK&lt/h2&gt<br>
+	&ltbutton onclick="clik()"&gtClick&lt/button&gt&lt/center&gt<br>
+	&ltscript&gt<br>
+	function clik()<br>
+		{<br>
+	document.getElementById("a").innerHTML="Hello World!";<br>
+	}<br>
+	&lt/script&gt<br>
+	&lt/body&gt<br>
+	&lt/html&gt<br>
+	<li><h2>ONMOUSEOVER:</h2></li>
+	<ul>
+			<li><p>The onmouseover event occurs when the mouse pointer is moved onto an element, or onto one of its children.</p></li>
+	</ul>
+	<li><h2>ONMOUSEOUT:</h2></li>
+	<ul>
+		<li><p>The onmouseout event occurs when the mouse pointer is moved out of an element, or out of one of its children.</p></li>
+	</ul>
+	<p>EXAMPLE:(MOUSEOVER AND MOUSEOUT)</p>
+	&lthtml&gt<br>
+	&lthead&gt<br>
+	&lttitle&gtMouseOver&lt/title&gt<br>
+	&ltstyle type="text/css"&gt<br>
+	h3<br>
+	{<br>
+	color:orange;<br>
+	}<br>
+	&lt/style&gt<br>
+	&lt/head&gt<br>
+	&ltbody&gt<br>
+	&ltcenter&gt<br>
+	&ltimg src="images.jpg" onmouseover="expand(this)" onmouseout="extract(this)" width="200" height="200"&gt<br>
+	&lth3&gtMouseOver&lt/h4&gt<br>
+	&lth3&gtMouseOut&lt/h4&gt&lt/center&gt<br>
+	&ltscript type="text/javascript"&gt<br>
+	function expand(x)<br>
+	{<br>
+	x.style.width="400";<br>
+	x.style.height="400";<br>
+	}<br>
+	function extract(x)<br>
+	{<br>
+	x.style.width="300";<br>
+	x.style.height="300";<br>
+	}<br>
+	&lt/script&gt<br>
+	&lt/body&gt<br>
+	&lt/html&gt<br>
+	<li><h2>ONMOUSEMOVE:</h2></li>
+	<ul>
+		<li><p>The onmousemove event occurs when the pointer is moving while it is over an element.</p></li>
+	</ul>
+	<p>EXAMPLE:</p>
+	&lthtml&gt<br>
+	&lthead&gt<br>
+	&lttitle&gtMouseOver&lt/title&gt<br>
+	&ltstyle type="text/css"&gt<br>
+	h3<br>
+	{<br>
+	color:orange;<br>
+	}<br>
+	&lt/style&gt<br>
+	&lt/head&gt<br>
+	&ltbody&gt<br>
+	&ltcenter&gt<br>
+	&ltimg src="images.jpg" onmousemove="expand(this)" onmouseout="extract(this)" width="200" height="200"&gt<br>
+	&lth3&gtMouseOver&lt/h4&gt<br>
+	&lth3&gtMouseOut&lt/h4&gt&lt/center&gt<br>
+	&ltscript type="text/javascript"&gt<br>
+	function expand(x)<br>
+	{<br>
+	x.style.width="400";<br>
+	x.style.height="400";<br>
+	}<br>
+	function extract(x)<br>
+	{<br>
+	x.style.width="300";<br>
+	x.style.height="300";<br>
+	}<br>
+	&lt/script&gt<br>
+	&lt/body&gt<br>
+	&lt/html&gt<br>
+
+	<li><h2>ONSEARCH:</h2></li>
+	<ul>
+		<li><p>The onsearch event occurs when a user presses the "ENTER" key or clicks the "x" button in an <input> input element with type="search".</p></li>
+	</ul><p>EXAMPLE:</p>
+	&lthtml&gt<br>
+	&lthead&gt<br>
+	&lttitle&gtonsearch&lt/title&gt<br>
+	&ltstyle type="text/css"&gt<br>
+	h2<br>
+	{<br>
+	color:blue;<br>
+	}<br>
+	h3<br>
+	{<br>
+	color:red;<br>
+	}<br>
+	&lt/style&gt<br>
+	&lt/head&gt<br>
+	&ltbody&gt<br>
+	&lth2&gt<br>
+	Enter the search object:&ltinput type="search" id="obj" onsearch="srch()"&gt&lt/h2&gt<br>
+	&lth3 id="con"&gt&lt/h3&gt<br>
+	&ltscript&gt<br>
+	function srch()<br>
+	{<br>
+	var z=document.getElementById("obj");<br>
+	document.getElementById("con").innerHTML="Your searching object is:"+z.value;<br>
+	}<br>
+	&lt/script&gt<br>
+	&lt/body&gt<br>
+	&lt/html&gt<br>
+	<li><h2>ONBLUR:</h2></li>
+	<ul>
+		<li><p>The onblur event occurs when an object loses focus.</p></li>
+		<li><p>The onblur event is most often used with form validation code (e.g. when the user leaves a form field).</p></li>
+	</ul>
+	<li><h2>ONFOCUS:</h2></li>
+	<ul>
+		<li><p>The onfocus event occurs when an element gets focus.The onfocus event is most often used with &ltinput&gt, &ltselect&gt,and &lta&gt.</p></li>
+	</ul>
+	<li><h2>ONSUBMIT:</h2></li>
+	<ul>
+<li><p>The onsubmit event occurs when a form is submitted.</p></li>
+<li><P>The onsubmit event is commonly used to validate the contents of form controls and set the contents of some input:hidden elements before submitting. If the user forgot to fill some required fields or made some other mistake on the form, you can cancel the submission with the onsubmit event.</p></li>
+</ul>
+<p>EXAMPLE:(ONBLUR,ONFOCUS,ONSUBMIT)</p>
+&lthtml&gt<br>
+&lthead&gt<br>
+&lttitle&gtonblur and onfocus&lt/title&gt<br>
+&lt/head&gt<br>
+&ltbody&gt<br>
+&ltpre&gt<br>
+&ltform onsubmit="sub()"&gt<br>
+FIRST NAME :&ltinput type="text" id="fname" onblur="slice()"&gt<br>
+LAST NAME  :&ltinput type="text" id="lname" onfocus="foc(this.id)"&gt<br>
+&lth3 id="div"&gt&lt/h3&gt&lt/pre&gt<br>
+&ltinput type="submit" value="Submit"&gt<br>
+&ltscript&gt<br>
+function slice()<br>
+{<br>
+var x=document.getElementById("fname");<br>
+var y=x.value.slice(0,4);<br>
+document.getElementById("div").innerHTML="Your sliced name is:"+y;<br>
+}<br>
+function foc(z)<br>
+{<br>
+document.getElementById(z).style.background="yellow";<br>
+}<br>
+function sub()<br>
+{<br>
+alert("submitted successfully");<br>
+}<br>
+&lt/script&gt<br>
+&lt/body&gt<br>
+&lt/html&gt<br>
+</ol>
+</body>
+</html>
+
