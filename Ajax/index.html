@@ -402,7 +402,44 @@ document.getElementById('a').innerHTML=asyncRequest.responseText;<br>
 &lt/body&gt<br>
 &lt/html&gt<br>
 
-
+<html>
+<head>
+<title>ajax
+</title>
+<style type="text/css">
+p
+{
+font-size:18px;
+}
+</style>
+</head>
+<body>
+<h2 style="font-size:25px;color:red;"> SEM QUESTION-NOV-2016</h2>
+<h2  style="font-weight: bold;color:gray">QUESTIONS:HOW AJAX DIFFERS FROM CONVENTIONAL CLIENTS/SERVER ARCHITECTURE IN WWW?</h2>
+<h3 style="font-size:20px;color:green;"> ANSWER:</h3>
+<ul style type="square">
+<p>Traditional Web application uses a synchronous model</p>
+<li><p>User fills in all the fields in a form and submits it.</li></p>
+<li><p>Browser generates a request,send it to the server and waits.</li></p>
+<li><p>Server receives the request,processes it and sends back a response page.</li></p>
+<li><p>Browser erases the original form page.</li></p>
+<li><p>Browser displays the new page.</li></p>
+<h2 style="font-size:25px;color:green;">DRAWBACKS</h2>
+<li><p>Users can't interact with the browser while it waits for the server's response.
+<li><p>Browser erases the old page before a new page appears.
+<h2 style="font-size:25px;color:green;">AJAX APPLICATION USES AN ASYNCHRONOUS MODEL</h2>
+<li><p> User fills in a field  in a form that needs some feedback.</li></p>
+<li><p>Application creates an XMLHTTPRequest objects, uses it to send a request to the server and services the user without waiting.</li></p>
+<li><p>Server receives the request,processes it and send back a response.</li></p>
+<li><p>XMLHTTPRequest receives the server's response and invokes a callback function.</li></p>
+<li><p>Callback function updates the original page without erasing it.</li></p>
+<h2 style="font-size:25px;color:green;">ADVANTAGES</h2>
+<li><p>Apllication doesn't wait for server's response.</li></p>
+<li><p>User interact with the page.</li></p>
+<li><p>Callback function can update only a part of the page.</li></p>
+</ul>
+</body>
+</html>
 
 
 
