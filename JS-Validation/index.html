@@ -21,6 +21,7 @@
 			
 		
 			//radio buuton validtion option method 2
+		
 			var option = document.forms["myform"]["sex"];
 			if (!(option[0].checked || option[1].checked)) 
 			{
@@ -29,7 +30,8 @@
 				return false;
 			}
 			
-			//Mobile.no validaiton method 3
+			//Mobile.no validaiton 
+		
 			var mob= document.forms["myform"]["mob"].value;
 			if(isNaN(mob))
 			{			
@@ -38,7 +40,8 @@
 				return false;
 			}
 			
-			//Validaing all the details 
+			//Validaing all the other details 
+		
 			var a = document.forms["myform"]["add"].value;
 			var d = document.forms["myform"]["dob"].value;
 			var m = document.forms["myform"]["mail"].value;
@@ -52,7 +55,7 @@
     return true;
    }
     
-	
+	//Password validation using regular Exp
 	function checkForm(form)
 	{
     if(form.username.value == "") {
