@@ -1,1 +1,555 @@
+<html>
+<head>
+<title>CONTROL STATEMENTS</title>
+<style type=text/css>
+.d
+{
+position:absolute;
+top:1100px;
+left:10px;
+z-index:10;
+}
+.h
+{
+position:absolute;
+top:1100px;
+left:150px;
+}
+.i
+{
+position:absolute;
+top:1100px;
+left:290px;
+}
+.j
+{
+position:absolute;
+top:1100px;
+left:430px;
+}
+.k
+{
+position:absolute;
+top:1100px;
+left:570px;
+}
+.a
+{
+position:absolute;
+top:1270px;
+left:10px;
+}
+.b
+{
+position:absolute;
+top:1270px;
+left:150px;
+}
+.c
+{
+position:absolute;
+top:1270px;
+left:290px;
+}
+.x
+{
+position:absolute;
+top:1270px;
+left:430px;
+}
+.y
+{
+position:absolute;
+top:1270px;
+left:570px;
+}
+</style>
 
+</head>
+
+
+
+<body>
+<p style="text-align:center;font-size:20pt;color:blue;"><b>CONTROL STATEMENTS</b></p>
+
+<p style="font-size:15pt;color:red;">Algorithm</p>
+<p>Any computable problem can be solved by executing a series of actions in a specific order.</p>
+<p>A procedure for solving a problem in terms of</p>
+<ol>
+<li> the <b>actions</b> to be executed, and</li>
+<li> the <b>order</b> in which the actions are to be executed</li></ol>
+<p>is called an <b>algorithm</b>. Correctly specifying the order in which the actions are to execute
+is important—this is called <b>program control</b>.</p><br>
+
+<p style="font-size:15pt;color:red;">Pseudo code</p>
+<p>Pseudocode is an informal language that helps you develop algorithms that will be converted to structured
+portions of JavaScript programs.</p><br>
+
+
+<p style="font-size:15pt;color:red;">Control statements</p>
+<p style="font-size:15pt;color:red;">Three control statements</p>
+<ol   style="font-size:15pt;">
+<li>Sequence</li>
+	<ul style="font-size:12pt;" type="square">
+	<li>Statements in a script execute one after the other in the order in which they’re
+written.</li></ul>
+<li>Selection</li>
+	
+	<ul style="font-size:12pt;" type="square">
+	<li>If </li>
+	<li>If else </li>
+	<li>Nested if </li>
+	<li>Switch </li>
+	</ul>
+
+<li>Repetition</li>
+	
+	<ul style="font-size:12pt;" type="square">
+	<li>For</li>
+	<li>While</li>
+	<li>Do while</li>
+	<li>For in</li>
+	</ul>
+</ol>
+
+
+<p style="font-size:15pt;color:red;">Flow chart</p>
+<p>A flowchart is a graphical representation of an algorithm or of a portion of an algorithm.</p>
+<b>Symbols used in flowchart:</b>
+<ul>
+<li>Rectangles</li> 
+<li>Diamonds</li>
+<li>Ovals</li>
+<li>Small circles</li></ul>
+
+<p>These symbols are connected by arrows called <b>flowlines.</b></p><br>
+
+<p style="font-size:15pt;color:red;">Javascript reserved keywords</p>
+<aside class="d">
+<ul><li>break</li>
+<li>delete</li>
+<li>for</li>
+<li>new</li>
+<li>throw</li>
+<li>void</li></ul></aside>
+
+<aside class="h">
+<ul>
+<li>case</li>
+<li>do</li>
+<li>function</li>
+<li>null</li>
+<li>true</li><li>while</li>
+</ul></aside>
+
+<aside class="i">
+<ul>
+<li>catch</li>
+<li>else</li>
+<li>if</li>
+<li>return</li>
+<li>try</li>
+<li>with</li>
+</ul></aside>
+
+<aside class="j">
+<ul>
+<li>continue</li>
+<li>false</li>
+<li>in</li>
+<li>switch</li>
+<li>typeof</li>
+</ul></aside>
+
+
+
+<aside class="k">
+<ul>
+<li>default</li>
+<li>finally</li>
+<li>instanceof</li>
+<li>this</li>
+<li>var</li>
+</ul></aside><br><br><br><br><br><br><br>
+
+<p>Keywords that are reserved but not used by JavaScript</p>
+
+<aside class="a">
+<ul>
+<li>class</li>
+<li>implements</li>
+<li>private</li>
+<li>yield</li>
+</ul></aside>
+
+<aside class="b">
+<ul>
+<li>const</li>
+<li>import</li>
+<li>protected</li>
+</ul></aside>
+
+<aside class="c">
+<ul>
+<li>enum</li>
+<li>interface</li>
+<li>public</li>
+</ul></aside>
+
+<aside class="x">
+<ul>
+<li>export</li>
+<li>let</li>
+<li>static</li>
+</ul></aside>
+
+<aside class="y">
+<ul>
+<li>extends</li>
+<li>package</li>
+<li>super</li>
+</ul></aside><br><br><br><br><br>
+
+<p style="font-size:15pt;color:red;">if selection statement</p>
+
+&lthtml&gt<br>
+&lthead&gt<br>
+&lttitle&gtIf&lt/title&gt<br>
+&ltscript type="text/javascript"&gt<br>
+var a,x; <br>
+x=window.prompt("Enter a value");<br>
+a=parseInt(x); <br>
+if(a&gt0) <br>
+{<br>
+document.writeln("The given number is positive");<br>
+}<br>
+&lt/script&gt<br>
+&lt/head&gt<br>
+&ltbody&gt<br>
+&lt/body&gt<br>
+&lt/html&gt<br>
+
+<p style="font-size:15pt;color:red;">if…else Selection Statement</p>
+
+&lthtml&gt<br>
+&lthead&gt<br>
+&lttitle&gtIf else&lt/title&gt<br>
+&ltscript type="text/javascript"&gt<br>
+
+var x=window.prompt("Enter a value");<br>
+a=parseInt(x);<br>
+if(a%2==0)<br>
+{<br>
+document.writeln("The given number is even");<br>
+}<br>
+else<br>
+{<br>
+document.writeln("The given number is odd");<br>
+}<br>
+
+&lt/script&gt<br>
+&lt/head&gt<br>
+&ltbody&gt<br>
+&lt/body&gt<br>
+&lt/html&gt<br>
+
+<p style="font-size:15pt;color:red;">Conditional Operator (?:)</p>
+
+&lthtml&gt<br>
+&lthead&gt<br>
+&lttitle&gtconditional statements&lt/title&gt<br>
+&ltscript type="text/javascript"&gt<br>
+var a,n;<br>
+a=window.prompt("Enter n value:");<br>
+n=parseInt(a);<br>
+document.writeln( n &gt= 50 ? "pass" : "fail");<br>
+&lt/script&gt<br>
+&lt/head&gt<br>
+&lt/html&gt<br>
+
+<p style="font-size:15pt;color:red;">Dangling-else Problem</p>
+
+&lthtml&gt<br>
+&lthead&gt<br>
+&lttitle&gtDangling-else problem&lt/title&gt<br>
+&ltscript type="text/javascript"&gt<br>
+var a,b,x,y;<br>
+a=window.prompt("Enter semester mark:");<br>
+b=window.prompt("enter internal mark:");<br>
+x=parseInt(a);<br>
+y=parseInt(b);<br>
+if(x&gt=50)<br>
+{<br>
+	if(y&gt=20)<br>{<br>
+		document.writeln("&ltp&gtpass&lt/p&gt");<br>
+		}<br>
+	else<br>
+		document.writeln("&ltp&gtfail&lt/p&gt");<br>
+}<br>
+else<br>
+	document.writeln("&ltp&gtfail&lt/p&gt");<br>
+&lt/script&gt<br>
+&lt/head&gt<br>
+&lt/html&gt<br>
+
+
+
+<p style="font-size:15pt;color:red;">Nested if...else Statements</p>
+
+&lthtml&gt<br>
+&lthead&gt<br>
+&lttitle&gtIf&lt/title&gt<br>
+&ltscript type="text/javascript"&gt<br>
+
+var m=window.prompt("Enter a mark");<br>
+var mark=parseInt(m);<br>
+if ( mark &gt= 90 )<br>
+document.writeln( " Grade for mark "+mark+" is 'A'" );<br>
+else if ( mark &gt= 80 )<br>
+document.writeln( "Grade for mark "+mark+"  is 'B'" );<br>
+else if ( mark &gt= 70 )<br>
+document.writeln( " Grade for mark "+mark+"  is 'C'" );<br>
+else if ( mark &gt= 60 )<br>
+document.writeln( "Grade for mark "+mark+"  is 'D'" );<br>
+else<br>
+document.writeln( "Grade for mark "+mark+"  is 'F'" );<br>
+
+&lt/script&gt<br>
+&lt/head&gt<br>
+&ltbody&gt<br>
+&lt/body&gt<br>
+&lt/html&gt<br>
+
+
+<p style="font-size:15pt;color:red;">Blocks</p>
+
+&lthtml&gt<br>
+&lthead&gt<br>
+&lttitle&gtBlocks&lt/title&gt<br>
+&ltscript type="text/javascript"&gt<br>
+var a,n;<br>
+a=window.prompt("Enter n value:");<br>
+n=parseInt(a);<br>
+if(n&gt50)<br>
+document.writeln("pass");<br>
+else<br>
+{<br>
+document.writeln("fail&ltbr&gt");<br>
+document.writeln("you must write the exam again");<br>
+}<br>
+&lt/script&gt<br>
+&lt/head&gt<br>
+&lt/html&gt<br>
+
+<p style="font-size:15pt;color:red;">while Repetition Statement</p>
+
+&lthtml&gt<br>
+&lthead&gt<br>
+&lttitle&gtWhile&lt/title&gt<br>
+&ltscript type="text/javascript"&gt<br>
+var n=2<br>
+while(n&lt=10)<br>
+{<br>
+n++;<br>
+}<br>
+document.writeln("N value is:"+n);<br>
+&lt/script&gt<br>
+&lt/head&gt<br>
+&lt/html&gt<br>
+
+
+<p style="font-size:15pt;color:red;">Counter Controlled statements</p>
+&lthtml&gt<br>
+&lthead&gt<br>
+&lttitle&gtCounter Control statements&lt/title&gt<br>
+&ltscript type="text/javascript"&gt<br>
+var a,grade,count=1,total=0;<br>
+while(count&lt=10)<br>
+{<br>
+a=window.prompt("Enter grade marks:");<br>
+grade=parseInt(a);<br>
+total=total+grade;<br>
+count++;<br>
+}<br>
+document.writeln("Total:"+total);<br>
+&lt/script&gt<br>
+&lt/head&gt<br>
+&lt/html&gt<br>
+
+
+
+
+<p style="font-size:15pt;color:red;">Assignment Operators</p>
+<p>JavaScript provides several additional assignment operators (called <b>compound assignment
+operators</b> )for abbreviating assignment expressions.</p>
+
+<table border="1">
+<thead>
+<tr>
+<th>Assignment operator</th>
+<th>Initial value of variable</th>
+<th>Sample expression</th>
+<th>Explanation</th>
+<th>Assigns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>+=</td>
+<td>c=3</td>
+<td>c+=7</td>
+<td>c=c+7</td>
+<td>10 to c</td>
+</tr>
+
+<tr>
+<td>-=</td>
+<td>d=5</td>
+<td>d-=4</td>
+<td>d=d-4</td>
+<td>1 to d</td>
+</tr>
+
+<tr>
+<td>*=</td>
+<td>e=4</td>
+<td>e*=5</td>
+<td>e=e*5</td>
+<td>20 to e</td>
+</tr>
+
+<tr>
+<td>/=</td>
+<td>f=6</td>
+<td>f/=3</td>
+<td>f=f/3</td>
+<td>2 to f</td>
+</tr>
+
+<tr>
+<td>%=</td>
+<td>g=12</td>
+<td>g%=9</td>
+<td>g=g%9</td>
+<td>3 to g</td>
+</tr>
+</tbody>
+</table>
+
+
+<p style="font-size:15pt;color:red;">Increment and Decrement Operators</p>
+<ul>
+<li><p>If an increment or decrement operator
+is placed before a variable, it’s referred to as the <b>preincrement or predecrement operator</b>,
+respectively.</p></li>
+<li><p>If an increment or decrement operator is placed after a variable, it’s
+referred to as the <b>postincrement or postdecrement operato</b>r, respectively.</p></li>
+</ul>
+
+<table border="1">
+<thead>
+<tr>
+<th>Operator</th>
+<th>Example</th>
+<th>Called</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>++</td>
+<td>++a</td>
+<td>preincrement</td>
+<td>Increment a by 1, then use the new value of
+a in the expression in which a resides.</td>
+</tr>
+<tr>
+<td>++</td>
+<td>a++</td>
+<td>postincrement</td>
+<td>Use the current value of a in the expression
+in which a resides, then increment a by 1.</td>
+</tr>
+<tr>
+<td>--</td>
+<td>--b</td>
+<td>predecrement</td>
+<td>Decrement b by 1, then use the new value of
+b in the expression in which b resides.</td>
+</tr>
+<tr>
+<td>--</td>
+<td>b--</td>
+<td>postdecrement</td>
+<td>Use the current value of b in the expression
+in which b resides, then decrement b by 1.</td>
+</tr>
+</tbody>
+</table><br><br>
+
+<p style="font-size:15pt;color:red;">Example:</p>
+
+&lthtml&gt<br>
+&lthead&gt<br>
+&lttitle&gtIncrement & Decrement&lt/title&gt<br>
+&ltscript type="text/javascript"&gt<br>
+var a=window.prompt("Enter a value");<br>
+var x=parseInt(a);<br>
+var xx=++x;<br>
+document.writeln("After preincrement value becomes : "+xx);<br>
+var b=window.prompt("Enter a value");<br>
+var y=parseInt(b);<br>
+var yy=y++;<br>
+document.writeln("After postincrement value becomes : "+yy);<br>
+var c=window.prompt("Enter a value");<br>
+var z=parseInt(c);<br>
+var zz=--z;<br>
+document.writeln("After predecrement value becomes : "+zz);<br>
+var d=window.prompt("Enter a value");<br>
+var k=parseInt(d);<br>
+var kk=k--;<br>
+document.writeln("After postdecrement value becomes : "+kk);<br>
+&lt/script&gt<br>
+&lt/head&gt<br>
+&ltbody&gt<br>
+&lt/body&gt<br>
+&lt/html&gt<br><br><br>
+
+
+
+<table border="1">
+<thead>
+<tr>
+<th>Operator</th>
+<th>Associativity</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>++,--</td>
+<td>right to left</td>
+<td>unary</td>
+</tr>
+<tr>
+<td>*,/,%</td>
+<td>left to right</td>
+<td>multiplicative</td>
+</tr>
+<tr>
+<td>+,-</td>
+<td>left to right</td>
+<td>additive</td>
+</tr>
+<tr>
+<td><,<=,>,>=</td>
+<td>left to right</td>
+<td>relational</td>
+</tr>
+</tbody>
+</table>
+
+
+
+</body>
+</html>
