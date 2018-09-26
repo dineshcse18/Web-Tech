@@ -1,4 +1,4 @@
-<html>
+html>
 
 <head>
 <title>functions</title>
@@ -10,7 +10,9 @@ color:blue;
 h4{
 font-size:20px;
 }
-
+h3{
+color:blue;
+}
 </style>
 
 </head>
@@ -21,13 +23,32 @@ font-size:20px;
 <h4>
 <ol>
  	<li>Modules in javascript are called <b><i>functions.</i></b></li><br>
- 	<li>Prpakaged functions that belong to javascript objects(such as <b><i>Math.pow and Math.round</i></b>) are called<i>methods</i></li><br>
+ 	<li>Prepakaged functions that belong to javascript objects(such as <b><i>Math.pow and Math.round</i></b>) are called<i> as methods</i></li><br>
  	<li>Functions are <b><i>programmer-defined functions.</i></b></li><br>
 	<li>A function is <b><i>invoked </i></b>by a <b><i>function call.</i></b></li><br>
 	<li>Function call specifies the function name and provides information (as arguments) that the called function needs to perform its task.</li><br>
 	<li>All the variables inside the function definitions are <b><i>local variables</i></b>-thismeans that they can be accessed only in the function in which they define.</li><br>
 	<li>The <b><i>parantheses()</i></b>represents the <b><i>function-call operator.</i></b></li>
-</ol>
+</ol><hr>
+<h1>USE OF FUNCTIONS</h1>
+<b>CODE REUSABILITY</b>
+<h2>Same code can be used many times with different arguments to produce different results.</h2><hr>
+<h1>SOME PREDEFINED FUNCTIONS</h1>
+<ul><h2>
+<li>parseInt()</li>
+<li>parseFloat()</li>
+<li>isNAN()</li>
+<li>Number()</li></h2>
+</ul>
+<hr>
+<h1>JAVASCRIPT FUNCTION PARAMETERS</h1>
+<h3>Function arguments are the values passed to the function.</h3>
+<ol ><h4>
+<li>Arguments are passed by value--><i style="color:blue;">changes are not visible outside the function.</i></li>
+<li>Objects are passed by reference--><i style="color:blue;">changes visible outside the function.</i></li>
+</h4></ol>
+<b><p style="color:red;">*In javascript, numbers,boolean values ,strings are passed to the function by value;whereas, objects and arrays are passed as reference.*</p><b>
+<hr>
 </h4>
 <ul>
 	<h1>FORMAT OF FUNCTIONS:</h1>
@@ -92,8 +113,8 @@ document.write(myFunction2())&lt!--function call with return type--&gt<br>
 &lt/body&gt<br>
 &lt/html&gt<br>
 <h3>OUTPUT</h3>
-<img src="example1.jpg"width="900"height="400"><br>
-<img src="examp2.jpg"width="900"height="400">
+<img src="example1.jpg"><br><hr><hr>
+<img src="examp2.jpg">
 <hr>
 <h3>SUM OF TWO NUMBERS</h3>
 &lthtml&gt<br>
@@ -112,13 +133,43 @@ function sum()<br>
 &lt/script&gt<br>
 &lt/head&gt<br>
 &ltbody&gt<br>
-
 &lt/body&gt<br>
 &lt/html&gt<br>
 <h3>OUTPUT</h3>
-<img src="s1.jpg"width="700"height="300"><br>
-<img src="s2.jpg"width="700"height="300"><br>
-<img src="s3.jpg"width="900"height="300"><br>
+<img src="s1.jpg"><br>
+<img src="s2.jpg"><br>
+<img src="s3.jpg"><br>
+<hr>
+<h3>MAXIMUM AND MINIMUM OF 3 NUMBERS</h3>
+&lthtml&gt<br>
+&lthead&gt<br>
+&lttitle&gtmaximum and minimum of 3 numbers&lt/title&gt<br>
+&ltscript&gt<br>
+var num1,num2,num3,maxnum,minnum; <br>
+num1=window.prompt("Enter first number:"); <br>
+num2=window.prompt("Enter second number:"); <br>
+num3=window.prompt("Enter third number:"); <br>
+maxnum=maximum(num1,num2,num3); <br>
+minnum=minimum(num1,num2,num3); <br>
+function maximum(num1,num2,num3) <br>
+{<br>
+	return Math.max(num1,Math.max(num2,num3)); <br>
+} <br>
+function minimum(num1,num2,num3) <br>
+{<br>
+	return Math.min(num1,Math.min(num2,num3)); <br>
+} <br>
+document.writeln("&lth3&gt"+"First number:"+num1+"&ltbr&gt"+"Second number:"+num2+"&ltbr&gt"+"Third number:"+num3+"&ltbr&gt"+"MAXIMUM NUMBER:"+maxnum+"&ltbr&gt"+"MINIMUM NUMBER:"+minnum+"&lt/h3&gt");<br>
+&lt/script&gt<br>
+&lt/head&gt<br>
+&ltbody&gt<br>
+&lt/body&gt<br>
+&lt/html&gt<br>
+<h3>OUTPUT</h3>
+<img src="min1.jpg"><br><hr><hr>
+<img src="min2.jpg"><br><hr><hr>
+<img src="min3.jpg"><br><hr><hr>
+<img src="min4.jpg"><br>
 <hr>
 <h3>SQUARE OF THE NUMBER</h3>
 &lthtml &gt<br>
@@ -145,8 +196,8 @@ function square()<br>
 &lt/body&gt<br>
 &lt/html&gt
 <h3>OUTPUT</h3>
-<img src="square1.jpg"width="900"height="400"><br>
-<img src="square2.jpg"width="900"height="400">
+<img src="square1.jpg"><br>
+<img src="square2.jpg">
 <hr>
 <h3>SUM OF N NATURAL NUMBERS</h3>
 &lthtml&gt<br>
@@ -168,8 +219,8 @@ function square()<br>
 &lt/head&gt<br>
 &lt/html&gt<br>
 <h3>OUTPUT</h3>
-<img src="natural1.jpg"width="700"height="300"><br>
-<img src="natural2.jpg"width="900"height="300"><br>
+<img src="natural1.jpg"><br><hr><hr>
+<img src="natural2.jpg"><br>
 <hr>
 <h3>RANDOM NUMBER GENERATION</h3>
 &lthtml&gt<br>
@@ -190,8 +241,8 @@ function random()<br>
 &lt/body&gt<br>
 &lt/html&gt<br>
 <h3>OUTPUT</h3>
-<img src="ran1.jpg"width="700"height="300"><br>
-<img src="ran2.jpg"width="700"height="300">
+<img src="ran1.jpg"><br><hr><hr>
+<img src="ran2.jpg">
 <hr>
 <h3>RECURSION FUNCTION OF FACTORIAL</h3>
 &lthtml&gt<br>
@@ -219,7 +270,41 @@ alert(fact); <br>
 &lt/body&gt<br>
 &lt/html&gt 
 <h3>OUTPUT</h3>
-<img src="fact1.jpg"width="900"height="400"><br>
-<img src="fact2.jpg"width="900"height="400">
+<img src="fact1.jpg"><br><hr><hr>
+<img src="fact2.jpg">
+<br><hr>
+<h3>HOW ARGUMENTS ARE PASSED IN FUNCTION?</h3>
+&lthtml&gt<br>
+&lthead&gt<br>
+&lttitle&gtarguments passed in function&lt/title&gt<br>
+&ltscript&gt<br>
+start();<br>
+function start()<br>
+{<br>
+	
+	var a=[1,2,3];<br>
+	
+	passbyvalue(a[2]);&lt!--passed as value--!&gt<br>
+	passbyreference(a);&lt!--passed as an array--!&gt<br>
+	function passbyvalue(a)<br>
+	{<br>
+		a*=3;<br>
+		document.writeln("&lth3&gtpass by value:"+" "+a+"&lt/h3&gt");<br>
+	}<br>
+	function passbyreference(a)<br>
+	{<br>
+		for(var i=0;i&lta.length;i++)<br>
+			a[i]*=3;<br>
+	}<br>
+	document.writeln("&lth3&gtpass by reference:"+" "+a+"&lt/h3&gt");<br>
+}<br>
+&lt/script&gt<br>
+&lt/head&gt<br>
+&ltbody&gt<br>
+&lt/body&gt<br>
+&lt/html&gt<br>
+<h3>OUTPUT</h3>
+<img src="pass.jpg">
 </h4>
+</body>
 </html>
