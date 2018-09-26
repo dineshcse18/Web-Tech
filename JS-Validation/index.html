@@ -1,0 +1,138 @@
+<html>
+<head>
+<title>JS Validation</title>
+</head>
+<body>
+<hr>
+<h1 align=center>FORM VALIDATION</h1>
+<hr>
+<script type="text/javascript">
+	function func(form)
+	{		
+			//Name validition method 1
+
+			re = /[a-zA-Z]/;
+			if(!re.test(form.name.value)) 
+			{
+				alert("Error: user name must contain only letters");
+				form.name.focus();
+				return false;
+			}
+			
+		
+			//radio buuton validtion option method 2
+			var option = document.forms["myform"]["sex"];
+			if (!(option[0].checked || option[1].checked)) 
+			{
+				alert("Please Select Your Gender");
+				form.sex.focus();
+				return false;
+			}
+			
+			//Mobile.no validaiton method 3
+			var mob= document.forms["myform"]["mob"].value;
+			if(isNaN(mob))
+			{			
+				window.alert("Enter a valid mobile number"); 
+				form.mob.focus();
+				return false;
+			}
+			
+			//Validaing all the details 
+			var a = document.forms["myform"]["add"].value;
+			var d = document.forms["myform"]["dob"].value;
+			var m = document.forms["myform"]["mail"].value;
+			if (mob==""||option==""||m==""||d==""||a=="") 
+			{	
+				alert("Enter all details!");
+				form.name.focus();
+				return false;
+			}
+	alert("You have Entered all the details correctly!");
+    return true;
+   }
+    
+	
+	function checkForm(form)
+	{
+    if(form.username.value == "") {
+      alert("Error: Username cannot be blank!");
+      form.username.focus();
+      return false;
+    }
+    re = /^\w+$/;
+    if(!re.test(form.username.value)) {
+      alert("Error: Username must contain only letters, numbers and underscores!");
+      form.username.focus();
+      return false;
+    }
+
+    if(form.pwd1.value != "" && form.pwd1.value == form.pwd2.value) {
+      if(form.pwd1.value.length < 6) {
+        alert("Error: Password must contain at least six characters!");
+        form.pwd1.focus();
+        return false;
+      }
+      if(form.pwd1.value == form.username.value) {
+        alert("Error: Password must be different from Username!");
+        form.pwd1.focus();
+        return false;
+      }
+      re = /[0-9]/;
+      if(!re.test(form.pwd1.value)) {
+        alert("Error: password must contain at least one number (0-9)!");
+        form.pwd1.focus();
+        return false;
+      }
+      re = /[a-z]/;
+      if(!re.test(form.pwd1.value)) {
+        alert("Error: password must contain at least one lowercase letter (a-z)!");
+        form.pwd1.focus();
+        return false;
+      }
+      re = /[A-Z]/;
+      if(!re.test(form.pwd1.value)) {
+        alert("Error: password must contain at least one uppercase letter (A-Z)!");
+        form.pwd1.focus();
+        return false;
+      }
+    } 
+		
+	else {
+      alert("Error: Please check that you've entered and confirmed your password!");
+      form.pwd1.focus();
+      return false;
+    }
+
+    alert("You have sucessfully logged in");
+    return true;
+  }
+</script>
+<form name="myform" onsubmit="return func(this);">
+<font color=red >
+<br>
+   Username:  <input type="text" name="name" required><br><br> <!--Automatic validaiton-->
+   GENDER :  <input type="radio" name="sex">Male 
+             <input type="radio"name="sex">Female<br><br>
+   MOBILE :  <input type="text" name="mob" maxlength=10 min=10><br><br> 
+   
+   ADDRESS:  <textarea rows="4" cols="50" name="add"></textarea><br><br>
+   DOB    :  <input type="date" name="dob"><br><br>
+   E-mail :  <input type="text" name="mail" placeholder="xxxx@gmail.com"><br><br>
+   <input type="submit" value="sign up"> 
+   </font>
+   </form>
+<br>
+<br>
+<hr>
+<h1 align=center>PASSWORD VALIDATION</h1>
+<hr>
+<form ... onsubmit="return checkForm(this);">
+<p>Username: <input type="text" name="username"></p>
+<p>Password: <input type="password" name="pwd1"></p>
+<p>Confirm Password: <input type="password" name="pwd2"></p>
+<p><input type="submit"></p>
+</form>
+  
+  </body>
+  </html>
