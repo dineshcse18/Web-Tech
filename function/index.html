@@ -49,6 +49,39 @@ color:blue;
 </h4></ol>
 <b><p style="color:red;">*In javascript, numbers,boolean values ,strings are passed to the function by value;whereas, objects and arrays are passed as reference.*</p></b>
 <hr>
+<h3>HOW ARGUMENTS ARE PASSED IN FUNCTION?</h3>
+&lthtml&gt<br>
+&lthead&gt<br>
+&lttitle&gtarguments passed in function&lt/title&gt<br>
+&ltscript&gt<br>
+start();<br>
+function start()<br>
+{<br>
+	
+	var a=[1,2,3];<br>
+	
+	passbyvalue(a[2]);&lt!--passed as value--!&gt<br>
+	passbyreference(a);&lt!--passed as an array--!&gt<br>
+	function passbyvalue(a)<br>
+	{<br>
+		a*=3;<br>
+		document.writeln("&lth3&gtpass by value:"+" "+a+"&lt/h3&gt");<br>
+	}<br>
+	function passbyreference(a)<br>
+	{<br>
+		for(var i=0;i&lta.length;i++)<br>
+			a[i]*=3;<br>
+	}<br>
+	document.writeln("&lth3&gtpass by reference:"+" "+a+"&lt/h3&gt");<br>
+}<br>
+&lt/script&gt<br>
+&lt/head&gt<br>
+&ltbody&gt<br>
+&lt/body&gt<br>
+&lt/html&gt<br>
+<h3>OUTPUT</h3>
+<img src="pass.jpg">
+<hr>
 </h4>
 <ul>
 	<h1>FORMAT OF FUNCTIONS:</h1>
@@ -273,38 +306,7 @@ alert(fact); <br>
 <img src="fact1.jpg"><br><hr><hr>
 <img src="fact2.jpg">
 <br><hr>
-<h3>HOW ARGUMENTS ARE PASSED IN FUNCTION?</h3>
-&lthtml&gt<br>
-&lthead&gt<br>
-&lttitle&gtarguments passed in function&lt/title&gt<br>
-&ltscript&gt<br>
-start();<br>
-function start()<br>
-{<br>
-	
-	var a=[1,2,3];<br>
-	
-	passbyvalue(a[2]);&lt!--passed as value--!&gt<br>
-	passbyreference(a);&lt!--passed as an array--!&gt<br>
-	function passbyvalue(a)<br>
-	{<br>
-		a*=3;<br>
-		document.writeln("&lth3&gtpass by value:"+" "+a+"&lt/h3&gt");<br>
-	}<br>
-	function passbyreference(a)<br>
-	{<br>
-		for(var i=0;i&lta.length;i++)<br>
-			a[i]*=3;<br>
-	}<br>
-	document.writeln("&lth3&gtpass by reference:"+" "+a+"&lt/h3&gt");<br>
-}<br>
-&lt/script&gt<br>
-&lt/head&gt<br>
-&ltbody&gt<br>
-&lt/body&gt<br>
-&lt/html&gt<br>
-<h3>OUTPUT</h3>
-<img src="pass.jpg">
+
 </h4>
 </body>
 </html>
