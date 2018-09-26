@@ -1,0 +1,387 @@
+HTML Paragraph Tag:
+
+Defines a paragraph into web document. HTML paragraph define using <p> tag.
+
+Syntax:
+
+<body>
+  <p> This is first Paragraphs </p>
+  <p> This is Second Paragraphs </p>
+</body>
+			--------------------------------------------------------------------------------
+HTML Comment Tag:
+
+Defines the Comments <!-- Your Comment --> tag.
+
+Syntax:
+
+<html>
+<head>
+  <title> HTML Comment Tag </title> 
+</head>
+<body>
+  <img src="images/jnj.png" width="365" height="86" />  <!-- Image File -->
+</body>
+</html>
+			---------------------------------------------------------------------------------
+
+HTML Images Tag:
+
+
+To display images into web document. HTML Images are define inside the <img /> tag.
+
+Syntax:
+
+<body>
+    <img src="image.png" width="380" height="70" />
+</body>
+			-----------------------------------------------------------------------------------
+
+HTML Link Tag:
+
+Defines the Link in internal or External document. HTML Link are defined inside the <a> tag.
+
+Syntax:
+
+<body>
+    <a href="http://www.westbuy.com">Web Development Tutorial</a>
+</body>
+			------------------------------------------------------------------------------------
+Bold tag:
+
+HTML <b> tag use for formatting output bold text. 
+
+Syntax:
+
+<b>Bold Text</b> 
+			------------------------------------------------------------------------------------
+<big> 	
+
+Displays the text in one size larger than surrounding text
+Syntax:
+
+<big>Big Text</big> 	
+			------------------------------------------------------------------------------------
+<center> 	
+Used to align the text in center.
+ 
+<center>Center Text</center> 	
+
+			-----------------------------------------------------------------------------------
+<em> 	
+
+<em>Emphasized Text</em> 	
+
+<i> 
+
+<i>Italic Text</i> 	
+
+<strong> 	
+
+<strong>Strong Text</strong> 	
+
+<sub> 	
+
+<sub>Subscript Text</sub> 	
+
+<sup> 	
+
+<sup>Superscript Text</sup> 	
+
+<del>
+
+The HTML <del> tag is used for markup of deleted text.	
+
+<del>Delete Text</del>
+
+</del>
+</del>
+			----------------------------------------------------------------------------------------------
+<blockquote>
+ 
+ <blockquote>Long Quotation</blockquote>
+
+ 
+			----------------------------------------------------------------------------------------------
+
+<ul> − An unordered list. This will list items using plain bullets.
+
+<ol> − An ordered list. This will use different schemes of numbers to list your items.
+
+Unordered list:
+
+Example:
+<!DOCTYPE html>
+<html>
+
+   <head>
+      <title>HTML Unordered List</title>
+   </head>
+	
+   <body>
+      <ul>
+         <li>Beetroot</li>
+         <li>Ginger</li>
+         <li>Potato</li>
+         <li>Radish</li>
+      </ul>
+   </body>
+   
+</html>
+
+You can use type attribute for <ul> tag to specify the type of bullet you like. 
+By default, it is a disc. Following are the possible options:
+<ul type = "square">
+<ul type = "disc">
+<ul type = "circle">
+				
+Ordered list:
+
+This list is created by using <ol> tag. 
+The numbering starts at one and is incremented by one for each successive ordered list element tagged with <li>.
+
+Example:
+<!DOCTYPE html>
+<html>
+
+   <head>
+      <title>HTML Ordered List</title>
+   </head>
+
+   <body>
+      <ol>
+         <li>Beetroot</li>
+         <li>Ginger</li>
+         <li>Potato</li>
+         <li>Radish</li>
+      </ol>
+   </body>
+
+</html>
+
+You can use type attribute for <ol> tag to specify the type of numbering you like. 
+By default, it is a number. Following are the possible options −
+
+<ol type = "1"> - Default-Case Numerals.
+<ol type = "I"> - Upper-Case Numerals.
+<ol type = "i"> - Lower-Case Numerals.
+<ol type = "A"> - Upper-Case Letters.
+<ol type = "a"> - Lower-Case Letters.
+				------------------------------------------------------------------------------------		
+				
+		
+Tables:
+
+The HTML tables allow web authors to arrange data like text, images, links, other tables, etc. into rows and 
+columns of cells.
+
+The HTML tables are created using the <table> tag in which the <tr> tag is used to create table rows and <td> tag 
+is used to create data cells. The elements under <td> are regular and left aligned by default
+Example
+Live Demo
+
+<!DOCTYPE html>
+<html>
+
+   <head>
+      <title>HTML Tables</title>
+   </head>
+	
+   <body>
+      <table border = "1">
+         <tr>
+            <td>Row 1, Column 1</td>
+            <td>Row 1, Column 2</td>
+         </tr>
+         
+         <tr>
+            <td>Row 2, Column 1</td>
+            <td>Row 2, Column 2</td>
+         </tr>
+      </table>
+      
+   </body>
+</html>
+
+Table Heading:
+
+Table heading can be defined using <th> tag. This tag will be put to replace <td> tag, which is used to represent 
+actual data cell. Normally you will put your top row as table heading as shown below, otherwise you can use <th> 
+element in any row. Headings, which are defined in <th> tag are centered and bold by default.
+Example
+Live Demo
+
+<!DOCTYPE html>
+<html>
+
+   <head>
+      <title>HTML Table Header</title>
+   </head>
+	
+   <body>
+      <table border = "1">
+         <tr>
+            <th>Name</th>
+            <th>Salary</th>
+         </tr>
+         <tr>
+            <td>Ramesh Raman</td>
+            <td>5000</td>
+         </tr>
+         
+         <tr>
+            <td>Shabbir Hussein</td>
+            <td>7000</td>
+         </tr>
+      </table>
+   </body>
+   
+</html>
+
+Cellpadding and Cellspacing Attributes:
+
+There are two attributes called cellpadding and cellspacing which you will use to adjust the white space in your 
+table cells. The cellspacing attribute defines space between table cells, while cellpadding represents the distance
+ between cell borders and the content within a cell.
+Example:
+
+<!DOCTYPE html>
+<html>
+
+   <head>
+      <title>HTML Table Cellpadding</title>
+   </head>
+	
+   <body>
+      <table border = "1" cellpadding = "5" cellspacing = "5">
+         <tr>
+            <th>Name</th>
+            <th>Salary</th>
+         </tr>
+         <tr>
+            <td>Ramesh Raman</td>
+            <td>5000</td>
+         </tr>
+         <tr>
+            <td>Shabbir Hussein</td>
+            <td>7000</td>
+         </tr>
+      </table>
+   </body>
+	
+</html>
+
+Colspan and Rowspan Attributes:
+
+You will use colspan attribute if you want to merge two or more columns into a single column. Similar way you will 
+use rowspan if you want to merge two or more rows.
+Example
+Live Demo
+
+<!DOCTYPE html>
+<html>
+
+   <head>
+      <title>HTML Table Colspan/Rowspan</title>
+   </head>
+	
+   <body>
+      <table border = "1">
+         <tr>
+            <th>Column 1</th>
+            <th>Column 2</th>
+            <th>Column 3</th>
+         </tr>
+         <tr>
+            <td rowspan = "2">Row 1 Cell 1</td>
+            <td>Row 1 Cell 2</td>
+            <td>Row 1 Cell 3</td>
+         </tr>
+         <tr>
+            <td>Row 2 Cell 2</td>
+            <td>Row 2 Cell 3</td>
+         </tr>
+         <tr>
+            <td colspan = "3">Row 3 Cell 1</td>
+         </tr>
+      </table>
+   </body>
+	
+</html>
+
+Table Height and Width:
+
+You can set a table width and height using width and height attributes. You can specify table width or height in 
+terms of pixels or in terms of percentage of available screen area.
+Example
+Live Demo
+
+<!DOCTYPE html>
+<html>
+
+   <head>
+      <title>HTML Table Width/Height</title>
+   </head>
+	
+   <body>
+      <table border = "1" width = "400" height = "150">
+         <tr>
+            <td>Row 1, Column 1</td>
+            <td>Row 1, Column 2</td>
+         </tr>
+         
+         <tr>
+            <td>Row 2, Column 1</td>
+            <td>Row 2, Column 2</td>
+         </tr>
+      </table>
+   </body>
+	
+</html>
+
+Table Caption:
+
+The caption tag will serve as a title or explanation for the table and it shows up at the top of the table. This 
+tag is deprecated in newer version of HTML/XHTML.
+Example:
+
+<!DOCTYPE html>
+<html>
+
+   <head>
+      <title>HTML Table Caption</title>
+   </head>
+	
+   <body>
+      <table border = "1" width = "100%">
+         <caption>This is the caption</caption>
+         
+         <tr>
+            <td>row 1, column 1</td><td>row 1, columnn 2</td>
+         </tr>
+         
+         <tr>
+            <td>row 2, column 1</td><td>row 2, columnn 2</td>
+         </tr>
+      </table>
+   </body>
+	
+</html>
+Image as a link:
+
+<!DOCTYPE html>
+<html>
+
+   <head>
+      <title>Image Hyperlink Example</title>
+   </head>
+	
+   <body>
+      <p>Click following link</p>
+      <a href = "https://www.buy4u.com" target = "_self"> 
+         <img src = "images.png" alt = "buy4u" border = "0"/> 
+      </a>
+   </body>
+	
+</html>
+
