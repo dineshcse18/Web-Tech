@@ -23,12 +23,12 @@ color:blue;
 <h4>
 <ol>
  	<li>Modules in javascript are called <b><i>functions.</i></b></li><br>
- 	<li>Prepakaged functions that belong to javascript objects(such as <b><i>Math.pow and Math.round</i></b>) are called<i> as methods</i></li><br>
+ 	<li>Prepackaged functions that belong to javascript objects (such as <b><i>Math.pow and Math.round</i></b>) are called<i> as methods.</i></li><br>
  	<li>Functions are <b><i>programmer-defined functions.</i></b></li><br>
 	<li>A function is <b><i>invoked </i></b>by a <b><i>function call.</i></b></li><br>
 	<li>Function call specifies the function name and provides information (as arguments) that the called function needs to perform its task.</li><br>
-	<li>All the variables inside the function definitions are <b><i>local variables</i></b>-thismeans that they can be accessed only in the function in which they define.</li><br>
-	<li>The <b><i>parantheses()</i></b>represents the <b><i>function-call operator.</i></b></li>
+	<li>All the variables inside the function definitions are <b><i>local variables</i></b>-this means that they can be accessed only in the function in which they define.</li><br>
+	<li>The <b><i>parentheses()</i></b>represents the <b><i>function-call operator.</i></b></li>
 </ol><hr>
 <h1>USE OF FUNCTIONS</h1>
 <b>CODE REUSABILITY</b>
@@ -45,10 +45,9 @@ color:blue;
 <h3>Function arguments are the values passed to the function.</h3>
 <ol ><h4>
 <li>Arguments are passed by value--><i style="color:blue;">changes are not visible outside the function.</i></li>
-<li>Objects are passed by reference--><i style="color:blue;">changes visible outside the function.</i></li>
+<li>Objects are passed by reference--><i style="color:blue;">changes are visible outside the function.</i></li>
 </h4></ol>
-<b><p style="color:red;">*In javascript, numbers,boolean values ,strings are passed to the function by value;whereas, objects and arrays are passed as reference.*</p></b>
-<hr>
+<b><p style="color:red;">*In javascript, numbers,boolean values ,strings are passed to the function by value; whereas objects and arrays are passed as reference.*</p></b>
 <h3>HOW ARGUMENTS ARE PASSED IN FUNCTION?</h3>
 &lthtml&gt<br>
 &lthead&gt<br>
@@ -148,6 +147,33 @@ document.write(myFunction2())&lt!--function call with return type--&gt<br>
 <h3>OUTPUT</h3>
 <img src="example1.jpg"><br><hr><hr>
 <img src="examp2.jpg">
+<hr>
+
+<h3>DISPLAY DETAILS WITHIN SCRIPT</h3>
+&lthtml&gt<br>
+&lthead&gt<br>
+&lttitle&gtdisplaying details within the script&lt/title&gt<br>
+&ltscript&gt<br>
+function disp()<br>
+{<br>
+	var n=document.getElementById('name').value; <br>
+	var d=document.getElementById('dept').value; <br>
+	document.writeln("&lth3&gtNAME:"+n+" &ltbr&gt"+"DEPT:"+d+"&lt/h3&gt");<br>
+}<br>
+&lt/script&gt<br>
+&lt/head&gt<br>
+&ltbody&gt<br>
+&ltform&gt<br>
+&lth3&gtDISPLAY THE FORM DETAILS IN THE SCRIPT USING FUNCTION &lt/h3&gt
+NAME:&ltinput type="text"id="name"&gt&ltbr&gt&ltbr&gt<br>
+DEPT:&ltinput type="text"id="dept"&gt&ltbr&gt&ltbr&gt<br>
+&ltinput type="button"onclick="disp()"value="click to display details"&gt<br>
+&lt/form&gt<br>
+&lt/body&gt<br>
+&lt/html&gt<br>
+<h3>OUTPUT</h3>
+<img src="display1.jpg"><br>
+<img src="display2.jpg">
 <hr>
 <h3>SUM OF TWO NUMBERS</h3>
 &lthtml&gt<br>
