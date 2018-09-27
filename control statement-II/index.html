@@ -1,1 +1,282 @@
+<html>
+<head>
+<title>Control Statements II</title>
+<style type="text/css">
+h1{font-size:30pt;color:violet;}
+h2{color:blue;}
+h3{color:purple;}
+h4{color:orange;}
+</style> 
+</head>
+<body>
+<h1> <center>CONTROL STATEMENTS II</center></h1>
+<h2>COUNTER CONTROL REPETITION</h2>
+<p>In counter control ,the number of times the loop executed is pre-defined.It is called definite repetition.</p> 
+<p>
+<h4>Counter-controlled repetition requires:</h4><ul>
+<li>The name of a control variable (or loop counter).</li>
+<li>The initial value of the control variable.</li>
+<li>The increment (or decrement) by which the control variable is modified each time through the loop (also known as each iteration of the loop).</li>
+<li>The condition that tests for the final value of the control variable to determine whether looping should continue.</li></ul>
+</p>
+<h3 >Example Program:</h3><p>Grade calculation</p>
+&lthtml&gt<br>
+&lthead&gt<br>
+&lttitle&gtcounter control&lt/title&gt<br>
+&ltscript type ="text/javascript"&gt<br>
+var grade,gradeval,total,counter,avg;<br>
+total=0;<br>
+counter=1;<br>
+while(counter&lt=5)<br>
+{<br>
+grade=window.prompt("enter the grade ");<br>
+gradeval=parseInt(grade);<br>
+total=total+gradeval;<br>
+counter=counter+1;<br>
+}<br>
+avg=total/5;<br>
+document.writeln("avg grade value is:\t"+avg);<br>
+&lt/script&gt<br>
+&lt/head&gt<br>
+&ltbody&gt<br>
+&lt/body&gt<br>
+&lt/html&gt<br></p>
+<h3>Output:</h3><img src="m1.jpg" width="625" ><img src="m11.jpg" width="625">
 
+<h2>FOR REPETITION STATEMENT</h2>
+<ul>
+<li>The for statement conveniently handles <strong>all the details of counter-controlled repetition </strong>with a control variable.</li>
+<li>The for statement is often called the <strong>for statement header </strong>.</li>
+<li>You can use a <strong>block to put multiple statements </strong>into the body of a for statement.</li>
+<li>The for statement takes three expressions:<ol>
+<li> an<strong> initialization</strong>,</li>
+<li> a <strong>condition </strong>and</li>
+<li> an <strong>expression</strong>.</li></ol>
+<li>The three expressions in the for statement are optional. </li>
+<li>The <strong>two semicolons</strong> in the for statement are required.</li>
+<li>The initialization, loop-continuation condition and increment portions of a for statement can contain <strong>arithmetic expressions</strong>.</li>
+<li>The increment of a for statement may be <strong>negative</strong>, in which case its called a decrement and the loop actually counts downward.</li>
+<li>If the loop-continuation <strong>condition initially is false</strong> , the body of the for statement is not performed. Instead, execution proceeds.</li></ul>
+<h4>General Format:</h4>for ( initialization ; loopContinuationTest ; increment )
+<h3>Syntax:</h3><p><strong>for(var i=0; i<=n; i++)</strong></p>for-keyword,<br>i-control variable name,<br>n-value given to control variable upto which the given condtion is true.
+<h2>Example Program:</h2>
+<p>&lthtml&gt<br>&lthead&gt<br>&ltmeta charset = "utf-8"&gt<br>&lttitle&gtSum of Even Integers &lt/title&gt<br>
+&ltscript&gt<br>
+var sum = 0;<br>
+for ( var number = 2; number &lt= 100; number += 2 )<br>
+sum += number;<br>
+document.writeln( "The sum of the even integers " +"from 2 to 100 is " + sum );<br>
+&lt/script&gt<br>&lt/head&gt<br>&ltbody&gt<br>&lt/body&gt<br>&lt/html&gt<br></p>
+<h4>Note:</h4><ol>
+<li> JavaScript does not include an exponentiation operator. Instead, we use the Math object pow method for this purpose. Math.pow(x, y) calculates the value of x raised to the y th power.</li>
+<li>Floating-point numbers can cause trouble as a result of rounding errors.</li>
+<li>To prevent implicit conversions in comparisons, which can lead to unexpected results, JavaScript provides the strict equals ( === ) and strict does not equal ( !== ) operators.</li></ol>
+
+<h3>Output:</h3><img src="cs4.jpg" width="700">
+
+<h2 >SWITCH MULTIPLE-SELECTION STATEMENT</h2><p>
+<p>Use the switch statement to select one of many code blocks to be executed.</p>
+<h2>Switch Statement</h2>
+<ul>
+<li>JavaScript provides the switch multiple-selection statement , in which a variable or expression is tested separately for each of the values it may assume. 
+Different actions are taken for each value.</li>
+<li>The CSS property list-style-type allows you to set the numbering system for the list.
+Possible values include decimal (numbers—the default), lower-roman (lowercase roman numerals), 
+upper-roman (uppercase roman numerals), lower-alpha (lowercase letters), upper-alpha(uppercase letters), and more.</li>
+<li>The switch statement consists of a series of case labels and an optional default case (which is normally placed last). 
+When the flow of control reaches the switch statement, the script evaluates the controlling expression in the parentheses following keyword switch . 
+The value of this expression is compared with the value in each of the case labels, starting with the first case label. 
+If the comparison evaluates to true , the statements after the case label are executed in order until a break statement is reached.</li>
+<li>The break statement is used as the last statement in each case to exit the switch statement immediately.</li>
+<li>Each case can have multiple actions (statements). The switch statement is different from other
+statements in that braces are not required around multiple actions in a case of a switch .</li>
+<li>The break statement is not required for the last case in the switch statement, because program
+control automatically continues with the next statement after the switch statement</li>
+<li>Having several case labels listed together (e.g., case 1: case 2: with no statements between the
+cases) simply means that the same set of actions is to occur for each case.</li>
+</ul></p>
+<h3>Syntax:</h3>
+switch(<em>expression</em>) 
+{<br>
+&nbsp;&nbsp;&nbsp;
+case <em>x</em>:<br>
+ <em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; code block<br>
+    </em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; break;<br>
+&nbsp;&nbsp;&nbsp;
+case <em>y</em>:<br>
+ <em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; code block<br>
+ </em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; break;<br>
+&nbsp;&nbsp;&nbsp;
+default:<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <em>code block</em><br>
+ }
+ <h4>How it works?</h4>
+<ul>
+<li>The switch expression is evaluated once.</li>
+<li>The value of the expression is compared with the values of each case.</li>
+<li>If there is a match, the associated block of code is executed.</li>
+</ul>
+<h3>Example:</h3>
+&lthtml&gt<br>
+&lthead&gt<br>
+&lttitle&gtswitch case&lt/title&gt<br>
+&lt/head&gt<br>
+   &ltbody&gt<br>
+    &ltscript type="text/javascript"&gt<br>
+         var grade='A';<br>
+            document.write("The gradevalue for obtained grade is given&ltbr /&gt");<br>
+            switch (grade)<br>
+            {<br>
+               case 'A': document.write("Grade point:10&ltbr /&gt");<br>
+               break;<br>
+            
+               case 'B': document.write("Grade point:9&ltbr /&gt");<br>
+               break;<br>
+            
+               case 'C': document.write("Grade point:8&ltbr /&gt");<br>
+               break;<br>
+            
+               case 'D': document.write("Grade point:7&ltbr /&gt");<br>
+               break;<br>
+            
+               case 'E': document.write("Grade point:6&ltbr /&gt");<br>
+               break;<br>
+			   
+			   case 'F': document.write("Grade point:5&ltbr /&gt");<br>
+               break;<br>
+			   
+			   case 'G': document.write("Grade point:RA&ltbr /&gt");<br>
+               break;<br>
+            
+               default:  document.write("Unknown grade&ltbr /&gt")<br>
+            }<br>
+            document.write("");<br>
+         &lt/script&gt<br>
+            &ltp&gt&lt/p&gt<br>
+   &lt/body&gt<br>
+&lt/html&gt<br>
+<h3>Output:</h3><img src="nm1.jpg"width="600">
+
+<h2>DO..WHILE REPETITION STATEMENT</h2>
+The do ... while statement  tests the loop-continuation condition after the loop body executes—therefore, the loop body always executes at least once.
+<h3> Do/While Loop:</h3>
+<p>The do/while loop is a variant of the while loop. This loop will execute the code block once, before checking if the condition is true, then it will
+repeat the loop as long as the condition is true.</p>
+<h3>Syntax:</h3>
+do {<br>
+    <i>&nbsp;&nbsp;&nbsp; code block to be executed<br>
+</i>}<br>
+while (<em>condition</em>);
+<h3>Example:</h3>
+<p>The example below uses a do/while loop. The loop will always be 
+executed at least once, even if the condition is false, because the code block 
+is executed before the condition is tested:</p>
+&lthtml&gt<br>
+&lthead&gt<br>
+&lttitle&gtdowhile&lt/title&gt<br>
+&lt/head&gt<br>
+&ltbody&gt<br>
+&lth2&gt Output&lt/h2&gt<br>
+&ltscript&gt<br>
+var fact,i;<br>
+fact=1;<br>
+i=1;<br>
+do{<br>
+fact=fact*i;<br>
+i=i+1;<br>
+}while(i&lt=5)<br>
+document.writeln("Factorial value is:\t"+fact);<br>
+&lt/script&gt<br>
+&lt/body&gt<br>
+&lt/html&gt<br>
+<p>Do not forget to increase the variable used in the condition, otherwise 
+the loop will never end!</p>
+<h3>Output:</h3>
+<img src="tt1.jpg" width="650">
+
+<h2> BREAK AND CONTINUE STATEMENT</h2>
+ <p >The break statement &quot;jumps out&quot; of a loop.</p>
+  The break statement, when executed in a repetition statement, causes immediate exit from the statement.
+Execution continues with the first statement after the repetition statement.
+<p >The continue statement &quot;jumps over&quot; one iteration in the loop.</p>
+The continue statement, when executed in a repetition statement, skips the remaining statements in the loop body and proceeds with the next loop iteration. 
+In while and do ... while statements, the loop-continuation test evaluates immediately after the continue statement executes. 
+In for statements, the increment expression executes, then the loop-continuation test evaluates.
+<h3>Break Statement:</h3>
+<p>You have already seen the break statement used in an earlier 
+chapter of this tutorial. It was used to &quot;jump out&quot; of a switch() statement.</p>
+<p>The break statement can also be used to jump out of a loop.&nbsp;&nbsp; </p>
+<p>The <strong>break statement</strong> breaks the loop and continues executing the code after 
+the loop (if any):</p>
+<h3>Example</h3>
+&lthtml&gt<br>
+&ltbody&gt<br>
+&ltp&gtA loop with a break when i==5.&lt/p&gt<br>
+&ltp id="demo"&gt&lt/p&gt<br>
+&ltscript&gt<br>
+var text = "";<br>
+var i;<br>
+for (i = 0; i &lt 10; i++) {<br>
+    if (i === 5) { break; }<br>
+    text += "The number is " + i + "&ltbr&gt";<br>
+}<br>
+document.getElementById("demo").innerHTML = text;<br>
+&lt/script&gt<br>
+&lt/body&gt<br>
+&lt/html&gt<br>
+<h3>Output:</h3>
+<img src="uu1.jpg" width="650">
+<h3> Continue Statement:</h3>
+<p>The <strong>continue statement</strong> breaks one iteration (in the loop), if a specified 
+condition occurs, and continues with the next iteration in the loop.</p>
+<p>This example skips the value of 3: </p>
+<h3>Example</h3>
+&lthtml&gt<br>
+&ltbody&gt<br>
+&ltp&gtA loop which will skip the step where i ==3 and continue.&lt/p&gt<br>
+&ltp id="demo"&gt&lt/p&gt<br>
+&ltscript&gt<br>
+var text = "";<br>
+var i;<br>
+for (i = 0; i &lt 10; i++) {<br>
+    if (i === 3) { continue; }<br>
+    text += "The number is " + i + "&ltbr&gt";<br>
+}<br>
+document.getElementById("demo").innerHTML = text;<br>
+&lt/script&gt<br>
+&lt/body&gt<br>
+&lt/html&gt<br>
+<h3>Output:</h3><img src="vv1.jpg" width="650">
+
+<h2 style="color:blue">LOGICAL OPERATORS</h2>
+JavaScript provides logical operators that can be used to form more complex conditions by combining simple conditions. The logical operators are 
+<ul><li>&& (logical AND)</li><li> || (logical OR) </li><li>! (logical NOT, also called logical negation)</li></ul>
+<h3>logical AND operator</h3>
+<li>The && operator is used to ensure that <strong>two conditions are both true</strong> before choosing a certain path of execution.</li>
+<li>JavaScript evaluates to false or true all expressions that include relational operators, equality operators and/or logical operators.</li>
+<h4>use:</h4>
+if(a>=5 &&b<=10)<br>
+   c=a+b;
+<h3>logical OR operator</h3>
+<li>The || (logical OR) operator is used to ensure that <strong>either or both of two conditions are true </strong>before choosing choose a certain path of execution.</li>
+<li>The && operator has a higher precedence than the || operator. Both operators associate from left to right.</li>
+<li>An expression containing && or || operators is evaluated only until truth or falsity is known. This is called short-circuit evaluation .</li>
+<h4>use:</h4>
+if(gradeval==10 || grade='s')<br>
+   cgpa=10;
+<h3>logical NEGATION operator</h3>
+<li>JavaScript provides the ! (logical negation) operator to enable you to<strong> &quotreverse&quot the meaning of a condition</strong>
+ (i.e., a true value becomes false , and a false value becomes true ).</li>
+<li>The logical negation operator has only a single condition as an operand (i.e., it is a unary operator).</li>
+<li>The logical negation operator is placed before a condition to evaluate to true if the original condition (without the logical negation operator) is false .</li>
+<li>The logical negation operator has a higher precedence than the equality operator.</li>
+<h4>use:</h4>
+if(a!=5)<br>
+   print 'a' value;
+   <p>
+<li> Most nonboolean values can be converted to a boolean true or false value. <br>Nonzero numeric values are considered to be true . <br>
+The numeric value zero is considered to be false . <br>Any string that contains characters is considered to be true . <br>
+The empty string (i.e., the string containing no characters) is considered to be false . <br>
+The value null and variables that have been declared but not initialized are considered to be false . <br>
+All objects (e.g., the browser’s document and window objects and JavaScript Math object) are considered to be true .</li></p>
+</body></html>
