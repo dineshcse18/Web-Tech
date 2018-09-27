@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+<center><h1>Basics of PHP</h1></center>
+<pre>
+<h3>
+<ul>
+<li>PHP is an acronym for "PHP: Hypertext Preprocessor
+<li>PHP is a server scripting language, and a powerful tool for making dynamic and interactive Web pages.
+<li>PHP is a widely-used, free, and efficient alternative to competitors such as Microsoft's ASP.
+&lt?php
+
+//This is a single-line comment
+
+# This is also a single-line comment
+
+/* This is a multiple-lines comment block
+that spans over multiple lines
+*/
+
+<li>In PHP, all keywords (e.g. if, else, while, echo, etc.), classes, functions, and user-defined functions are NOT case-sensitive.
+
+echo "My first PHP script!";        O/P:My first PHP script!
+ECHO "Hello World!";				O/P:Hello World!
+
+<li>print also can be used:
+print "PHP is Fun!";				O/P:PHP is Fun!
+
+
+<li>In PHP, a variable starts with the $ sign, followed by the name of the variable:
+
+$txt = "Hello world!";
+$x = 5;
+$y = 10.5;
+
+
+=>variable names are case-sensitive.
+$color = "red";
+echo "My car is " . $color . "";			O/P:My car is red
+echo "My house is " . $COLOR . "";			O/P:My house is 
+
+
+<li>arithmetic operations can be done:
+	$x = 5;
+	$y = 4;
+	echo $x + $y;							O/P:9
+
+Global and Local Scope:
+<li>A variable declared outside a function has a GLOBAL SCOPE and can only be accessed outside a function
+<li>A variable declared within a function has a LOCAL SCOPE and can only be accessed within that function.
+
+$x = 5; //global scope
+function myTest() {
+//using x inside this function will generate an error
+echo "<p>Variable x inside function is: $x</p>";
+}
+myTest();
+echo "<p>Variable x outside function is: $x</p>";
+
+O/P:
+Variable x inside function is:
+
+Variable x outside function is: 5
+
+<li>Global variables can be used within the function using the keyword global
+
+$x = 5;
+$y = 10;
+
+function myTest() {
+    global $x, $y;
+    $y = $x + $y;
+}
+
+myTest();
+echo $y;
+
+O/P:15
+
+<li>Normally, when a function is completed/executed, all of its variables are deleted. However, sometimes we want a local variable NOT to be deleted. We need it for a further job.
+To do this, use the static keyword when you first declare the variable:
+
+function myTest() {
+    static $x = 0;
+    echo $x;
+    $x++;
+}
+myTest();
+
+myTest();
+
+myTest();
+
+O/P:
+
+0
+1
+2 
+
+PHP Data Types
+
+Variables can store data of different types, and different data types can do different things.
+
+PHP supports the following data types:
+
+    =>String
+    =>Integer
+    =>Float (floating point numbers - also called double)
+    =>Boolean
+    =>Array
+    =>Object
+    =>NULL
+    =>Resource
+
+
+<li>The PHP var_dump() function returns the data type and value:
+
+
+$x = 5985;
+var_dump($x);								O/P:int(5985) 
+
+$cars = array("Volvo","BMW","Toyota");
+var_dump($cars);							O/P:array(3) { [0]=> string(5) "Volvo" [1]=> string(3) "BMW" [2]=> string(6) "Toyota" }
+
+=>Length of string:
+echo strlen("Hello world!");				O/P: 12
+
+=>word count:
+echo str_word_count("Hello world!");	 	O/P: 2
+
+=>string reverse:
+echo strrev("Hello world!");				O/P:!dlrow olleH
+
+=>The PHP strpos() function searches for a specific text within a string.
+
+=>If a match is found, the function returns the character position of the first match. If no match is found, it will return FALSE.
+echo strpos("Hello world!", "world");		O/P:6
+
+=>Replace Text Within a String
+echo str_replace("world", "Dolly", "Hello world!");		O/P:Hello Dolly!
+
+=>Create a PHP Constant
+define("GREETING", "Baby ");
+echo GREETING;								O/P:Baby
+
+Constants are Global
+<li>Constants are automatically global and can be used across the entire script.
+
+define("GREETING", "Baby");
+
+function myTest() {
+    echo GREETING;
+}
+ 
+myTest();									O/P:Baby
+
+PHP Operators
+
+<li>Operators are used to perform operations on variables and values.
+
+<li>PHP divides the operators in the following groups:
+
+   <li> Arithmetic operators
+   <li> Assignment operators
+    <li>Comparison operators
+    <li>Increment/Decrement operators
+    <li>Logical operators
+    <li>String operators
+    <li>Array operators
+
+=>PHP Arithmetic Operators
+
+Operator 	 Name 	    	Example 	   Result 	
++ 	       	Addition 	$x + $y 	Sum of $x and $y 	
+- 	    	Subtraction 	$x - $y 	Difference of $x and $y 	
+* 	   	Multiplication 	$x * $y 	Product of $x and $y 	
+/ 	        Division 	$x / $y 	Quotient of $x and $y 	
+% 	        Modulus		$x % $y 	Remainder of $x divided by $y 	
+** 	        Exponentiation  $x ** $y 	Result of raising $x to the $y'th power (Introduced in PHP 5.6)
+
+=>PHP Assignment Operators
+
+Assignment 	    	Same as... 	    Description 	
+x = y 	        	x = y 	   	The left operand gets set to the value of the expression on the right 	
+x += y 	        	x = x + y 	Addition 	
+x -= y 			x = x - y 	Subtraction 	
+x *= y 			x = x * y 	Multiplication 	
+x /= y 			x = x / y 	Division 	
+x %= y 			x = x % y 	Modulus
+
+
+=>PHP Comparison Operators
+<li>The PHP comparison operators are used to compare two values (number or string):
+
+Operator 	Name 				Example 		Result 	
+== 		Equal 				$x == $y 		Returns true if $x is equal to $y 	
+=== 		Identical			$x === $y 		Returns true if $x is equal to $y, and they are of the same type 	
+!= 		Not equal 			$x != $y 		Returns true if $x is not equal to $y 	
+&lt &gt 		Not equal 			$x&lt &gt$y 		Returns true if $x is not equal to $y 	
+!== 		Not identical 			$x !== $y 		Returns true if $x is not equal to $y, or they are not of the same type 	
+&gt 		Greater than 			$x &gt $y 		Returns true if $x is greater than $y 	
+&lt 		Less than 			$x &lt $y 		Returns true if $x is less than $y 	
+&gt= 		Greater than or equal to 	$x &gt= $y 		Returns true if $x is greater than or equal to $y 	
+&gt= 		Less than or equal to 		$x &lt= $y 		Returns true if $x is less than or equal to $y
+
+=>PHP Increment / Decrement Operators
+<li>The PHP increment operators are used to increment a variable's value.
+<li>The PHP decrement operators are used to decrement a variable's value.
+
+Operator 		Name 		Description 	
+++$x 		Pre-increment 	Increments $x by one, then returns $x 	
+$x++ 		Post-increment 	Returns $x, then increments $x by one 	
+--$x 		Pre-decrement 	Decrements $x by one, then returns $x 	
+$x-- 		Post-decrement 	Returns $x, then decrements $x by one
+
+=>PHP Logical Operators:
+
+<li>The PHP logical operators are used to combine conditional statements.
+
+Operator 	Name 	Example 	Result 
+and 		And 	$x and $y 	True if both $x and $y are true 	
+or 		Or	$x or $y 	True if either $x or $y is true 	
+xor 		Xor 	$x xor $y 	True if either $x or $y is true, but not both 	
+&& 		And 	$x && $y 	True if both $x and $y are true 	
+|| 		Or	$x || $y 	True if either $x or $y is true 	
+! 		Not 	!$x 		True if $x is not true
+
+=>PHP String Operators
+
+<li>PHP has two operators that are specially designed for strings.
+Operator 		Name 					Example 		Result 
+. 			Concatenation 				$txt1 . $txt2 		Concatenation of $txt1 and $txt2 	
+.= 			Concatenation assignment 		$txt1 .= $txt2 		Appends $txt2 to $txt1
+
+=>PHP Array Operators:
+
+<li>The PHP array operators are used to compare arrays.
+Operator 		Name 			Example 	Result 	
++ 			Union 			$x + $y 	Union of $x and $y 	
+== 			Equality 		$x == $y 	Returns true if $x and $y have the same key/value pairs 	
+=== 			Identity 		$x === $y 	Returns true if $x and $y have the same key/value pairs in the same order and of the same types 	
+!= 			Inequality 		$x != $y 	Returns true if $x is not equal to $y 	
+<> 			Inequality 		$x <> $y 	Returns true if $x is not equal to $y 	
+!== 			Non-identity 		$x !== $y 	Returns true if $x is not identical to $y
+
+=>PHP - The if...else Statement
+
+The if....else statement executes some code if a condition is true and another code if that condition is false.
+Syntax
+if (condition) {
+    code to be executed if condition is true;
+} else {
+    code to be executed if condition is false;
+}
+<Li>
+The example below will output "Have a good day!" if the current time is less than 20, and "Have a good night!" otherwise:
+Example
+
+$t = date("H");
+
+if ($t &lt "20") {
+    echo "Have a good day!";
+} else {
+    echo "Have a good night!";
+}
+
+
+O/P:Have a good night! 
+
+<li>The PHP switch Statement
+
+Use the switch statement to select one of many blocks of code to be executed.
+
+$favcolor = "red";
+
+switch ($favcolor) {
+    case "red":
+        echo "Your favorite color is red!";
+        break;
+    case "blue":
+        echo "Your favorite color is blue!";
+        break;
+    case "green":
+        echo "Your favorite color is green!";
+        break;
+    default:
+        echo "Your favorite color is neither red, blue, nor green!";
+}
+
+O/P:Your favorite color is red!
+
+
+do while:
+
+Syntax
+do {
+    code to be executed;
+} while (condition is true);
+
+Example:
+
+$x = 1;
+
+do {
+    echo "The number is: $x ";
+    $x++;
+} while ($x &lt= 5);
+
+O/P:
+
+The number is: 1
+The number is: 2
+The number is: 3
+The number is: 4
+The number is: 5 
+
+For loop:
+<li>The for loop is used when you know in advance how many times the script should run.
+
+Syntax
+for (init counter; test counter; increment counter) {
+    code to be executed;
+}
+
+
+for ($x = 0; $x <= 10; $x++) {
+    echo "The number is: $x ";
+} 
+
+
+O/P:
+
+The number is: 0
+The number is: 1
+The number is: 2
+The number is: 3
+The number is: 4
+The number is: 5
+The number is: 6
+The number is: 7
+The number is: 8
+The number is: 9
+The number is: 10 
+
+Functions
+
+<li>A function is a block of statements that can be used repeatedly in a program.
+
+<li>A function will not execute immediately when a page loads.
+
+<li>A function will be executed by a call to the function.
+
+Syntax
+function functionName() {
+    code to be executed;
+}
+
+Example:
+
+function writeMsg() {
+    echo "Hello world!";
+}
+
+writeMsg(); // call the function
+
+
+O/P:
+
+Hello world!
+
+Arrays:
+<li>An array stores multiple values in one single variable:
+
+Example:
+
+$cars = array("Volvo", "BMW", "Toyota");
+echo "I like " . $cars[0] . ", " . $cars[1] . " and " . $cars[2] . ".";
+
+O/P:
+
+I like Volvo, BMW and Toyota. 
+
+<li>Get The Length of an Array - The count() Function
+
+$cars = array("Volvo", "BMW", "Toyota");
+echo count($cars);
+
+O/P:
+
+3
+
+<li>Loop Through an Indexed Array
+
+$cars = array("Volvo", "BMW", "Toyota");
+$arrlength = count($cars);
+for($x = 0; $x < $arrlength; $x++) {
+    echo $cars[$x];
+    
+}
+
+
+O/P:
+
+Volvo
+BMW
+Toyota
+
+
+$age = array("Peter"=>"35", "Ben"=>"37", "Joe"=>"43");
+echo "Peter is " . $age['Peter'] . " years old.";
+
+O/P:
+
+Peter is 35 years old. 
+
+?&gt
+</h3>
+</pre>
+</body>
+</html> 
