@@ -1,0 +1,238 @@
+<html>
+<head>
+<html>
+<head>
+<title>input tags</title>
+</head>
+<body>
+<pre>
+                                                                                        <b>HTML Input Types</b>
+                                                    1.Input Type Text 
+defines a one-line text input field:
+<!--<!--syntax:
+<input type="text">-->
+Example
+<form>
+  First name:<br>
+  <input type="text" name="firstname"><br>
+  Last name:<br>
+  <input type="text" name="lastname">
+</form>
+
+                                                   2.Input Type Password
+defines a password field:
+The characters in a password field are masked (shown as asterisks or circles).
+
+<!--
+syntax:
+<input type="password"> -->
+
+Example
+<form>
+  User name:<br>
+  <input type="text" name="username"><br>
+  User password:<br>
+  <input type="password" name="psw">
+</form>
+                                                     3.Input Type Submit
+defines a button for submitting form data to a form-handler.
+If you omit the submit button's value attribute, the button will get a default text:
+
+<!--
+syntax:
+<input type="submit"> -->
+
+Example
+<form action="/action_page.php">
+  First name:<br>
+  <input type="text" name="firstname" value="Mickey"><br>
+  Last name:<br>
+  <input type="text" name="lastname" value="Mouse"><br><br>
+  <input type="submit">
+</form>
+                                                       4.Input Type Reset
+defines a reset button that will reset all form values to their default values:
+If you change the input values and then click the "Reset" button, the form-data will be reset to the default values.
+
+<!--
+syntax:
+<input type="reset"> -->
+
+Example
+<form action="/action_page.php">
+  First name:<br>
+  <input type="text" name="firstname"><br>
+  Last name:<br>
+  <input type="text" name="lastname" ><br><br>
+  <input type="reset">
+</form>
+                                                      5.Input Type Radio
+defines a radio button.
+Radio buttons let a user select ONLY ONE of a limited number of choices:
+
+<!--
+syntax:
+<input type="radio"> -->
+
+Example
+<form>
+  <input type="radio" name="gender" value="male" checked> Male<br>
+  <input type="radio" name="gender" value="female"> Female<br>
+  <input type="radio" name="gender" value="other"> Other
+</form>
+
+
+                                                     6.Input Type Checkbox
+ defines a checkbox.
+Checkboxes let a user select ZERO or MORE options of a limited number of choices.
+
+<!--
+syntax:
+<input type="checkbox">-->
+
+Example
+<form>
+  <input type="checkbox" name="vehicle1" value="Bike"> I have a bike<br>
+  <input type="checkbox" name="vehicle2" value="Car"> I have a car
+</form>
+
+                                                     7.Input Type Button
+ defines a button:
+ <!--
+ syntax:
+<input type="button">-->
+Example
+<input type="button" onclick="alert('Hello World!')" value="Click Me!">
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                                                 several new input types:
+
+    *color
+    *date
+    *datetime-local
+    *email
+    *number
+    
+
+                                                      1.Input Type Color
+is used for input fields that should contain a color.
+Depending on browser support, a color picker can show up in the input field.
+
+<!--
+syntax:
+The <input type="color"> -->
+
+Example
+<form>
+  Select your favorite color:
+  <input type="color" name="favcolor">
+</form>
+
+                                                      2.Input Type Date
+ used for input fields that should contain a date.
+Depending on browser support, a date picker can show up in the input field.
+
+<!--
+syntax:
+The <input type="date"> --> 
+   
+Example
+<form>
+  Birthday:
+  <input type="date" name="bday">
+</form>
+
+You can also use the min and max attributes to add restrictions to dates:   
+Example
+<form>
+  Enter a date before 1980-01-01:
+  <input type="date" name="bday" max="1979-12-31"><br>
+  Enter a date after 2000-01-01:
+  <input type="date" name="bday" min="2000-01-02"><br>
+</form>
+
+                                                      3.Input Type Datetime-local
+specifies a date and time input field, with no time zone.
+Depending on browser support, a date picker can show up in the input field.
+
+<!--
+syntax:
+The <input type="datetime-local">  -->
+  
+Example
+<form>
+  Birthday (date and time):
+  <input type="datetime-local" name="bdaytime">
+</form>
+
+                                                       4.Input Type Email
+ used for input fields that should contain an e-mail address.
+Depending on browser support, the e-mail address can be automatically validated when submitted
+Some smartphones recognize the email type, and adds ".com" to the keyboard to match email input.
+
+<!--
+syntax:
+The <input type="email">-->
+
+Example
+<form>
+  E-mail:
+  <input type="email" name="email">
+</form>
+
+                                                        5.Input Type Number
+defines a numeric input field.
+You can also set restrictions on what numbers are accepted.
+The following example displays a numeric input field, where you can enter a value from 1 to 5:
+
+<!--
+syntax:
+The <input type="number"> --> 
+
+Example
+<form>
+  Quantity (between 1 and 5):
+  <input type="number" name="quantity" min="1" max="5">
+</form> 
+
+                                                        Input Restrictions some common input restrictions 
+
+disabled 	      Specifies that an input field should be disabled
+max 	          Specifies the maximum value for an input field
+maxlength      	  Specifies the maximum number of character for an input field
+min 	          Specifies the minimum value for an input field
+pattern           Specifies a regular expression to check the input value against
+readonly 	      Specifies that an input field is read only (cannot be changed)
+required 	      Specifies that an input field is required (must be filled out)
+size 	          Specifies the width (in characters) of an input field
+step 	          Specifies the legal number intervals for an input field
+value 	          Specifies the default value for an input field
+-------------------------------------
+             DATALIST
+   Definition and Usage
+
+The <datalist> tag specifies a list of pre-defined options for an <input> element.
+
+The <datalist> tag is used to provide an "autocomplete" feature on <input> elements. Users will see a drop-down list of pre-defined options as they input data.
+
+Use the <input> element's list attribute to bind it together with a <datalist> element.
+
+ EXAMPLE:
+<html>
+<body>
+<form action="/action_page.php" method="get">
+  <input list="browsers" name="browser">
+  <datalist id="browsers">
+    <option value="Internet Explorer">
+    <option value="Firefox">
+    <option value="Chrome">
+    <option value="Opera">
+    <option value="Safari">
+  </datalist>
+  <input type="submit">
+</form>         
+
+</pre>
+</body>
+</html>
+
+
