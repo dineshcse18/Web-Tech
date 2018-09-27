@@ -1,22 +1,110 @@
 <html>
 <head>
 <title>DB Connectivity & Session Tracking</title>
+<style type="text/css">
+.red{
+color:red;
+}
+.green{
+color:green;
+}
+.grey{
+color:grey;
+}
+.blue{
+color:blue;
+}
+.brown{
+color:brown;
+text-decoration:underline;
+}
+</style>
 </head>
 <body>
-<center><h1>Database Connectivity </h1></center>
+<center><h1 style="text-decoration:underline;">Database Connectivity </h1></center>
 <h2>Database Connection:</h2>
 <h3>Example:</h3><br>
-<div><img src="db.png" alt="img" width="700" height="700"></div><hr>
+<div class="grey">
+<span class="red">&lt?php</span><br>
+$servername = "localhost";<br>
+$username = "username";<br>
+$password = "password";<br>
+$database = "database";<br>
+<br>
+<span class="green">// Create connection</span><br>
+$conn = mysqli_connect($servername, $username, $password, $database);<br>
+<br>
+<span class="green">// Check connection</span><br>
+if (!$conn) {<br>
+    die("Connection failed: " . mysqli_connect_error());<br>
+}<br>
+echo "Connected successfully";<br>
+<span class="red">?&gt </span>
+
+</div><hr>
 <h2>Insert values into Datatabse Table:</h2>
 <h3>Example:</h3><br>
-<div><img src="insert.png" alt="img" width="700" height="700"></div><hr>
+<div class="grey">
+<span class="red">&lt?php</span><br>
+$sql = "INSERT INTO MyGuests (firstname, lastname, email)<br>
+VALUES ('John', 'Doe', 'john@example.com')";<br>
+<br>
+if (mysqli_query($conn, $sql)) {<br>
+    echo "New record created successfully";<br>
+} <br>
+else {<br>
+    echo "Error: " . $sql . "<br>" . mysqli_error($conn);<br>
+}<br>
+<span class="red">?&gt </span>
+</div><hr>
 <h2>Select values from Database Table:</h2>
 <h3>Example:</h3><br>
-<div><img src="select.png" alt="img" width="700" height="700"></div><hr>
+<div class="grey">
+<span class="red">&lt?php</span><br>
+$sql = "SELECT id, firstname, lastname FROM MyGuests";<br>
+$result = mysqli_query($conn, $sql);<br>
+<br>
+if (mysqli_num_rows($result) > 0) {<br>
+    <span class="green">// output data of each row</span><br>
+    while($row = mysqli_fetch_assoc($result)) {<br>
+        echo "id: " . $row["id"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "&ltbr&gt";<br>
+    }<br>
+}<br>
+ else {<br>
+    echo "0 results";<br>
+}<br>
+<span class="red">?&gt </span>
+</div><hr>
+<h2>Delete Database Table values:</h2>
+<h3>Example:</h3><br>
+<div class="grey">
+<span class="red">&lt?php</span><br>
+<span class="green">// sql to delete a record</span><br>
+$sql = "DELETE FROM MyGuests WHERE id=3";<br>
+<br>
+if (mysqli_query($conn, $sql)) {<br>
+    echo "Record deleted successfully";<br>
+}<br>
+else {<br>
+    echo "Error deleting record: " . mysqli_error($conn);<br>
+}<br>
+<span class="red">?&gt </span>
+</div>
 <h2>Update Database Table values:</h2>
 <h3>Example:</h3><br>
-<div><img src="update.png" alt="img" width="700" height="700"></div>
-<center><h1>Session Tracking </h1></center>
+<div class="grey">
+<span class="red">&lt?php</span><br>
+$sql = "UPDATE MyGuests SET lastname='Doe' WHERE id=2";<br>
+<br>
+if (mysqli_query($conn, $sql)) {<br>
+    echo "Record updated successfully";<br>
+}<br>
+else {<br>
+    echo "Error updating record: " . mysqli_error($conn);<br>
+}<br>
+<span class="red">?&gt </span>
+</div><hr>
+<center><h1 style="text-decoration:underline;">Session Tracking </h1></center>
 <h2>What is a PHP Session?</h2>
 <p>When you work with an application, you open it, do some changes, and then you close it. This is much like a Session. The computer knows who you are. It knows when you start the application and when you end. But on the internet there is one problem: the web server does not know who you are or what you do, because the HTTP address doesn't maintain state.<br>
 Session variables solve this problem by storing user information to be used across multiple pages (e.g. username, favorite color, etc). By default, session variables last until the user closes the browser.<br>So,Session variables hold information about one single user, and are available to all pages in one application.</br></p><hr>
@@ -25,10 +113,47 @@ Session variables solve this problem by storing user information to be used acro
 Session variables are set with the PHP global variable: $_SESSION.<br>
 <span style="color:red;">Note:</span> The session_start() function must be the very first thing in your document. Before any HTML tags.</p>
 <h4>Example:</h4>
-<div><img src="start.png" alt="img" width="700" height="700"></div><hr>
+<div class="grey">
+<span class="brown">sample1.php</span><br><br>
+<span class="red">&lt?php</span><br>
+// Start the session
+session_start();<br>
+<span class="red">?&gt </span><br>
+<span class="blue">&lthtml&gt</span><br>
+<span class="blue">&ltbody&gt</span><br>
+
+<span class="red">&lt?php</span><br>
+<span class="green">// Set session variables</span><br>
+$_SESSION["favfood"] = "Noodles";<br>
+<span class="red">?&gt </span>
+<br>
+<span class="blue">&lt/body&gt </span><br>
+<span class="blue">&lt/html&gt </span><br>
+</div><hr>
 <h2>Destroy a PHP Session:</h2>
 <p>To remove all global session variables and destroy the session, use session_unset() and session_destroy()</p>
 <h4>Example:</h4>
-<div><img src="destroy.png" alt="img" width="700" height="700"></div>
+<div class="grey">
+<span class="brown">sample2.php</span><br><br>
+<span class="red">&lt?php</span><br>
+session_start();<br>
+<span class="red">?&gt </span><br>
+<span class="blue">&lthtml&gt</span><br>
+<span class="blue">&ltbody&gt</span><br>
+
+<span class="red">&lt?php</span><br>
+if(isset( $_SESSION["favfood"])){<br>
+<span class="green">// Checking session variables that were set on previous page sample1.php using 'isset' method</span><br>
+echo "Favorite Food is " . $_SESSION["favfood"] . ".";<span style="color:orange">//Output: Dosa</span><br>
+session_destroy();//it is used to destroy the created session variable.<br>
+}<br>
+else{<br>
+	header("Location: sample1.php"); <span class="green">//if session is not not set it goes to the previous page.</span><br>
+}<br>
+<span class="red">?&gt </span>
+<br>
+<span class="blue">&lt/body&gt </span><br>
+<span class="blue">&lt/html&gt </span><br>
+</div>
 </body>
 </html>
