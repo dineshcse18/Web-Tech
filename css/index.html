@@ -8,6 +8,7 @@ li{font-size:20px;font-family:timesnewroman;}
 p,#p1{font-size:25px;font-family:timesnewroman;}
 strong,#p2{font-size:25px;font-family:timesnewroman;color:orange;}
 #p3{color:blue;font-size:23pt;}
+body{align:justify;}
 </style>
 </head>
 <body>
@@ -237,14 +238,308 @@ p {<br>
 <p id=p2>
  body { <br>
     background-attachment:fixed;<br>
-	
-}
+	}
 </p>
 </ol>
  </p>
+  <h3>POSITIONING ELEMENTS</h3>
+  <p>The position property specifies the type of positioning method used for an element.
+
+There are five different position values:</p>
+<ul>
+<li>static</li>
+<li>relative</li>
+<li>fixed</li>
+<li>absolute</li>
+<li>sticky</li>
+</ul>
+<p>Elements are then positioned using the top, bottom, left, and right properties. 
+However, these properties will not work unless the position property is set first. 
+They also work differently depending on the position value.In our syllabus only relative and 
+absoulte positioning elements are used.</p>
+ <h3 style=font-size:20px;>RELATIVE POSITIONING</h3>
+ <p>An element with<STRONG> position: relative; </STRONG>is positioned relative to its normal position.
+Setting the top, right, bottom, and left properties of a relatively-positioned element will
+cause it to be adjusted away from its normal position. Other content will not be adjusted to fit into any gap left by the element.
+Relative positioning keeps elements in the general flow of elements on the page,so positioning is realtive to other element in the flow.</p>
+<h3>SYNTAX</H3>
+<p id=p2>
+div.relative <br>
+{<br>
+    position: relative;<br>
+    left: 30px;<br>
+    border: 3px solid green;<br>
+}<br>
+</p>
+ <h3 style=font-size:20px;>ABSOLUTE POSITIONING</h3>
+ <P>An element with<STRONG> position: absolute; </STRONG>is positioned relative to the nearest positioned ancestor 
+ (instead of positioned relative to the viewport, like fixed).Absolute positioning removes the element from normal 
+ flow of elements on the page, instead positioning it according to the distancefrom the left,right,top,bottom margins
+ of its containing block-level element. The <strong>Z-index</strong> property allows to layer overlaping elements property.
+ Elements that have higher z-index values are displayed in front of elements with lower Z-index values.</p>
+ <h3>SYNTAX</H3>
+<p id=p2>
+div.relative {<br>
+    position: relative;<br>
+    width: 400px;<br>
+    height: 200px;<br>
+    border: 3px solid green;<br>
+} <br>
+
+div.absolute {<br>
+    position: absolute;<br>
+    top: 80px;<br>
+    right: 0;<br>
+    width: 200px;<br>
+    height: 100px;<br>
+    border: 3px solid green; <br>
+}<br>
+</p>
+<h3>EXAMPLE</h3>
+&lthtml&gt<br>
+&lthead&gt<br>
+&ltstyle&gt<br>
+div.relative {<br>
+    position: relative;<br>
+    width: 400px;<br>
+    height: 200px;<br>
+    border: 3px solid green; <br>
+} <br>
+
+div.absolute {<br>
+    position: absolute;<br>
+    top: 80px;<br>
+    right: 0;<br>
+    width: 200px;<br>
+    height: 100px;<br>
+    border: 3px solid #73AD21;<br>
+}<br>
+&lt/style&gt <br>
+&lt/head&gt <br>
+&ltbody&gt<br>
+
+
+&ltp&gtAn example for relative and absolute positioning.&lt/p&gt <br>
+
+&ltdiv class="relative"&gtThis div element has position: relative;<br>
+  &ltdiv class="absolute"&gtThis div element has position: absolute;&lt/div&gt <br>
+&lt/div&gt <br>
+
+&lt/body&gt <br>
+&lt/html&gt <br>
+</P>
+<h3>OUTPUT</h3>
+<p>
+<h3>EXAMPLE</h3>
+<html>
+<head>
+<style>
+div.relative {
+    position: relative;
+    width: 400px;
+    height: 200px;
+    border: 3px solid green;
+} 
+
+div.absolute {
+    position : absolute;
+    top: 80px;
+    right: 0;
+    width: 200px;
+    height: 100px;
+    border: 3px solid green;
+}
+</style>
+</head> 
+<body>
+<p>An example for relative and absolute positioning.</p> 
+<div class="relative">This div element has position: relative;
+<div class="absolute">This div element has position: absolute;</div>
+</div> 
+ </body> 
+</html> 
+
+
+
  <h3>BORDER PROPERTY</h3>
- 
- <p>
+ <p>Border Style:</p>
+ <p>The border-style property specifies what kind of border to display.
+The following values are allowed:</p>
+<ul>
+<li>dotted - Defines a dotted border.</li>
+<li>dashed - Defines a dashed border.</li>
+<li>solid - Defines a solid border.</li>
+<li>double - Defines a double border.</li>
+<li>groove - Defines a 3D grooved border. (The effect depends on the border-color value)</li>
+<li>ridge - Defines a 3D ridged border. (The effect depends on the border-color value)</li>
+<li>inset - Defines a 3D inset border. (The effect depends on the border-color value)</li>
+<li>outset - Defines a 3D outset border. (The effect depends on the border-color value)</li>
+<li>none - Defines no border</li>
+<li>hidden - Defines a hidden border</li>
+<ul>
+<p>The border-style property can have from one to four values (for the top border, right border, bottom border, and the left border).</p>
+<h3>SYNTAX</h3>
+<p id=p2>
+ &ltstyle&gt<br>
+p.dotted {border-style: dotted;}<br>
+p.dashed {border-style: dashed;}<br>
+p.solid {border-style: solid;}<br>
+p.double {border-style: double;}<br>
+p.groove {border-style: groove;}<br>
+p.ridge {border-style: ridge;}<br>
+p.inset {border-style: inset;}<br>
+p.outset {border-style: outset;}<br>
+p.none {border-style: none;}<br>
+p.hidden {border-style: hidden;}<br>
+p.mix {border-style: dotted dashed solid double;}<br>
+&lt/style&gt <br>
+</p>
+<h3>EXAMPLE</h3>
+<p>
+&lthtml&gt<br>
+&lthead&gt<br>
+&ltstyle&gt<br>
+p.dotted {border-style: dotted;}<br>
+p.dashed {border-style: dashed;}<br>
+p.solid {border-style: solid;}<br>
+p.double {border-style: double;}<br>
+p.groove {border-style: groove;}<br>
+p.ridge {border-style: ridge;}<br>
+p.inset {border-style: inset;}<br>
+p.outset {border-style: outset;}<br>
+p.none {border-style: none;}<br>
+p.hidden {border-style: hidden;}<br>
+p.mix {border-style: dotted dashed solid double;}<br>
+&lt/style&gt <br>
+&lt/head&gt <br>
+&ltbody&gt<br>
+&lth2&gtThe border-style Property&lt/h2&gt <br>
+&ltp&gtThis property specifies what kind of border to display:&lt/p&gt <br>
+&ltp class="dotted"&gtA dotted border.&lt/p&gt <br>
+&ltp class="dashed"&gtA dashed border.&lt/p&gt <br>
+&ltp class="solid"&gtA solid border.&lt/p&gt <br>
+&ltp class="double"&gtA double border.&lt/p&gt <br>
+&ltp class="groove"&gtA groove border.&lt/p&gt <br>
+&ltp class="ridge"&gtA ridge border.&lt/p&gt <br>
+&ltp class="inset"&gtAn inset border.&lt/p&gt <br>
+&ltp class="outset"&gtAn outset border.&lt/p&gt <br>
+&ltp class="none"&gtNo border.&lt/p&gt <br>
+&ltp class="hidden"&gtA hidden border.&lt/p&gt <br>
+&ltp class="mix"&gtA mixed border.&lt/p&gt <br>
+&lt/body&gt <br>
+&lt/html&gt <br>
+</p>
+
+<p>BORDER WIDTH</P>
+
+<P>The border-width property specifies the width of the four borders.
+The width can be set as a specific size (in px, pt, cm, em, etc) or by using one of the three pre-defined values: thin, medium, or thick.
+The border-width property can have from one to four values (for the top border, right border, bottom border, and the left border).</P>
+ <h3>SYNTAX</h3>
+<p id=p2>
+ body { <br>
+  p.one { <br>
+    border-style: solid;<br>
+    border-width: 5px;<br>
+}<br>
+
+p.two {<br>
+    border-style: solid;<br>
+    border-width: medium;<br>
+}<br>
+
+p.three {<br>
+    border-style: solid;<br>
+    border-width: 2px 10px 4px 20px;<br>
+} <br>
+	}<br>
+</p>
+
+<p>BORDER COLOR:</p>
+
+<p>The border-color property is used to set the color of the four borders.<br>
+The color can be set by:<br>
+     -> name - specify a color name, like "red"<br>
+     ->Hex - specify a hex value, like "#ff0000"<br>
+     -> RGB - specify a RGB value, like "rgb(255,0,0)"<br>
+     -> transparent<br>
+The border-color property can have from one to four values (for the top border, right border, bottom border, and the left border). <br>
+If border-color is not set, it inherits the color of the element.</P>
+
+<h3>SYNTAX</h3>
+<p id=p2>
+p.one {<br>
+    border-style: solid;<br>
+    border-color: red;<br>
+}
+
+p.two {<br>
+    border-style: solid;<br>
+    border-color: green;<br>
+}<br>
+
+p.three {<br>
+    border-style: solid;<br>
+    border-color: red green blue yellow;<br>
+}<br>
+</P>
+<p>In CSS, there is also properties for specifying each of the borders (top, right, bottom, and left):</p>
+<h3>SYNTAX</h3>
+<p id=p2>
+p { <br>
+    border-top-style: dotted;  <br>
+    border-right-style: solid;  <br>
+    border-bottom-style: dotted;  <br>
+    border-left-style: solid; <br>
+}  <br>
+</p>
+<pre>     (or)        </pre>
+<p id=p2>
+p { <br>
+    border-style: dotted solid; <br>
+}
+</p>
+<p>
+If the border-style property has four values:<br></p>
+    <h3>  border-style: dotted solid double dashed;</h3> <br>
+     <p>-> top border is dotted<br></p>
+     <p>-> right border is solid<br></p>
+     <p>-> bottom border is double<br></p>
+     <p>-> left border is dashed<br></p>
+	  <br>
+ <p>If the border-style property has three values: <br></p>
+    <h3>   border-style: dotted solid double;</h3> <br></p>
+	 <p>->  top border is dotted <br></p>
+     <p>->  right and left borders are solid <br></p>
+    <p> ->  bottom border is double <br></p>
+	<br>	
+ <p>If the border-style property has two values:<br></p>
+    <h3> border-style: dotted solid;</h3> <br></p>
+     <p>->   top and bottom borders are dotted<br></p>
+     <p>->   right and left borders are solid<br></p>
+	<br>   
+ <p>If the border-style property has one value:<br></p>
+    <h3>  border-style: dotted; </h3><br></p>
+    <p>->   all four borders are dotted<br></p>
+
+<h3>MARGIN PROPERTY</H3>
+<P>The CSS margin properties are used to generate space around elements.The margin properties set the size of the white space OUTSIDE the border.<BR>
+ The margins are completely transparent - and cannot have a background color!<br>
+ CSS has properties for specifying the margin for each side of an element:</P>
+<ul >
+<li>margin-top</li>
+<li>margin-right</li>
+<li>margin-bottom</li>
+<li>margin-left</li>
+<p>All the margin properties can have the following values:</p>
+<li>auto - the browser calculates the margin</li>
+<li>length - specifies a margin in px, pt, cm, etc.</li>
+<li>% - specifies a margin in % of the width of the containing element</li>
+<li>inherit - specifies that the margin should be inherited from the parent element</li>
+</ul>	
+<p>It is also possible to use negative values for margins; to overlap content.</P>
+	
+	
 
 
 </body>
