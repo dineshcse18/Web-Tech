@@ -1,34 +1,177 @@
-<!DOCTYPE html>
-<html>
-<title>WT Study Material</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<body>
-<div class="w3-container w3-teal">
-  <center><h1>Web Technology Study Material</h1></center>
-</div>
-  <div class="w3-sidebar w3-light-grey w3-bar-block" style="width:25%">
-  <a href="https://dineshcse18.github.io/Web-Tech/" class="w3-bar-item w3-button w3-green">Menu</a>
-	   <a href="JS-Validation/index.html" class="w3-bar-item w3-button w3-mobile">JS Validation</a>
-  <a href="object/index.html" class="w3-bar-item w3-button w3-mobile">Objects</a>
-	<a href="EventHandling/index.html" class="w3-bar-item w3-button">Event Handling</a>
-  <a href="Dom/index.html" class="w3-bar-item w3-button w3-mobile">DOM</a>
-  <a href="Ajax/index.html" class="w3-bar-item w3-button w3-mobile">AJAX</a>
-  <a href="php_basic/index.html" class="w3-bar-item w3-button">PHP Basic</a>
-  <a href="Database Connectivity - Session Tracking/index.html" class="w3-bar-item w3-button">PHP Database Connectivity & Session Tracking</a>
-</div>
-  <div style="margin-left:25%">
-  <div class="w3-bar w3-black">
-    <a href="basichtml/index.html" class="w3-bar-item w3-button w3-mobile">Basic HTML Tags</a>
-    <a href="Basic input tags/index.html" class="w3-bar-item w3-button w3-mobile">Input Tag</a>
-	<a href="page structured element/index.html" class="w3-bar-item w3-button">Page Structured Elements</a>
-    <a href="css/index.html" class="w3-bar-item w3-button w3-mobile">CSS</a>
-	<a href="array/index.html" class="w3-bar-item w3-button w3-mobile">Array</a>
-    <a href="function/index.html" class="w3-bar-item w3-button w3-mobile">Function</a>
-     <a href="Control Statements/index.html" class="w3-bar-item w3-button w3-mobile">Control Statements I</a>
-	  <a href="control statement-II/index.html" class="w3-bar-item w3-button w3-mobile">Control Statements II</a>
-  </div>
-  </div>
 
+<html>
+<head>
+<title>Page structure</title>
+<style>
+h1{
+color:green;
+}
+body
+{
+border-color:red;
+}
+p
+{
+font-size:40px;
+font-family:sans-serif;
+color:green;
+}
+
+</style>
+</head>
+<body>
+<h1>PAGE STRUCTURE ELEMENT</h1>
+It is used to identify the area of page as
+<table>
+<table border="1">
+<thead>
+<tr>
+<th>tag</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>header</td>
+<td>defines header for a document or section</td>
+</tr>
+<tr>
+<td>footer</td>
+<td>defines footer for a document or section</td>
+</tr>
+<tr>
+<td>section</td>
+<td>defines section in a document</td>
+</tr>
+<tr>
+<td>details</td>
+<td>defines additional details that the user can view or hide</td>
+</tr>
+<tr>
+<td>article</td>
+<td>defines article in a document</td>
+</tr>
+<tr>
+<td>nav</td>
+<td>defines navigation links</td>
+</tr>
+<tr>
+<td>aside</td>
+<td>defines content aside from the page content</td>
+</tr>
+<tr>
+<td>figure</td>
+<td>defines self contained content</td>
+</tr>
+<tr>
+<td>meter</td>
+<td>defines a scalar measurement within a range(a guage)</td>
+</tbody>
+</table>
+<img src="ps.jpg">
+<h1>HEADER</h1>
+<ul>
+<li>The header element specifies a header for a document or section.</li>
+<li>The header element should be used as a container for introductory content.</li>
+<li>You can have several <header> elements in one document.</li>
+</ul>
+<h2>EXAMPLE FOR HEADER</h2>
+&ltarticle&gt<br>
+  &ltheader&gt<br>
+    &lth1&gtWhat Does WWF Do?&lt/h1&gt<br>
+    &ltp&gtWWF's mission:&lt/p&gt<br>
+  &lt/header&gt<br>
+  &ltp&gtWWF's mission is to stop the degradation of our planet's natural environment,
+  and build a future in which humans live in harmony with nature.&lt/p&gt<br>
+&lt/article&gt<br>
+
+<p>OUTPUT</p>
+<img src="header.png" alt="header">
+
+<h1>FOOTER</h1>
+<ul>
+<li>The footer element specifies a footer for a document or section.</li>
+<li>A footer element should contain information about its containing element.</li>
+<li>A footer typically contains the author of the document, copyright information, links to terms of use, contact information, etc.</li>
+<li>You may have several footer elements in one document.</li>
+<h2>EXAMPLE FOR FOOTER</h2>
+&ltfooter&gt<br>
+  &ltp&gtPosted by: Hege Refsnes&lt/p&gt<br>
+  &ltp&gtContact information: &lta href="mailto:someone@example.com"&gt<br>
+  someone@example.com&lt/a&gt&lt/p&gt<br>
+&lt/footer&gt<br>
+
+<p>OUTPUT</p>
+<img src="footer.png" alt="footer">
+<h1>SECTION</h1>
+<ul>
+<li> A section is a thematic grouping of content, typically with a heading.</li>
+<li>A home page could normally be split into sections for introduction, content, and contact information.</li>
+</ul>
+
+<h2>EXAMPLE FOR SECTION</h2>
+&lth1&gtWWF&lt/h1&gt<br>
+  &ltp&gtThe World Wide Fund for Nature (WWF) is an international organization working on issues regarding the conservation, research and restoration of the environment, formerly named the World Wildlife Fund. WWF was founded in 1961.&lt/p&gt<br>
+
+
+  &lth1&gtWWF's Panda symbol&lt/h1&gt<br>
+  &ltp&gtThe Panda has become the symbol of WWF. The well-known panda logo of WWF originated from a panda named Chi Chi that was transferred from the Beijing Zoo to the London Zoo in the same year of the establishment of WWF.&lt/p&gt<br>
+
+
+<p>OUTPUT</p>
+ <img src="section.png" alt="section">
+<h1>ARTICLE</h1>
+<ul>
+<li>The article element specifies independent, self-contained content</li>
+<li>An article should make sense on its own, and it should be possible to read it independently from the rest of the web sitli>
+<li>Examples of where an article element can be used:</li></ul>
+<ol>
+<li>Forum post</li>
+<li>Blog post</li>
+<li>Newspaper article</li></ol>
+
+<h2>EXAMPLE FOR ARTICLE</h2>
+&ltarticle&gt<br>
+  &lth1&gtWhat Does WWF Do?&lt/h1&gt<br>
+  &ltp&gtWWF's mission is to stop the degradation of our planet's natural environment, and build a future in which humans live in harmony with nature.&lt/p&gt<br>
+&lt/article&gt<br>
+
+<p>OUTPUT</p>
+<img src="article.png" alt="article">
+<h1>NAV</h1>
+<ul>
+<li>The nav element defines a set of navigation links.</li>
+</ul>
+<h2>EXAMPLE FOR NAV</h2>
+&ltnav&gt<br>
+  &lta href="/html/"&gtHTML&lt/a&gt&ltbr&gt<br>
+  &lta href="/css/"&gtCSS&lt/a&gt&ltbr&gt<br>
+  &lta href="/js/"&gtJavaScript&lt/a&gt&ltbr&gt <br>
+  &lta href="/jquery/"&gtjQuery&lt/a&gt<br>
+&lt/nav&gt<br>
+
+<p>OUTPUT</p>
+<img src="navigate.png" alt="navigate">
+<h1>FIGURE</h1>
+<ul>
+<li>The purpose of a figure caption is to add a visual explanation to an image.</li>
+<li>An image and a caption can be grouped together in a figure element</li>
+<li>The img element defines the image, the figcaption element defines the caption.</li>
+</ul>
+<h2>EXAMPLE FOR FIGURE</h2>
+&lth2&gtPlaces to Visit&lt/h2&gt<br>
+
+&ltp&gtPuglia's most famous sight is the unique conical houses (Trulli)&ltbr&gt<br>
+It isfound in the area around Alberobello,&ltbr&gt<br>
+a declared UNESCO World Heritage Site.&lt/p&gt<br>
+
+&ltfigure&gt<br>
+  <img src="p.jpg" alt="Trulli" style="width:100%">
+  &ltfigcaption&gtFig.1 - Trulli, Puglia, Italy.&lt/figcaption&gt<br>
+&lt/figure&gt<br>
+
+
+<p>OUTPUT</p>
+<img src="figure.png" alt="figure">
 </body>
 </html>
