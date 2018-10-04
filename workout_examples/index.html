@@ -1,0 +1,112 @@
+<h3>QUESTION:- Design a HTML form with four necessary fields like name, rollno, date of birth, mobile number and email id. Write PHP program to validate the name (start with alphabet and followed by atleast three character), rollno number (exactly in this format: 16CSR288), mobile number (start with 9 or 8, exactly 10 digits) and email address(start with alphabet followed by alphanumeric character and support for edu, in, com). The student details must be stored in database by clicking submit button and retrieved the details by clicking view result button.
+</h3>
+&lthtml&gt<br>
+&lthead&gt<br>
+&lttitle&gtpreg_match&lt/title&gt<br>
+&lt/head&gt<br>
+&ltbody&gt<br>
+&ltform method="post"&gt<br>
+NAME:&ltinput type="text"name="name"&gt&ltbr&gt&ltbr&gt<br>
+ROLL NUM:&ltinput type="text"name="roll"&gt&ltbr&gt&ltbr&gt<br>
+DOB:&ltinput type="text"name="dob"&gt&ltbr&gt&ltbr&gt<br>
+MOBILE:&ltinput type="text"name="mob"&gt&ltbr&gt&ltbr&gt<br>
+MAIL:&ltinput type="text"name="mail"&gt&ltbr&gt&ltbr&gt<br>
+&ltinput type="submit"value="check" name="submit"&gt<br>
+&lt/form&gt<br>
+&lt?php<br>
+	$servername='localhost'; <br>
+	$user = 'root'; <br>
+	$password = ''; <br>
+	$mysql_database = 'lab'; <br>
+	$db = mysqli_connect($servername, $user, $password,$mysql_database); <br>
+	if (!$db) <br>
+	{<br>
+      die("Connection failed: " . mysqli_connect_error());<br>
+	}<br>
+if (isset($_POST['submit'])) <br>
+{<br>
+	$name=$_POST['name']; <br>
+	$roll=$_POST['roll']; <br>
+	$mob=$_POST['mob']; <br>
+	$mail=$_POST['mail']; <br>
+	if(preg_match("/\b^[[:alpha:]]{3,}\b/",$name)) <br>
+		{<br>
+		echo "Correct name&ltbr&gt";<br>
+		}<br>
+	else<br>
+	{	<br>
+		echo "Wrong name&ltbr&gt";<br>
+		echo"can't store&ltbr&gt";<br>
+		die; <br>
+	}<br>
+	if(preg_match("/\b[[:digit:]]{2}[[:alpha:]]{3}[[:digit:]]{3}\b/",$roll)) <br>
+		{<br>
+		echo "Correct roll&ltbr&gt";<br>
+		}<br>
+	else<br>
+	{	<br>
+		echo "Wrong rollnum&ltbr&gt";<br>
+		echo"can't store&ltbr&gt";<br>
+		die; <br>
+	}<br>
+	if(preg_match("/^(8|9)+[[:digit:]]{9}$/",$mob)) <br>
+		{<br>
+		echo "Correct mobile num&ltbr&gt";<br>
+		}<br>
+	else<br>
+	{<br>
+		echo "Wrong ph num&ltbr&gt";<br>
+		echo"can't store&ltbr&gt";<br>
+		die; <br>
+	}<br>
+	if(preg_match('/^[A-z0-9_\-]+[@][A-z0-9_\-]+([.][A-z0-9_\-]+)+[A-z.]{2,4}$/', $mail)) <br>
+		{<br>
+		echo "Correct email";<br>
+		}<br>
+	else<br>
+	{<br>
+		echo "Wrong email&ltbr&gt";<br>
+		echo"can't store&ltbr&gt";<br>
+		die; <br>
+	}<br>
+	
+	$sql="INSERT INTO q1(name,roll,ph,mail) VALUES('$name','$roll','$mob','$mail')"; <br>
+		if(mysqli_query($db,$sql)){ <br>
+				echo "Successful";<br>
+			}<br>
+			else{<br>
+				echo "&ltscript type='text/javascript'&gtalert('Not stored');&lt/script&gt";exit; <br>
+			}<br>
+			
+}<br>
+if (isset($_POST['retrive']))<br>
+    {     <br>
+	
+		$sql1="SELECT * from q1";<br>
+		$query=mysqli_query($db,$sql1); <br>
+		echo "&lttable border=1&gt";<br>
+				echo "&lttr&gt&ltth&gtName&lt/th&gt&ltth&gtRoll num&lt/th&gt&ltth&gtPhone num&lt/th&gt&ltth&gtMail&lt/th&gt&lt/tr&gt";<br>
+		if((mysqli_num_rows($query))!=0) <br>
+		{<br>
+			while ($row = mysqli_fetch_assoc($query)) <br>
+			{<br>
+				
+				echo "&lttr&gt&lttd&gt".$row["name"]."&lt/td&gt&lttd&gt".$row["roll"]."&lt/td&gt&lttd&gt".$row["ph"]."&lt/td&gt&lttd&gt".$row["mail"]."&lt/td&gt&lt/tr&gt";<br>
+				
+			}<br>
+		}<br>
+		else<br>
+		{<br>
+			echo "0 results";<br>
+		}<br>
+	}<br>
+
+?&gt<br>
+&lt/body&gt<br>
+&lt/html&gt<br><h2>OUTPUT</h2>
+<img src="a1.jpg"><br>
+<img src="a2.jpg"><br>
+<img src="a3.jpg"><br>
+<img src="a4.jpg"><br>
+<img src="a5.jpg"><br>
+<img src="a6.jpg"><br>
