@@ -110,3 +110,48 @@ if (isset($_POST['retrive']))<br>
 <img src="a4.jpg"><br>
 <img src="a5.jpg"><br>
 <img src="a6.jpg"><br>
+<h2>QUESTION:-2.      Create the PHP script called test.php which contains string $Given=”Web technology has client and server scripting”. The script perform the following tasks
+
+a.       Find the word that ends with ‘ing’ in $Given and store it in $match[0].
+
+b.      Search for the word that begins with ‘t’ and ends with ‘y’ in $Given and store it in $match[1]
+
+c.       Find the word that has third character as ‘i’ and store the results in $match[2] and so on.
+
+d.      Display the results in $match
+
+e.       Check the word client is available in the $Given using strcmp.</h2>
+&lt?php<br>
+$s="web technology has client and server scripting ";<br>
+if(preg_match("/\b[[:alpha:]]*ing\b/",$s,$match)) <br>
+{<br>
+	$m[]=$match[0]; <br>
+	echo "word ends with ing is:".$match[0]."&ltbr&gt";<br>
+}<br>
+if(preg_match("/\b t[[:alpha:]]*y\b/",$s,$match)) <br>
+{<br>
+	
+	$match[1]= $match[0]; <br>
+	$m[]=$match[1]; <br>
+	echo "word begins with t and ends y is:".$match[1]."&ltbr&gt";<br>
+}<br>
+if(preg_match("/\b [[:alpha:]]{2}[i][[:alpha:]]*\b/",$s,$match)) <br>
+{<br>
+	$match[2]= $match[0]; <br>
+	$m[]=$match[2]; <br>
+	echo "word with 3rd letter i:".$match[2]."&ltbr&gt";<br>
+}<br>
+echo"The words stored in match&ltbr&gt";<br>
+for($i=0;$i&ltcount($m);$i++)<br>
+	echo "$m[$i]"."&ltbr&gt";<br>
+for($i=0;$i&ltcount($s);$i++)<br>
+{<br>
+	if(strcmp($s[$i],"client")!=0) <br>
+		echo "The word client is available in the given string";<br>
+	else<br>
+		echo "The word client is not available in the given string";<br>
+		
+}<br>
+?&gt
+<h3>OUTPUT</h3>
+<img src="b1.jpg">
