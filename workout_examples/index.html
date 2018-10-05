@@ -155,3 +155,159 @@ for($i=0;$i&ltcount($s);$i++)<br>
 ?&gt
 <h3>OUTPUT</h3>
 <img src="b1.jpg">
+<h3>QUESTION:-1.      Create a registration form for online hotel reservation system  with fields such as first name, middle name, last name, email, phone number, date of birth, date of booking, type of room (drop down list). The form has reserve, update, cancel and view button with appropriate features to manipulate in the database. Also, the calculate the billing amount (including tax) and store the Database.</h3>
+&lthtml&gt<br>
+&lthead&gt<br>
+&lttitle&gtquest 2&lt/title&gt<br>
+&lt/head&gt<br>
+&ltbody&gt<br>
+&ltform method="post"&gt<br>
+FIRST NAME:&ltinput type="text"name="fname"&gt&ltbr&gt&ltbr&gt<br>
+MIDDLE NAME:&ltinput type="text"name="mname"&gt&ltbr&gt&ltbr&gt<br>
+LAST NAME:&ltinput type="text"name="lname"&gt&ltbr&gt&ltbr&gt<br>
+EMAIL:&ltinput type="text"name="mail"&gt&ltbr&gt&ltbr&gt<br>
+PHONE NUMBER:&ltinput type="text"name="ph"&gt&ltbr&gt&ltbr&gt<br>
+D.O.B:&ltinput type="date"name="dob"&gt&ltbr&gt&ltbr&gt<br>
+TYPE OF ROOM:&ltselect name="type"&gt<br>
+&ltoption&gtAC&lt/option&gt<br>
+&ltoption&gtNON-AC&lt/option&gt<br>
+&ltoption&gtSINGLE&lt/option&gt<br>
+&ltoption&gtDOUBLE&lt/option&gt<br>
+&lt/select&gt&ltbr&gt&ltbr&gt<br>
+NUMBER OF ROOMS:&ltinput type="text"name="no"&gt&ltbr&gt&ltbr&gt<br>
+&ltinput type="submit"value="Reserve" name="reserve"&gt<br>
+&ltinput type="submit"value="Edit" name="edit"&gt<br>
+&ltinput type="submit"value="Cancel" name="cancel"&gt<br>
+&ltinput type="submit"value="View" name="view"&gt<br>
+&lt/form&gt<br>
+&lt?php<br>
+	$servername='localhost'; <br>
+	$user = 'root'; <br>
+	$password = ''; <br>
+	$mysql_database = 'lab'; <br>
+	$db = mysqli_connect($servername, $user, $password,$mysql_database); <br>
+	if (!$db) <br>
+	{<br>
+      die("Connection failed: " . mysqli_connect_error());<br>
+	}<br>
+	if (isset($_POST['reserve'])) <br>
+	{<br>
+		$fname=$_POST['fname']; <br>
+		$mname=$_POST['mname']; <br>
+		$lname=$_POST['lname']; <br>
+		$email=$_POST['mail']; <br>
+		$ph=$_POST['ph']; <br>
+		$dob=$_POST['dob']; <br>
+		$room=$_POST['type']; <br>
+		$num=$_POST['no']; <br>
+		if($room=="AC")<br>
+		{<br>
+			$amt=$num*15000; <br>
+			$gst=$amt+($amt*0.02); <br>
+			echo"Total amt including tax:$gst";<br>
+		}<br>
+		if($room=="NON-AC")<br>
+		{<br>
+			$amt=$num*1200; <br>
+			$gst=$amt+($amt*0.02); <br>
+			echo"Total amt including tax:$gst";<br>
+		}<br>
+		if($room=="SINGLE")<br>
+		{<br>
+			$amt=$num*750; <br>
+			$gst=$amt+($amt*0.02); <br>
+			echo"Total amt including tax:$gst";<br>
+		}<br>
+		if($room=="DOUBLE")<br>
+		{<br>
+			$amt=$num*900; <br>
+			$gst=$amt+($amt*0.02); <br>
+			echo"Total amt including tax:$gst";<br>
+		}<br>
+		$sql="INSERT INTO wt(fname,mname,lname,email,ph,dob,room,num,amt) VALUES('$fname','$mname','$lname','$email','$ph','$dob','$room','$num',$gst)"; <br>
+		
+		
+		if(mysqli_query($db,$sql)){ <br>
+				echo "&ltbr&gtSuccessful";<br>
+			}<br>
+			else{<br>
+				echo "&ltscript type='text/javascript'&gtalert('Not stored');&lt/script&gt";exit; <br>
+			}<br>
+	}<br>
+	if (isset($_POST['edit'])) <br>
+	{<br>
+		$fname=$_POST['fname']; <br>
+		$mname=$_POST['mname']; <br>
+		$lname=$_POST['lname']; <br>
+		$email=$_POST['mail']; <br>
+		$ph=$_POST['ph']; <br>
+		$dob=$_POST['dob']; <br>
+		$room=$_POST['type']; <br>
+		$num=$_POST['no']; <br>
+		if($room=="AC")<br>
+		{<br>
+			$amt=$num*15000; <br>
+			$gst=$amt+($amt*0.02); <br>
+			echo"Total amt including tax:$gst";<br>
+		}<br>
+		if($room=="NON-AC")<br>
+		{<br>
+			$amt=$num*1200; <br>
+			$gst=$amt+($amt*0.02); <br>
+			echo"Total amt including tax:$gst";<br>
+		}<br>
+		if($room=="SINGLE")<br>
+		{<br>
+			$amt=$num*750; <br>
+			$gst=$amt+($amt*0.02); <br>
+			echo"Total amt including tax:$gst";<br>
+		}<br>
+		if($room=="DOUBLE")<br>
+		{<br>
+			$amt=$num*900; <br>
+			$gst=$amt+($amt*0.02); <br>
+			echo"Total amt including tax:$gst";<br>
+		}<br>
+		$sq = "UPDATE  wt SET  fname='$fname',mname='$mname',lname='$lname',ph='$ph',dob='$dob',room='$room',num='$num',amt='$gst' where email='$email'";<br>
+		if(mysqli_query($db,$sq)){ <br>
+		echo "&ltbr&gt*****updated*****";<br>
+		}<br>
+		
+	}<br>
+	if (isset($_POST['cancel'])) <br>
+		{<br>
+			$mail=$_POST['mail']; <br>
+			$sq2 = "DELETE  FROM wt WHERE email='$mail'";<br>
+			mysqli_query($db,$sq2); <br>
+			echo "*****deleted*****";<br>
+		}<br>
+	if (isset($_POST['view'])) <br>
+    {     <br>
+	
+		$sql1="SELECT * from wt";<br>
+		$query=mysqli_query($db,$sql1); <br>
+		echo "&lttable border=1&gt";<br>
+				echo "&lttr&gt&ltth&gtFirst Name&lt/th&gt&ltth&gtMiddle Name&lt/th&gt&ltth&gtLast Name&lt/th&gt&ltth&gtMail&lt/th&gt&ltth&gtPhone num&lt/th&gt&ltth&gtDOB&lt/th&gt&ltth&gtRoom Type&lt/th&gt&ltth&gtNum of Rooms&lt/th&gt&ltth&gtTotal Amt&lt/th&gt&lt/tr&gt";<br>
+		if((mysqli_num_rows($query))!=0) <br>
+		{<br>
+			while ($row = mysqli_fetch_assoc($query)) <br>
+			{<br>
+				
+				echo "&lttr&gt&lttd&gt".$row["fname"]."&lt/td&gt&lttd&gt".$row["mname"]."&lt/td&gt&lttd&gt".$row["lname"]."&lt/td&gt&lttd&gt".$row["email"]."&lt/td&gt&lttd&gt".$row["ph"]."&lt/td&gt&lttd&gt".$row["dob"]."&lt/td&gt&lttd&gt".$row["room"]."&lt/td&gt&lttd&gt".$row["num"]."&lt/td&gt&lttd&gt".$row["amt"]."&lt/td&gt&lt/tr&gt";<br>
+				
+			}<br>
+		}<br>
+		else<br>
+		{<br>
+			echo "0 results";<br>
+		}<br>
+	}<br>
+	mysqli_close($db); <br>
+?&gt<br>
+&lt/body&gt<br>
+&lt/html&gt<br>
+<h3>OUTPUT</h3>
+<img src="c1.jpg">
+<img src="c2.jpg">
+<img src="c3.jpg">
+<img src="c4.jpg">
