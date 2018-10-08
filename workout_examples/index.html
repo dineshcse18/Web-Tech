@@ -1581,13 +1581,321 @@ COMPUTER SCIENCE AND ENGINEERING ASSOCIATION&ltbr&gtPresents,&ltbr&gt&lt/p&gt&lt
 Conducted by,&ltbr&gtN.Manoj Raj,&ltbr&gtM.Kavinkumar.&ltbr&gt&lta href="mailto:manojrajsn@gmail.com"&gtClick Here to send mail&lt/a&gt
 Conducted on:1st June,2018&ltbr&gtFurther Details&ltbr&gtContact::8754560701&ltbr&gtVenue:Kongu Concentional centre&lt/h1&gt&lt/center&gt&lt/pre&gt
 &lt/body&gt&lt/html&gt
-
 </pre>
-<img src="op2.PNG">
-<img src="op2.PNG">
-<img src="op3.PNG">
-<img src="op4.PNG">
 </body>
-</html>
+</html><br>
+<h3>QUEST 17:-17.	BANK MANAGEMENT SYSTEM:
+a) Create a website for bank management system with horizontal menus Home, login, deposit, withdraw, Balance enquiry, Logout.
+b) On balance enquiry the balance amount of particular customer is retrieved from the database.
+c) On Deposit the amount should be credited to the balance amount in database
+d) On Withdraw the amount should be debited from the balance amount in database should be retrieved.</h3><br>
+&lthtml&gt<br>
+&lthead&gt<br>
+&lttitle&gtAtm system&lt/title&gt<br>
+&ltstyle type="text/css"&gt<br>
+ul <br>
+{<br>
+	list-style-type: none;<br>
+	overflow: hidden;<br>
+	background-color: black;<br>
+}<br>
+li <br>
+{<br>
+	float:left;<br>
+}<br>
+li a, .dropbtn <br>
+{<br>
+	display: inline-block;<br>
+	color: white;<br>
+	text-align: center;<br>
+	padding: 14px 16px;<br>
+	text-decoration: none;<br>
+}<br>
+li a:hover<br>
+{<br>
+	background-color: goldenrod;<br>
+	color:black;<br>
+}<br>
+li .dropdown <br>
+{<br>
+	display: inline-block;<br>
+}<br>
+.dropdown-content <br>
+{<br>
+	display: none;<br>
+	position: absolute;<br>
+	background-color:black;<br>
+	color:white;<br>
+	min-width: 160px;<br>
+	z-index: 1;<br>
+}<br>
+.dropdown-content a <br>
+{<br>
+	padding: 12px 16px;<br>
+	text-decoration: none;<br>
+	display: block;<br>
+	text-align: left;<br>
+}<br>
+.dropdown-content a:hover <br>
+{<br>
+	background-color:goldenrod;<br>
+}<br>
+.dropdown:hover .dropdown-content <br>
+{<br>
+	display: block;<br>
+}<br>
+body<br>
+{<br>
+background-color:lightblue;<br>
+font-size:12pt;<br>
+}<br>
+.a<br>
+{<br>
+position:absolute;<br>
+left:800px;<br>
+top:10px;<br>
+}<br>	
+&lt/style&gt<br>
+&lt/head&gt<br>
+&ltbody&gt<br>
+&ltcenter&gt<br>
+&lth3 style="font-size:20pt;"&gtBank Management System &lt/h3&gt<br>
+&ltul class="topnav"&gt<br>
+ &ltli&gt&lta href="#home"&gtHome&lt/a&gt&lt/li&gt<br>
+ &ltli&gt&lta href="banklogin.php"&gtLogin&lt/a&gt&lt/li&gt<br>
+ &ltli&gt&lta href="deposit.php"&gtDeposit&lt/a&gt&lt/li&gt<br>
+ &ltli&gt&lta href="Withdrawal.php"&gtWithdrawal&lt/a&gt&lt/li&gt<br>
+  &ltli&gt&lta href="Balanceenquiry.php"&gtBalanceEnquiry&lt/a&gt&lt/li&gt<br>
+&ltli&gt&lta href=""&gtLogout&lt/a&gt&lt/li&gt<br>
+&lt/ul&gt <br>
+&ltp id="home"&gt&lt/p&gt<br>
+&lt/body&gt<br>
+&lt/html&gt<br>
+&lthtml&gt<br>
+&lthead&gt<br>
+&lttitle&gt<br>
+ATM system<br>
+&lt/title&gt<br>
+&ltstyle type="text/css"&gt<br>
+body<br>
+{<br>
+background-color:lightblue;<br>
+background-attachment:fixed;<br><br>
+}<br>
+form<br>
+{<br>
+text-align:center;<br>
+position :relative;<br>
+font-size :12pt;<br>
+top:150px;<br>
+left:70px;<br>
+}<br>
+&lt/style&gt<br>
+&lt/head&gt<br>
+&ltbody&gt<br>
+&ltcenter&gt&lth1 style="color:black;"&gtLogin into the website!!!&lt/h1&gt&lt/center&gt<br>
+&ltform name="loginform"  method="post" onsubmit="return validate()"&gt<br><br>
+&ltpre&gt&lth3 style="color:black;"&gt Username: &ltinput type="email" name="username" placeholder="email"&gt&lt/h3&gt<br>
+&lth3 style="color:black;"&gt password: &ltinput type="password" name="password" &gt&lt/h3&gt<br>
+&ltinput type="submit" value="login" name="submit"&gt 		&lta href="banksignup.php"&gt&ltbutton type="button" &gtSignin&lt/button&gt&lt/pre&gt<br>
+&lt/form&gt<br>
+&lt/span&gt<br>
+&lt/a&gt&ltbr&gt<br>
+&lt?php<br>
+	$servername='localhost';<br>
+	$user = 'root';<br>
+	$password = '';<br>
+	$mysql_database = 'bank';<br>
+	$db = mysqli_connect($servername, $user, $password,$mysql_database);<br>
+	if (!$db)<br>
+	 {<br>
+     	 die("Connection failed: " . mysqli_connect_error());<br>
+	 }<br>
+	if(isset($_POST["submit"]))<br>
+	{<br>
+	$username=$_POST['username'];<br>
+	$pass=$_POST['password'];<br>
+	$sql1="SELECT ConfirmPassword  FROM customer WHERE RegisterEmail='$username'";<br>
+	$res=mysqli_query($db,$sql1);<br>
+	if($res)<br>
+	{<br>
+	while($row=mysqli_fetch_array($res))<br>
+	{<br>
+	if($row["ConfirmPassword"]==$pass)<br>
+	{<br>
+	$sql="select * from login";<br>
+	$rest=mysqli_query($db,$sql);<br>
+	$n=mysqli_num_rows($rest);<br>
+	print($n);<br>
+	$n1=$n+1;<br>
+	$sql= "INSERT INTO login (Id,username,password) VALUES ('$n1','$username','$pass')";<br>
+	if(mysqli_query($db,$sql))<br>
+	{<br>
+	print("&ltscript type='text/javascript'&gtalert('Successful');&lt/script&gt");<br>
+	}<br>
+	else<br>
+	{<br>
+	print("&ltscript type='text/javascript'&gtalert('Unsuccessful');&lt/script&gt");<br>
+	}<br>
+	}<br>
+	else<br>
+	{<br>
+	print("&ltscript type='text/javascript'&gtalert('Incorrect password');&lt/script&gt");<br>
+	}<br>
+	}<br>
+	}<br>
+	}<br>
+	mysqli_close($db);<br>
+?&gt<br>
+	<h3>Deposit.php</h3>
+&lt/body&gt<br>
+&lt/html&gt<br>
+&lthtml&gt<br>
+&lthead&gt<br>
+&lttitle&gt<br>
+Deposit&lt/title&gt<br>
+&ltstyle type="text/css"&gt<br>
+body<br>
+{<br>
+background-color:lightblue;<br>
+}<br>
+&lt/style&gt<br>
+&lt/head&gt<br>
+&ltbody&gt<br>
+&ltform method="POST" &gt<br>
+&ltcenter&gt<br>
+Enter your Account  no:	&ltinput type="text" name="Number"&gt&ltbr&gt&ltbr&gt&ltbr&gt<br>
+Enter the amount to be Deposited:         &ltinput type="text" name="dep"&gt  &ltbr&gt&ltbr&gt&ltbr&gt&ltinput type="submit" value="Deposit" name="depsubmit"&gt &ltbr&gt&ltbr&gt&ltbr&gt<br>
+&lt/form&gt<br>
+&lta href="bank.php"&gt&ltinput type="submit" value="Goback" name="ss"&gt&lt/a&gt&lt/center&gt<br>
+&lt?php<br>
+	$servername='localhost';<br>
+	$user = 'root';<br>
+	$password = '';<br>
+	$mysql_database = 'bank';<br>
+	$db = mysqli_connect($servername, $user, $password,$mysql_database);<br>
+if (!$db)<br>
+ {<br>
+     die("Connection failed: " . mysqli_connect_error());<br>
+ }<br>
+	
+if(isset($_POST['depsubmit']))<br>
+{<br>
+	
+	$an=$_POST['Number'];<br>
+	$number1=$_POST['dep'];<br>
+	echo "&lth3&gtYour Deposit Amount is:".$number1;<br>
+	echo "&ltbr&gt";<br>
+	$result=mysqli_query($db, "select balance from customer where AccountNo=$an");<br>
+		while($row=mysqli_fetch_array($result))<br>
+		{<br>
+			$number2=$row['balance'];<br>
+			$number3= $number2 + $number1;<br>
+			mysqli_query($db, "update customer set balance=$number3 where AccountNo=$an");<br>
+			echo "&lth3&gtYour Current Balance is:".$number3;<br>
+		}<br>
+}<br>
+?&gt<br>
+&lt/body&gt<br>
+&lt/html&gt<br>
+	<h3>Balance Enquiry.php</h3>
+&lthtml&gt<br>
+&lthead&gt<br>
+&lttitle&gtBalance Enquiry&lt/title&gt<br>
+&ltstyle type="text/css"&gt<br>
+body<br>
+{<br>
+background-color:lightblue;<br>
+}<br>
+&lt/style&gt<br>
+&lt/head&gt<br>
+&ltbody&gt<br>
+&ltform method="post"&gt<br>
+&ltcenter&gtEnter your AccountNo:&ltinput type="text" name="Number"&gt&ltbr&gt&ltbr&gt&ltbr&gt <br>
+&ltinput type="submit" value="Check Balance" name="bal"&gt&lt/form&gt&lt/center&gt<br>
+&lt?php<br>
+	$servername='localhost';<br>
+	$user = 'root';<br>
+	$password = '';<br>
+	$mysql_database = 'bank';<br>
+	$db = mysqli_connect($servername, $user, $password,$mysql_database);<br>
+if (!$db)<br>
+ {<br>
+     die("Connection failed: " . mysqli_connect_error());<br>
+ }<br>
+if(isset($_POST['bal']))<br>
+{<br>
+	$an=$_POST['Number'];<br>
+	$result=mysqli_query($db, "select balance from customer where AccountNo=$an");<br>
+	while($row=mysqli_fetch_array($result))<br>
+	{<br>
+		echo "&lth3&gtYour Balance is:";<br>
+		echo  $row['balance'];<br>
+	}<br>
+}<br>	
+mysqli_close($db);<br>
+?&gt <br>
+&lt/body&gt<br>
+&lt/html&gt<br>
+	<h3>Withdraw.php</h3>
+&lthtml&gt<br>
+&lthead&gt<br>
+&lttitle&gt<br>
+Withdraw&lt/title&gt<br>
+&ltstyle type="text/css"&gt<br>
+body<br>
+{<br>
+background-color:lightblue;<br>
+}<br>
+&lt/style&gt<br>
+&lt/head&gt<br>
+&ltbody&gt<br>
+&ltform method="POST" &gt<br>
+&ltcenter&gt<br>
+Enter your Account  no:	&ltinput type="text" name="Number"&gt&ltbr&gt&ltbr&gt&ltbr&gt<br>
+Enter the amount to be Withdrawn:         &ltinput type="text" name="with"&gt  &ltbr&gt&ltbr&gt&ltbr&gt&ltinput type="submit" value="Withdraw" name="withsubmit"&gt &ltbr&gt&ltbr&gt&ltbr&gt<br>
+&lt/form&gt<br>
+&lta href="bank.php"&gt&ltinput type="submit" value="Goback" name="ss"&gt&lt/a&gt&lt/center&gt<br>
+&lt?php<br>
+	$servername='localhost';<br>
+	$user = 'root';<br>
+	$password = '';<br>
+	$mysql_database = 'bank';<br>
+	$db = mysqli_connect($servername, $user, $password,$mysql_database);<br>
+if (!$db)<br>
+ {<br>
+     die("Connection failed: " . mysqli_connect_error());<br>
+ }<br>
+	
+if(isset($_POST['withsubmit']))<br>
+{<br>
+	
+	$an= $_POST['Number'];<br>
+	$number1=$_POST['with'];<br>
+	echo "&ltbr&gt";<br>
+	$result=mysqli_query($db, "select balance from customer where AccountNo=$an");<br>
+		while($row=mysqli_fetch_array($result))<br>
+		{<br>
+			$number2=$row['balance'];<br>
+			$number3= $number2 - $number1;<br>
+			if($number3&lt500)<br>
+			{<br>
+				print("&lth3&gtPlease maintain minimum balance...&lt/h3&gt");<br>
+				print("&lth3&gtWithdrawal connot be performed...&lt/h3&gt");<br>
+				echo "&lth3&gtYour Current Balance is:".$number2."&lt/h3&gt";<br>
+			}<br>
+			else<br>
+			{<br>
+				echo "&lth3&gtYour Withdraw Amount is:".$number1;<br>
+				mysqli_query($db, "update customer set balance=$number3 where AccountNo=$an");<br>
+				echo "&lth3&gtYour Current Balance is:".$number3;<br>
+			}<br>
+		}<br>
+}<br>
+?&gt<br>
+&lt/body&gt<br>
+&lt/html&gt<br>
+
+
 
 
