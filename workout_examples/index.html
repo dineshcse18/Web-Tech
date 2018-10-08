@@ -316,3 +316,59 @@ NUMBER OF ROOMS:&ltinput type="text"name="no"&gt&ltbr&gt&ltbr&gt<br>
 <img src="c2.jpg">
 <img src="c3.jpg">
 <img src="c4.jpg">
+<h2>LAB QUSTIONS:</h2>
+<h3>QUEST 10:-</h3>
+<img src="quest10.jpg"><br><br>
+&lt?php<br>
+session_start();<br>
+if (isset($_POST['submit'])) <br>
+{<br>
+$_SESSION["name1"] = $_POST['name']; <br>
+$_SESSION["email1"] = $_POST['email']; <br>
+echo "This session is handled by :".$_SESSION["name1"]." "."with email id:" . $_SESSION["email1"]." ";<br>
+session_destroy();<br>
+}<br>
+?&gt<br>
+&lthtml&gt<br>
+&lthead&gt<br>
+&ltscript&gt<br>
+var asyncRequest; <br>
+function getContent(url) <br>
+{<br>
+	try<br>
+	{<br>
+	asyncRequest=new XMLHttpRequest();<br>
+	asyncRequest.addEventListener("readystatechange",stateChange,false); <br>
+	asyncRequest.open("GET",url,true); <br>
+	asyncRequest.send(null); <br>
+	}<br>
+	catch(Exception) <br>
+	{<br>
+	alert('request failed'); <br>
+	}<br>
+}<br>
+
+function stateChange()<br>
+{<br>
+	if(asyncRequest.readyState==4&&asyncRequest.status==200) <br>
+	{<br>
+		document.getElementById('a').innerHTML=asyncRequest.responseText; <br>
+	}<br>
+}<br>
+
+	
+&lt/script&gt<br>
+&lt/head&gt<br>
+&ltbody&gt<br>
+&ltform method="post"&gt<br>
+Name:&ltinput type="text"name="name"&gt&ltbr&gt&ltbr&gt<br>
+Email:&ltinput type="email"name="email"&gt&ltbr&gt&ltbr&gt<br>
+&ltbr&gt<br>
+&ltinput type="submit"name="submit"value="submit"&gt&ltbr&gt&ltbr&gt&ltbr&gt<br>
+&ltb&gtNature:&lt/b&gt&ltbr&gt&ltbr&gt<br>
+&ltimg src="nature.jpg"height="200"width="200"id="im"onclick='getContent("a.html")'&gt<br>
+&ltp id="a"&gt&lt/p&gt<br>
+&lt/body&gt<br>
+&lt/html&gt<br>
+<h3>OUTPUT:</h3>
+<img src="q10.jpg">
