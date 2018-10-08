@@ -600,6 +600,7 @@ mysqli_close($db); <br>
 <img src="bq11.jpg">
 <img src="cq11.jpg">
 <img src="dq11.jpg"><br>
+
 <h3>QUEST 10:-
 16.	BLOOD BANK MAINTENANCE 
 a) Create a web site for blood donor as shown below 
@@ -704,4 +705,367 @@ Blood Group:	&ltselect name="group"&gt&ltoption&gtselect&lt/option&gt&ltoption&g
 &lt/form&gt<br>
 &lt/body&gt<br>
 &lt/html&gt<br>
-<img src="out1.jpg" height="500" width="700">
+<h3>QUEST:-15HOTEL MANAGEMENT SYSTEM:
+a) Create a website for online hotel management system that should contain two logins
+admin and customer. Admin has full control over the website such as adding room
+information and price, house rules, facilities etc. Customer can login and book their room and
+food.
+b) Separate booking form for room and food should be created.
+b) Booking should add the customer details to the database and cancel booking should delete
+the customer details from the database.</h3>
+<b>Form.php</b><br>
+
+&lthtml&gt<br>
+&lthead&gt<br>
+&lttitle&gtONLINE REGISTERATION<br>
+&lt/title&gt<br>
+&ltstyle type="text/css"&gt<br>
+body<br>
+{<br>
+color:red; <br>
+background-attachment:fixed; <br>
+background-size:1500px 1500px; <br>
+background-repeat:no-repeat; <br>
+}<br>
+&lt/style&gt<br>
+
+
+&ltscript type="text/javascript"&gt<br>
+function validate()<br>
+{<br>
+var name=document.forms["form"]["user"].value; <br>
+var rdbtn=document.getElementsByName("gender");<br>
+var i=0; <br>
+var count = 0; <br>
+var valid=false; <br>
+var mode=document.getElementsByName("mode");<br>
+var j=0; <br>
+var count=0; <br>
+var valid=false; <br>
+if(name=="")<br>
+{<br>
+window.alert("create your user name");<br>
+name.focus();<br>
+return false; <br>
+}<br>
+while(!valid && i&ltrdbtn.length) <br>
+{<br>
+    if(rdbtn[i].checked) <br>
+    {<br>
+        valid=true; <br>
+    }<br>
+    i++;<br>
+}<br>
+if(!valid) <br>
+{<br>
+    alert("please enter your gender");<br>
+        return false; <br>
+}<br>
+while(!valid && j&ltmode.length) <br>
+{<br>
+    if(mode[j].checked) <br>
+    {<br>
+        valid=true; <br>
+    }<br>
+    j++;<br>
+}<br>
+if(!valid) <br>
+{<br>
+    alert("please enter your mode of payment");<br>
+        return false; <br>
+}<br>
+}<br>
+&lt/script&gt<br>
+&lt/head&gt<br>
+&ltcenter&gt&ltbody background="regs.jpg" style="font-size:20pt;"&gt&lt/center&gt<br>
+&ltcenter&gt&ltform name="form"method="post"onsubmit="return validate()"&gt<br>
+
+&ltcenter&gtREGISTERATION FORM&lt/center&gt&ltpre&gt<br>
+&ltcenter&gtNAME            :&ltinput type="text" name="user" placeholder="manovikashini.d"&gt&lt/center&gt<br>
+&ltbr&gt<br>
+&ltcenter&gtE-mail          :&ltinput type="email" name="email" <br>placeholder="abc16@gmail.com"&gt&lt/center&gt
+&ltbr&gt<br>
+&ltcenter&gtDATE-OF-BIRTH   :&ltinput type="date" name="date" placeholder="16/07/1999"&gt&lt/center&gt<br>
+&ltbr&gt<br>
+&ltcenter&gtROOMS NEED ON   :&ltinput type="date" name="rooms"&gt&lt/center&gt<br>
+&ltbr&gt<br>
+&ltcenter&gtCONTACT-NO      :&ltinput type="tel" name="contactno"required pattern="[0-9]{5}-[0-9]{5}"&gt&lt/center&gt<br>
+&ltbr&gt<br>
+&ltcenter&gtGENDER          :&ltinput type="radio" name="gender" <br>value="male"&gtMALE  &ltinput type="radio" name="gender" <br>value="female"&gtFEMALE&lt/center&gt<br>
+&ltbr&gt<br>
+&ltcenter&gtNUMBER OF ROOMS TO BE BOOKED:&ltinput type="number" name="no" min="1"&gt&lt/center&gt<br>
+&ltbr&gt<br>
+&ltcenter&gtROOMS-AVAILABLE :&ltinput list="room"  name="roomsavailable"&gt<br>
+&ltdatalist id="room"&gt<br>
+&ltselect&gt<br>
+&ltoption&gtAC room with food&lt/option&gt<br>
+&ltoption&gtNON-AC room with food&lt/option&gt<br>
+&ltoption&gtAC room without food&lt/option&gt<br>
+&ltoption&gtNON-AC room without food&lt/option&gt<br>
+&lt/select&gt<br>
+&lt/datalist&gt&lt/center&gt<br>
+&ltbr&gt<br>
+&ltcenter&gtHALL BOOKING    :&ltinput type="checkbox" name="hallbooking" <br>value="party hall"&gtparty hall  &ltinput type="checkbox" name="hallbooking" <br>value="wedding hall"&gtwedding hall &ltinput type="checkbox" name="hallbooking" <br>value="meeting hall"&gtmeeting hall&lt/center&gt<br>
+&ltbr&gt<br>
+&ltcenter&gtMODE OF PAYMENT :&ltinput type="radio" name="mode" value="credit card"&gtcredit card &ltinput type="radio" name="mode" value="debit card"&gtdebit card &ltinput type="radio" name="mode" value="spot payment"&gtspot payment &ltinput type="radio" name="mode" value="net banking"&gtnet banking&lt/center&gt
+&ltbr&gt<br>
+&ltcenter&gtNATIONALITY     :&ltinput type="radio" name="nation" value="indian"&gtINDIAN  &ltinput type="radio" name="nation" value="anglo-indian"&gtANGLO-INDIAN  &ltinput type="radio" name="nation" value="others"&gtOTHERS&lt/center&gt<br>
+&ltbr&gt<br>
+&ltp&gtif others means passport & visa copy is need to be uploaded&lt/p&gt<br>
+&ltbutton&gtupload&lt/button&gt<br>
+&ltbutton&gtreset&lt/button&gt<br>
+&ltbr&gt<br>
+&ltcenter&gtTRANSLATOR      :&ltinput type="radio" name="translator" value=yes"&gtYES  &ltinput type="radio" name="translator" value="no"&gtNO&lt/center&gt<br>
+&ltbr&gt<br>
+&ltcenter&gtLANGUAGE        :&ltinput type="text" name="lang"&gt&lt/center&gt<br>
+&ltbr&gt<br>
+&ltcenter&gtFOOD:&lttextarea rows="2"cols="30"name="foo"&gt&lt/textarea&gt&lt/center&gt<br>
+&lt/pre&gt&ltbr&gt<br>
+&ltcenter&gt&ltinput type="submit" name="submit" value="submit"&gt &ltinput type="submit" value="edit"&gt&lt/center&gt<br>
+
+&lt/form&gt&lt/center&gt<br>
+&lt?php<br>
+$db=mysqli_connect("localhost","root","","lab");<br>
+
+if(!$db) <br>
+{<br>
+die("connection failed");<br>
+}<br>
+if(isset($_POST['submit'])) <br>
+{<br>
+$name=$_POST['user']; <br>                                                                           
+$email=$_POST['email']; <br>
+$dob=$_POST['date']; <br>
+$rooms=$_POST['rooms']; <br>
+$contact=$_POST['contactno']; <br>
+$gender=$_POST['gender']; <br>                                                                          
+$norooms=$_POST['no']; <br>
+$roomsavailable=$_POST['roomsavailable']; <br>
+$hall=$_POST['hallbooking']; <br>
+$mode=$_POST['mode']; <br>
+$nationality=$_POST['nation']; <br>
+$translator=$_POST['translator']; <br>
+$language=$_POST['lang']; <br>
+$food=$_POST['foo']; <br>
+$query="INSERT INTO form(name,email,dob,rooms,contact,gender,noofrooms,roomsavailable,hall,mode,nationality,translator,language,food)VALUES('$name','$email','$dob','$rooms','$contact','$gender','$norooms','$roomsavailable','$hall','$mode','$nationality','$translator','$language','$food')"; <br>
+if(mysqli_query($db,$query)) <br>
+{<br>
+echo"success";<br>
+}<br>
+}<br>
+mysqli_close($db); <br>
+?&gt<br>
+&lt/body&gt<br>
+&lt/html&gt<br>
+
+<b>User.php</b>
+
+&lthtml&gt<br>
+&lthead&gt<br>
+&lttitle&gtUSER PAGE&lt/title&gt<br>
+&ltlink rel="stylesheet" type="text/css" href="l.css"&gt<br>
+&lt/head&gt<br>
+&ltscript type="text/javascript"&gt<br>
+function validate()<br>
+{<br>
+var name=document.forms["form"]["user"].value; <br>
+if(name=="")<br>
+{<br>
+window.alert("Enter your user name");<br>
+name.focus();<br>
+return false; <br>
+}<br>
+}<br>
+&lt/script&gt<br>
+&ltcenter&gt&ltbody background="index.jpg"&gtUSER PAGE&ltcenter&gt<br>
+&ltform name="form"method="post"onsubmit="return validate()"&gt<br>
+username:&ltinput type="text" name="user" style="color:red;"&gt<br>
+&ltbr&gt<br>
+&ltbr&gt<br>
+password:&ltinput type="password" name="password" style="color:red ;" &gt<br>
+&ltbr&gt<br>
+&ltbr&gt<br>
+
+
+&lt/form&gt<br>
+&lt/body&gt<br>
+&lta href="form.php"&gt&ltinput type="submit" name="submit" value="login"&gt&lt/a&gt<br>
+&ltinput type="submit" value="reset"&gt<br>
+&lt/html&gt<br>
+
+<b>Admin.php</b><br>
+
+ &lthtml&gt<br>
+&lthead&gt<br>
+&lttitle&gtsignup<br>
+&lt/title&gt<br>
+&ltstyle type="text/css"&gt<br>
+button<br>
+{<br>
+color:green; <br>
+}<br>
+body<br>
+{<br>
+background-repeat:no-repeat; <br>
+background-size:1300px;900px; <br>
+button-size:50pt; <br>
+font-size:15pt; <br>
+}<br>
+&lt/style&gt<br>
+&lt/head&gt<br>
+&ltcenter&gt&ltbody background="admin.jpeg"&gtADMIN LOGIN&lt/center&gt<br>
+&ltbr&gt<br>
+&ltbr&gt<br>
+&ltform&gt<br>
+
+&ltcenter&gtADMIN NAME:&ltinput type="text" name="name"required&gt&lt/center&gt<br>
+&ltbr&gt<br>
+&ltbr&gt<br>
+&ltcenter&gtPASSWORD:&ltinput type="password" name="pass"required&gt&lt/center&gt<br>
+&ltbr&gt<br>
+&ltbr&gt<br>
+
+&lt/form&gt<br>
+&ltbr&gt<br>
+
+&lt/body&gt<br>
+&ltcenter&gt&lta href="admin.php"&gt<br>
+&ltinput type="submit" name="submit" value="login"&gt&lt/a&gt<br>
+&ltinput type="submit"  value="edit"&gt&lt/center&gt<br>
+&lt/html&gt<br>
+
+<b>Frnt.php</b><br>
+	&lthtml&gt<br>
+&lthead&gt<br>
+&lttitle&gtHOTEL RESI
+<br>&lt/title&gt<br>
+&ltstyle type="text/css"&gt<br>
+body{<br>
+background-attachment:fixed;
+<br>background-repeat:norepeat;
+background-size:100%;
+<br>}
+nav a<br>
+{<br>
+display:none; <br>
+}<br>
+nav:hover a
+<br>{
+display:inline;
+<br>}<br>
+.navbar{<br>
+overflow:hidden;
+<br>background-color:orange; <br>
+}<br>
+.navbar a{
+<br>float:left;
+color:white;
+<br>text-align:center; <br>
+padding:14px 16px; <br>
+font-size:16px; <br>
+text-decoration:none;
+<br>}
+
+.dropdown2{
+<br>float:left;
+overflow:hidden; <br>
+}<br>
+.dropdown2 .dropbt2{<br>
+font-size:16px; <br>
+border:none; <br>
+outline:none; <br>
+color:white; <br>
+padding:12px 12px;
+<br>margin:0;
+background-color:orange;
+<br>}<br>
+
+.navbar a:hover, .dropdown2:hover .dropbt2 {<br>
+    background-color: green; <br>
+  }<br>
+.dropcont2{<br>
+display:none; <br>
+background-color:black;
+<br>
+}<br>
+.dropcont2 a{
+<br>float:none;
+color:white;
+<br>padding:12px 12px; <br>
+display:block; <br>
+text-align:left; <br>
+}<br>
+.dropcont2 a:hover{
+<br>background-color:green;
+}<br>
+.dropdown2:hover .dropcont2{
+<br>display:block; <br>
+}<br>
+.dropdown{
+<br>float:left; <br>
+overflow:hidden; <br>
+}<br>
+.dropdown .dropbt{<br>
+font-size:16px; <br>
+border:none; <br>
+outline:none; <br>
+color:white; <br>
+padding:12px 12px; <br>
+margin:0; <br>
+background-color:orange;
+<br>}
+
+.navbar a:hover, .dropdown:hover .dropbt {<br>
+    background-color: green; <br>
+  }<br>
+.dropcont{
+<br>display:none;
+background-color:black;
+<br>
+}<br>
+.dropcont a{<br>
+float:none; <br>
+color:white; <br>
+padding:12px 12px;
+<br>display:inline; <br>
+text-align:left; <br>
+<br>}
+.dropcont a:hover{<br>
+background-color:green;
+}<br>
+.dropdown:hover .dropcont{<br>
+display:block; <br>
+}<br>
+
+body{<br>
+background-image:url("vis.jpg");<br>
+background-repeat:no-repeat; <br>
+background-position:fixed; <br>
+}<br>
+&lt/style&gt<br>
+&lt/head&gt<br>
+&ltbody background="d.jpg" style="text-allign:center;font-size:30pt;"&gt
+<br>&ltcenter&gtHOTEL RESI&lt/center&gt
+<br>&ltdiv class="navbar"&gt
+<br>&lta href="front.php"&gtHOME&lt/a&gt<br>
+&lta href="2.php"&gtFACILITIES&lt/a&gt<br>
+&ltdiv class="dropdown"&gt<br>
+&ltbutton class="dropbt"&gtLOGIN&ltspan&gt&#9660&lt/span&gt<br>
+&lti class="fa fa-caret-down"&gt&lt/i&gt&lt/button&gt<br>
+&ltdiv class="dropcont"&gt<br>
+&lta href="user.php"&gtUSER&lt/a&gt<br>
+&lta href="ad.php"&gtADMIN&lt/a&gt<br>
+&lt/div&gt<br>
+&lt/div&gt<br>
+&lt/div&gt<br>
+&lt/nav&gt<br>
+&lt/body&gt<br>
+&lt/html&gt<br>
+<h3>OUTPUT:</h3>
+<img src="m1.png">
+<img src="m2.png">
+<img src="m3.png">
+<img src="m4.png">
+<img src="m5.png">
+<img src="m6.png">
+<img src="m7.png">
