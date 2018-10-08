@@ -1069,3 +1069,513 @@ background-position:fixed; <br>
 <img src="m5.png">
 <img src="m6.png">
 <img src="m7.png">
+
+
+<h3>QUESTION NOE:12
+Create a website for National level technical symposium (Infocruise 2k18) of your department with menu layout. Home menu describes about your department and college. Events menu specify all the technical and non technical events with conditions. Students from other colleges can register for the particular event using registration form (Validation is mandatory). On submitting the form the details should be added to the database. Provide the contact details of student and staff coordinators with mobile number and mail id under the menu Contact us.<h3>
+
+home.html
+
+&lthtml&gt
+&lthead&gt&lttitle&gtSymposium&lt/title&gt&lth1&gt&ltdiv align="center"&gtKONGU ENGINEERING COLLEGE&ltbr&gtNATIONAL LEVEL SYMPOSIUM&ltbr&gt&lt/div&gt&lt/h1&gt
+&ltstyle type="text/css"&gt
+
+	.navbar {
+    overflow: hidden;
+    background-color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+
+&lt/style&gt
+&lt/head&gt
+&ltbody&gt
+&ltdiv class="navbar"&gt
+  &lta href="home.html"&gtHome&lt/a&gt
+  &lta href="events.html"&gtEvents&lt/a&gt
+  &lta href="technical.php"&gtRegister&lt/a&gt
+  &lta class="active" href="contact.html"&gtContact Us&lt/a&gt
+&lt/div&gt
+&ltp style="text-align:center;font-size:20pt"&gt
+Kongu Engineering College&lt/p&gt
+&ltp style="font-size:17pt;"&gt
+Kongu Engineering College affiliated to Anna University is located in Perundurai,Erode.It is accredited 'A' grade by National Assessment Accreditation Council.Over the past 32 years the instituton with its good infrastructure facility and excellent academic records has emerged as a center of excellence.The college with its quality education and peaceful environment provides continuous improvement and confidence for the students to face the real world challenges and mould their future. 
+&lt/p&gt
+&ltp style="text-align:center;font-size:20pt"&gt
+Department of Computer Science & Engineering&lt/p&gt
+&ltp style="font-size:17pt;"&gt
+The department of computer science and engineering holding nearly 700 students has been successfully achieving its goal of identifying and appreciating the unique talents.The department is constantly striving to provide the best acadimecs to empower the practical knowledge of students so as to meet the changing industrial needs. The department brings out world class professionals in the field of computer science. After getting the autonomous status, the syllabus was made more advanced so that students came to know more about the latest cutting edge technologies. 
+&lt/p&gt
+&ltp style="text-align:center;font-size:20pt"&gt
+TECHNOFREAKZ&lt/p&gt
+&ltp style="font-size:17pt;"&gt
+Infocruise is a national level technical symposium conducted every year by the computer science and engineering department of kongu engineering college.Infocruise which is a great platform to present your innovative ideas and develop your technical skills has both technical and fun events .Infocruise never fails in finding the best in a person and reward them accordingly. . We delightfully welcomes you all to examine yourself in different areas.
+&lt/p&gt
+&lt/body&gt
+&lt/html&gt
+
+events.html
+
+&lthtml&gt
+&lthead&gt&lttitle&gtEvents&lt/title&gt&lth1&gt&ltdiv align="center"&gtKONGU ENGINEERING COLLEGE&ltbr&gtNATIONAL LEVEL SYMPOSIUM&ltbr&gt&lt/div&gt&lt/h1&gt
+&ltstyle type="text/css"&gt
+p
+{
+font-size:20pt;
+}
+	.navbar {
+    overflow: hidden;
+    background-color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+&lt/style&gt
+&lt/head&gt
+&ltbody&gt
+&ltdiv class="navbar"&gt
+  &lta href="home.html"&gtHome&lt/a&gt
+  &lta href="events.html"&gtEvents&lt/a&gt
+  &lta href="technical.php"&gtRegister&lt/a&gt
+  &lta class="active" href="contact.html"&gtContact Us&lt/a&gt
+&lt/div&gt
+&ltp style="text-align:center;font-size:20pt;"&gtTECHNICAL EVENTS&lt/p&gt
+&ltp style="text-align:center;font-size:19pt;"&gtCODEZERS&lt/p&gt
+&ltp style="text-align:center;font-size:15pt;"&gt(Coding [Any Language])&ltbr&gtPrizes worth : 3000&lt/p&gt
+
+&ltp&gt 1.Programming is not just about what you know it's about what you can do with what you know. Code It is filled with competitive programming challenges made to unleash your coding skills. Code and debug your path to a proper result and ascend to the next level. The power of coding is infinite! 
+&ltbr&gt
+&ltbr&gtGuidelines:
+&ltul&gt
+&ltli&gt&ltp&gt
+It is an individual event.&lt/li&gt
+&ltli&gt&ltp&gtIt will based on hacker rank or hacker earth platform. The results will be based on logic of code and execution of programs.&lt/li&gt
+&lt/p&gt&lt/ul&gt
+&ltp style="text-align:center;font-size:20pt;"&gtWEB WAR&ltbr&gt
+Web War&ltbr&gt
+(Web Designing)&ltbr&gt
+Prizes worth : 3000&lt/p&gt
+&ltp&gt1. Websites should look good from the inside and out? Paul Cookson The participants are expected to build fully functional websites on a given theme. It is an event for the young developers to expose their development skills.
+&ltbr&gt
+&ltbr&gt
+Guidelines:
+
+&ltul&gt
+    &ltli&gt&ltp&gtA team can consist a maximum of two participants. Individual Participants are also allowed.&lt/li&gt
+    &ltli&gt&ltp&gtSeperate Regsitrations has to be done by both the participants of team.&lt/li&gt
+&ltp&gtRound 1
+    &ltli&gt&ltp&gtIt tests the basic website development skills of the participants.&lt/li&gt
+    &ltli&gt&ltp&gtIt consists of MCQ in the area of Web Designing, and acts as an eliminating round. Out of all the teams, only top 10 teams move forward to the next round.&lt/li&gt
+    &ltli&gt&ltp&gtQuestions will be in the area of HTML, SQL&lt/li&gt
+&ltp&gtRound 2
+    &ltli&gt&ltp&gtIn this round, a theme will be given to the participants. They are expected to build a fully functional website in the stipulated time.&ltli&gt
+    &ltli&gt&ltp&gtThey are judged on the basis of functionalities they have provided,code security,tools used, design parameters&lt/li&gt
+    &ltli&gt&ltp&gtIt is preferable to bring their own laptops/our system will be provided only with certain tools .&lt/li&gt
+&lt/ul&gt
+&lt/p&gt
+
+&ltp style="text-align:center;font-size:20pt;"&gtPAPERENZA&ltbr&gt
+ Paperenza&ltbr&gt
+(Paper Presentation)&ltbr&gt
+Prizes worth : 3000&lt/p&gt
+&ltp&gt1. Paper presentation is about how you put your topic and present your ideas , the ideas that invokes the best results will be appreciated and awarded.
+    
+Guidelines:
+&ltul&gt
+&ltli&gt&ltp&gt
+    Participants must register online in the website.Seperate Registrations has to be done by all the Team members.
+    &ltli&gt&ltp&gtAfter Registration,abstract must be send to Infocruise Mailid  (Click Here)with Participants Name and Participant Id.
+    &ltli&gt&ltp&gtInclude Your Paper name as Subject of the Mail.
+    &ltli&gt&ltp&gtMention your team members Name,participant Id,Department,College Name in the Mail.
+    &ltli&gt&ltp&gtPapers must be submitted in IEEE format. Plagiarism is strictly prohibited.
+    &ltli&gt&ltp&gtAbstract in IEEE format should be mailed to infocruise2k18@gmail.com on or before 09/03/2018 06.00 PM and the shortlisted candidates will be intimated through mail or phone on or before 11/03/2018.Mention the name of the Authors, Year of study, Department, Mail ID, and Contact Number through mail
+   &ltli&gt&ltp&gtEach team will be given 05 minutes to present their paper
+    &ltli&gt&ltp&gtDecision of judges will be final
+    &ltbr&gt
+	&ltbr&gt
+Topics:&ltbr&gt
+&ltbr&gt
+    Papers on the following topics will be encouraged
+   &ltli&gt&ltp&gt Networking
+    &ltli&gt&ltp&gt Machine Learning
+    &ltli&gt&ltp&gt Internet of Things
+    &ltli&gt&ltp&gt Security
+    &ltli&gt&ltp&gt Cloud Computing
+    &ltli&gt&ltp&gt Articial Intelligence
+    &ltli&gt&ltp&gt Image Processing
+    &ltli&gt&ltp&gt Nano technology
+    &ltli&gt&ltp&gt And Other Recent Technology Papers Related to Computer
+&lt/p&gt
+&ltp style="text-align:center;font-size:20pt;"&gtPROJECT PRESENTO&ltbr&gt
+ Project&ltbr&gt
+Presentation&ltbr&gt
+Prizes worth : 3000&lt/p&gt
+&ltp&gt
+    &ltli&gt&ltp&gtproject presentation is the platform to expose your innovative ideas and have a chance to Change the world of creativity into reality
+    &ltli&gt&ltp&gtEach team should consist of a maximum of 2 members per team.
+    &ltli&gt&ltp&gtPresentation duration should not exceed 7 mins.
+    &ltli&gt&ltp&gtSeparate Registration has to be done by all the team members
+    &ltli&gt&ltp&gtRegistration will be open till March 09
+    &ltli&gt&ltp&gtAfter Registering online,a brief note about the project should be sent to infocruise2k18@gmail.com (Click Here) on or before 06/03/2018.
+    &ltli&gt&ltp&gtInclude project topic as subject of the email.
+    &ltli&gt&ltp&gtInclude Participants Name and participant id in the email
+    &ltli&gt&ltp&gtShortlisted projects will be intimated through mail or phone on or before 8/03/2018
+
+&lt/p&gt
+&ltp style="text-align:center;font-size:20pt;"&gtGO GOOGLE&ltbr&gt
+ GO Google&ltbr&gt
+(Google Search Event)&ltbr&gt
+Prizes worth : 3000&lt/p&gt
+&ltp&gt
+    "Unless your name is google, stop acting like you know everything" and here is a place to evaluate how effectively you use google.
+    Guidelines:
+	&ltbr&gt
+	&ltbr&gt
+    &ltli&gt&ltp&gtIt is an Individual event .
+    &ltli&gt&ltp&gtThe Participants will be given certain Tasks.
+    &ltli&gt&ltp&gtInternet Facility will be provided.
+    &ltli&gt&ltp&gtParticipants can use Google for finding answers
+    &ltli&gt&ltp&gtRegistration is Mandatory
+    &ltli&gt&ltp&gtRegistration will be open till March 09
+
+&lt/p&gt
+&ltp style="text-align:center;font-size:20pt;"&gtTECHNOFREAKS&ltbr&gt
+ TechnoFreaks&ltbr&gt
+(Technical Quiz)&ltbr&gt
+Prizes worth : 3000&lt/p&gt
+&ltp&gt
+    Far from classroom rote, this quiz is all about the world of Science and Technology. Get ready for a roller coaster ride into the intense world of techno quizzing.
+Guidelines:
+    &ltli&gt&ltp&gtBased on Innovative ideas/concepts
+    &ltli&gt&ltp&gtIt is an Onstage Event
+    &ltli&gt&ltp&gtThe team can consist of maximum 4 members.
+    &ltli&gt&ltp&gtSeperate online Registration has to be done by all the team members
+    &ltli&gt&ltp&gtRegistration will be open till March 09
+   &ltli&gt&ltp&gt Decision of judges will be final
+	&lt/p&gt
+&ltp style="text-align:center;font-size:20pt;"&gtNON-TECHNICAL EVENTS&lt/p&gt
+&ltp style="text-align:center;font-size:20pt;"&gtSEARCH-O-SEEK&ltbr&gt
+ SearchoSeek&ltbr&gt
+(Treasure Hunt)&ltbr&gt
+Prizes worth: 3000&lt/p&gt
+&ltp&gt
+    This simple format and time-tested team activity still makes one of the most popular team building events today. Teams armed with clues, questions and recording devices set off against the clock to be the first to complete challenges. We add the magic, creativity and theming to make your treasure hunt truly special and unique.You are constrained by imagination alone.
+    Guidelines
+    &ltli&gt&ltp&gtTeam event
+   &ltli&gt&ltp&gt A team may contain of maximum 4 members
+    &ltli&gt&ltp&gtRegistration is Mandatory.
+    &ltli&gt&ltp&gtRegistration will be open until March 09
+    &ltli&gt&ltp&gtSeperate Registration has to be done by all the team members
+    &ltli&gt&ltp&gtDetails about the event will be given on the spot.
+&lt/p&gt
+
+&ltp style="text-align:center;font-size:20pt;"&gtZAM&ltbr&gt
+(ZUST A MINUTE)&ltbr&gt
+Prizes Worth : 3000&lt/p&gt
+&ltp&gt
+    Zust-A-Minute (or ZAM) is an all round-fun event that is all about the control of the mind over the mouth. Can you make it through sixty seconds of non-stop talking without hesitation, repetition, or deviation? Or will the sheer pressure make you crumble and have your competitors pounce on you in an instant?
+Guidelines:
+   &ltli&gt&ltp&gt Each participant will be given a topic and a preparation time of 30 seconds.
+   &ltli&gt&ltp&gt A minute will be given to speak over the topic without pause, repetition and hesitation.
+
+&lt/p&gt
+
+&ltp style="text-align:center;font-size:20pt;"&gtMr/MsINFOCRUISE&ltbr&gt
+ Mr/Ms INFOCRUISE&ltbr&gt
+(Solo Event)&ltbr&gt
+Prizes Worth : 3000/-&lt/p&gt
+&ltp&gt
+    Here we have a fun filled event for you to showcase your individuality and personality. get through the various tasks to win the MR/MS INFOCRUISE 2k18 title.
+    Guidelines
+    &ltli&gt&ltp&gt Participants will be given several tasks to perform
+   &ltli&gt&ltp&gt  The one who stays till the end wins the title.
+&lt/p&gt
+
+&ltp style="text-align:center;font-size:20pt;"&gtA GAME HAS NO NAME&ltbr&gt
+ A Game has no name&ltbr&gt
+(Fun Event)&ltbr&gt
+Prizes Worth : 3000/-&lt/p&gt
+&ltp&gt
+"Winning is only half of it, while having fun is the other half", so here is an event to check your spontaneity and enthusiasm.
+Guidelines:
+    &ltli&gt&ltp&gt A team must contain 4 members.
+    &ltli&gt&ltp&gt The instructions will be given on the spot.
+
+&lt/p&gt
+&lt/body&gt
+&lt/html&gt
+
+register.php
+
+
+&lt?php
+session_start();
+
+$servername='localhost';
+	$user = 'root';
+	$password = '';
+	$mysql_database = 'sympo';
+	//$msg='Error:Email is  already registered';
+	$db = mysqli_connect($servername, $user, $password,$mysql_database);
+	if (!$db) {
+      die("Connection failed: " . mysqli_connect_error());
+			}
+
+if (isset($_POST['submit1']))
+        {     
+	$name=$_POST['name'];
+	$reg=$_POST['reg'];
+	$gender=$_POST['gender'];
+	$colname=$_POST['col'];
+	$dob=$_POST['dob'];
+	$lid=$_POST['elid'];
+	$pwd=$_POST['pwd1'];
+	$etp=$_POST['etp'];
+    $email=$_POST['mail'];
+	$address=$_POST['add'];
+	$contactno=$_POST['cn'];
+	$lno=$_POST['lno'];
+	$aoi=$_POST['aoi1'];
+	
+    $sql="INSERT INTO regist (name,regno,gender,colname,dob,lid,pwd,etp,email,address,contactno,lno,aoi) 
+	VALUES ('$name','$reg','$gender','$colname','$dob','$lid','$pwd','$etp','$email','$address','$contactno','$lno','$aoi')";
+
+	if(!mysqli_query($db,$sql))
+	{
+		echo "I hate this";
+    }
+		}
+	
+		
+			
+?&gt
+&lthtml&gt
+&lthead&gt&lttitle&gtSymposium&lt/title&gt&lth1&gt&ltdiv align="center"&gtKONGU ENGINEERING COLLEGE&ltbr&gtNATIONAL LEVEL SYMPOSIUM&ltbr&gt&lt/div&gt&lt/h1&gt
+&ltstyle type="text/css"&gt
+	.navbar {
+    overflow: hidden;
+    background-color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+&lt/style&gt
+&ltscript type="text/javascript"&gt
+function validate()
+{
+var n1=document.forms["tech"]["name"];
+var n2=document.forms["tech"]["reg"];
+var n3=document.forms["tech"]["col"];
+var n4=document.getElementsByName("gender");
+var n5=document.forms["tech"]["mail"];
+var n6=document.forms["tech"]["add"];
+var n7=document.forms["tech"]["cn"];
+var n8=document.forms["tech"]["lno"];
+var n9=document.forms["tech"]["pwd1"];
+var n10=document.forms["tech"]["pwd2"];
+var n11=document.forms["tech"]["elid"];
+if(n1.value=="")
+{
+alert("Enter the name");
+n1.focus();
+return false;
+}
+re = /[0-9]/;
+if(re.test(n1.value)) 
+{
+alert(" Name doesn't contains numbers");
+n1.focus();
+return false;
+}
+if(n2.value=="")
+{
+alert("Enter the Rollno");
+n2.focus();
+return false;
+}
+if(n3.value=="")
+{
+alert("Enter the College name");
+n3.focus();
+return false;
+}
+var i=0;
+var valid=false;
+while(!valid&&i&ltn4.length)
+{
+if(n4[i].checked)
+{
+valid=true;
+}
+i++;
+}
+if(!valid)
+{
+alert("Select an gender");
+return false;
+}
+if(n5.value=="")
+{
+alert("Enter the Email id");
+n5.focus();
+return false;
+}
+if(n6.value=="")
+{
+alert("Enter the Address");
+n6.focus();
+return false;
+}
+if(n7.value=="")
+{
+alert("Enter the contact no");
+n7.focus();
+return false;
+}
+re = /[0-9]/;
+if(!re.test(n7.value)) 
+{
+alert("Numbers don't contain any alphabets");
+n7.focus();
+return false;
+}
+if(n8.value=="")
+{
+alert("Enter the contact no");
+n8.focus();
+return false;
+}
+if(!re.test(n8.value)) 
+{
+alert("Landline no do not contain alphabets");
+n8.focus();
+return false;
+}
+if(n9.value== "")
+{
+alert("please enter the password");
+n9.focus();
+return false;
+}
+if(n10.value== "")
+{
+alert("please enter the confirm password");
+n10.focus();
+return false;
+}
+if(n9.value!=n10.value)
+{
+alert("Please enter the correct password");
+n9.focus();
+return false;
+}
+
+}
+&lt/script&gt
+&lt/head&gt
+&ltbody&gt
+
+&ltdiv class="navbar"&gt
+  &lta href="home.html"&gtHome&lt/a&gt
+  &lta href="events.html"&gtEvents&lt/a&gt
+  &lta href="technical.php"&gtRegister&lt/a&gt
+  &lta class="active" href="contact.html"&gtContact Us&lt/a&gt
+&lt/div&gt
+
+&ltform name="tech" onsubmit="return validate()" method="post"&gt
+&ltpre&gt
+&lth2 &gt
+&ltp&gtName	                     :&ltinput type="text" name="name"&gt
+Registration Number          :&ltinput type="text" name="reg"&gt
+Gender			     :&ltinput type="radio" name="gender" value="Male"&gtMale
+                              &ltinput type="radio" name="gender" value="Female"&gtFemale	
+College name		     :&ltinput type="text" name="col"&gt
+DOB	                     :&ltinput type="text" name="dob" placeholder="YYYY/MM/DD"required&gt
+Enter Login Id 		     :&ltinput type="text" name="elid"&gt
+Enter the Password           :&ltinput type="password" name="pwd1"&gt
+Confirm Password             :&ltinput type="password" name="pwd2"&gt
+Event to participate         :&ltinput type="radio" name="etp"value="Paper Mania"&gtPaper Mania
+			      &ltinput type="radio" name="etp"value="Google Hackers"&gtGoogle Hackers
+			      &ltinput type="radio"name="etp"value="Coderz Zone"&gtCoderz Zone
+Email id		     :&ltinput type="email" placeholder="abc@gmail.com"name="mail"&gt
+Address 		     :&lttextarea name="add" rows="3" cols="30"&gt&lt/textarea&gt
+Contact No		     :&ltinput type="text" size="10" name="cn"&gt
+Landline No		     :&ltinput type="tel" name="lno"&gt
+Area Of Interest             :&ltinput name="aoi1"list="aoi"&gt
+&ltdatalist id="aoi" name="aoi1"&gt
+  &ltoption value="C"&gt
+  &ltoption value="C++"&gt
+  &ltoption value="Java"&gt
+  &ltoption value="Python"&gt
+  &ltoption value="IOT"&gt
+&lt/datalist&gt
+&ltbr&gt
+&lt/p&gt
+&ltcenter&gt
+&ltinput type="submit" name="submit1" class="cent "value="submit"&gt
+&lt/pre&gt
+&lt/form&gt
+
+&lt/body&gt
+&lt/html&gt
+
+
+contact.html
+
+&lthtml&gt
+&lthead&gt&lttitle&gtSymposium&lt/title&gt&lth1&gt&ltdiv align="center"&gtKONGU ENGINEERING COLLEGE&ltbr&gtNATIONAL LEVEL SYMPOSIUM&ltbr&gt&lt/div&gt&lt/h1&gt
+&ltstyle type="text/css"&gt
+	.navbar {
+    overflow: hidden;
+    background-color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+&lt/style&gt
+&lt/head&gt
+&ltbody&gt
+&ltdiv class="navbar"&gt
+  &lta href="home.html"&gtHome&lt/a&gt
+  &lta href="events.html"&gtEvents&lt/a&gt
+  &lta href="technical.php"&gtRegister&lt/a&gt
+  &lta class="active" href="about.html"&gtContact Us&lt/a&gt
+&lt/div&gt
+&lth1&gt&ltcenter&gt&ltpre&gt
+&ltp style="text-align:center;font-size:22pt;"&gt
+COMPUTER SCIENCE AND ENGINEERING ASSOCIATION&ltbr&gtPresents,&ltbr&gt&lt/p&gt&ltp style="text-align:center;font-size:30pt;color:purple;"&gtTECHNOFREAKZ 2K18&lt/p&gt
+Conducted by,&ltbr&gtN.Manoj Raj,&ltbr&gtM.Kavinkumar.&ltbr&gt&lta href="mailto:manojrajsn@gmail.com"&gtClick Here to send mail&lt/a&gt
+Conducted on:1st June,2018&ltbr&gtFurther Details&ltbr&gtContact::8754560701&ltbr&gtVenue:Kongu Concentional centre&lt/h1&gt&lt/center&gt&lt/pre&gt
+&lt/body&gt&lt/html&gt
+
+
