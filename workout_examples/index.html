@@ -372,3 +372,110 @@ Email:&ltinput type="email"name="email"&gt&ltbr&gt&ltbr&gt<br>
 &lt/html&gt<br>
 <h3>OUTPUT:</h3>
 <img src="q10.jpg">
+<h3>QUEST:-12ONLINE TICKET RESERVATION
+Develop a website for Railway Reservation System. Create a database named &quot;Train&quot; with a
+table &quot;User&quot; with fields &quot;Name&quot;, &quot;Train number&quot;, &quot;Phno&quot; and &quot;NoS&quot; using MYSQL. Create
+the below form entries: Name (6 charecters), Train Number (4digits), Phno (10digits),
+Number of Seats (non-negative) and validate the entries as mentioned. Use MySQL to store
+and retrieve data appropriately.</h3>
+&lthtml&gt<br>
+&lthead&gt<br>
+&lttitle&gtTrain&lt/title&gt<br>
+&lt/head&gt<br>
+&ltbody&gt<br>
+&ltform method="post"&gt<br>
+NAME:&ltinput type="text" name="Name"&gt&ltbr&gt&ltbr&gt<br>
+TRAIN NUMBER:&ltinput type="text" name="Trainnumber"&gt&ltbr&gt&ltbr&gt<br>
+PHONE NO:&ltinput type="text" name="Phonenumber"&gt&ltbr&gt&ltbr&gt<br>
+NO.OF SEATS:&ltinput type="text" name="Nofseats"&gt&ltbr&gt&ltbr&gt<br>
+&ltinput type="submit" value="submit" name="submit"&gt<br>
+&ltinput type="submit" value="Retrive" name="retrive"&gt<br>
+&lt/form&gt<br>
+&lt?php<br>
+$servername='localhost'; <br>
+$user = 'root'; <br>
+$password = ''; <br>
+$mysql_database = 'Train'; <br>
+$db = mysqli_connect($servername, $user, $password,$mysql_database); <br>
+if (!$db) <br>
+{<br>
+die("Connection failed: " . mysqli_connect_error());<br>
+}<br>
+if (isset($_POST['submit'])) <br>
+{<br>
+$Name=$_POST['Name']; <br>
+$Trainnumber=$_POST['Trainnumber']; <br>
+$Phonenumber=$_POST['Phonenumber']; <br>
+$Nofseats=$_POST['Nofseats']; <br>
+if(preg_match("/\b[[:alpha:]]{6,}\b/",$Name)) <br>
+{<br>
+echo "Correct name&ltbr&gt";<br>
+}<br>
+else<br>
+{ <br>
+echo "Wrong name&ltbr&gt";<br>
+echo"can't store&ltbr&gt";<br>
+die; <br>
+}<br>
+if(preg_match("/\b[[:digit:]]{4}\b/",$Trainnumber)) <br>
+{<br>
+echo "Correct Trainnumber&ltbr&gt";<br>
+}<br>
+else<br>
+{ <br>
+echo "Wrong Trainnumber&ltbr&gt";<br>
+echo"can't store&ltbr&gt";<br>
+die; <br>
+}<br>
+if(preg_match("/[[:digit:]]{10}$/",$Phonenumber)) <br>
+{<br>
+echo "Correct phone num&ltbr&gt";<br>
+}<br>
+else<br>
+{<br>
+echo "Wrong phone num&ltbr&gt";<br>
+echo"can't store&ltbr&gt";<br>
+die; <br>
+}<br>
+if(preg_match("/^[1-9]\d*$/",$Nofseats)) <br>
+{<br>
+echo "Correct seat number&ltbr&gt";<br>
+}<br>
+else<br>
+{<br>
+echo "Invalid seat number&ltbr&gt";<br>
+echo"can't store&ltbr&gt";<br>
+die; <br>
+}<br>
+$sql="INSERT INTO user(Name,Trainnumber,Phonenumber,Nofseats) VALUES('$Name','$Trainnumber','$Phonenumber','$Nofseats')"; <br>
+if(mysqli_query($db,$sql)){ <br>
+echo "Successful";<br>
+}<br>
+else{<br>
+echo "&ltscript type='text/javascript'&gtalert('Not stored');&lt/script&gt";exit; <br>
+}<br>
+}<br>
+if (isset($_POST['retrive'])) <br>
+{ <br>
+$sql1="SELECT * from user";<br>
+$query=mysqli_query($db,$sql1); <br>
+echo "&lttable border=1&gt";<br>
+echo "&lttr&gt&ltth&gtName&lt/th&gt&ltth&gtTrainnumber&lt/th&gt&ltth&gtPhonenumber&lt/th&gt&ltth&gtNofseats&lt/th&gt&lt/tr&gt";<br>
+if((mysqli_num_rows($query))!=0) <br>
+{<br>
+while ($row = mysqli_fetch_assoc($query)) <br>
+{<br>
+echo <br>"&lttr&gt&lttd&gt".$row["Name"]."&lt/td&gt&lttd&gt".$row["Trainnumber"]."&lt/td&gt&lttd&gt".$row["Phonenumber"]."&lt/td&gt&lttd&gt".$row["Nofseats"]."&lt/td&gt&lt/tr&gt";<br>
+}<br>
+}<br>
+else<br>
+{<br>
+echo "0 results";<br>
+}<br>
+}<br>
+?&gt<br>
+&lt/body&gt<br>
+&lt/html&gt<br>
+<h3>OUTPUT:</h3>
+<img src="train1.png"><br>
+<img srsc="train2.png">
