@@ -606,100 +606,101 @@ a) Create a web site for blood donor as shown below
 b) Add details to the database on clicking the save button
 c) Retrieve the donor details based on particular blood group</h3>
 <img src="donor.jpg">
-&lthtml&gt
-&lthead&gt
-&lttitle&gt 16th question&lt/title&gt
-&lt/head&gt
-&ltstyle&gt
-.box
-{
+&lthtml&gt<br>
+&lthead&gt<br>
+&lttitle&gt 16th question&lt/title&gt<br>
+&lt/head&gt<br>
+&ltstyle&gt<br>
+.box<br>
+{<br>
 	
-	background-color:grey;
-	top:0px;
-	left:0px;
-	height:60px;
-	width:1340px;
+	background-color:grey;<br>
+	top:0px;<br>
+	left:0px;<br>
+	height:60px;<br>
+	width:1340px;<br>
 	
-}
-h3
-{
-		position:absolute;
-		top:0px;
-		left:100px;
-}
-body
-{
-	background-image:url('grey.jpg');
-	background-repeat:no-repeat;
-	background-size:100%;
-}
-&lt/style&gt
-&ltbody &gt
-	&ltform name="fifteen" method="post" &gt&ltdiv class="box"&gt
-&ltimg src="plus.jpg" height="55" width="70" &gt
-	 &lth3 style="color:white;font-size:18pt;"&gtDonor Detail Form&lt/h3&gt&lt/div&gt
-	 &lth4&gtDonor's Detail&lt/h4&gt
-	 &ltpre style="font-size:16pt;"&gt Donor's no:	&ltinput type="text" name="no"&gt					Date:	&ltinput type="text" name="date"&gt&ltbr&gt
-Blood Group:	&ltselect name="group"&gt&ltoption&gtselect&lt/option&gt&ltoption&gtb+ve&lt/option&gt&ltoption&gto+ve&lt/option&gt&ltoption&gtb-ve&lt/option&gt&lt/select&gt					     country:	&ltselect name="country"&gt&ltoption&gtselect&lt/option&gt&ltoption&gtIndia&lt/option&gt&ltoption&gtChina&lt/option&gt&ltoption&gtNepal&lt/option&gt&lt/select&gt &ltbr&gt                        
-	Age:	&ltinput type="text" name="age"&gtYear    Sex:&ltselect name="gender"&gt&ltoption&gtselect&lt/option&gt&ltoption&gtmale&lt/option&gt&ltoption&gtfemale&lt/option&gt&lt/select&gt	       state:	&ltinput name="state" list="state"&gt&ltdatalist id="state"&gt&ltoption&gtselect&lt/option&gt&ltoption&gtTamilnadu&lt/option&gt&ltoption&gtAndra&lt/option&gt&ltoption&gtKerala&lt/option&gt&lt/datalist&gt  &ltbr&gt
-       Name:	&ltinput type="text" name="name" size="50"&gt	        City:	&ltinput name="city" list="city"&gt&ltdatalist id="city"&gt&ltoption&gtNamakkal&lt/option&gt&ltoption&gtSalem&lt/option&gt&lt/datalist&gt&ltbr&gt							      Mobile:	&ltinput type="tel" pattern="[0-9]{10}" name="mobile"&gt 
-    Address:	&lttextarea rows="5" cols="50" name="address"&gt&lt/textarea&gt	       Email:	&ltinput type="email" name="email"&gt&ltbr&gt
-   Phone(H): 	&ltinput type="text" name="ph"&gt(0)&ltinput type="text" name="ph1"&gt              
+}<br>
+h3<br>
+{<br>
+		position:absolute;<br>
+		top:0px;<br>
+		left:100px;<br>
+}<br>
+body<br>
+{<br>
+	background-image:url('grey.jpg');<br>
+	background-repeat:no-repeat;<br>
+	background-size:100%;<br>
+}<br>
+&lt/style&gt<br>
+&ltbody &gt<br>
+	&ltform name="fifteen" method="post" &gt&ltdiv class="box"&gt<br>
+&ltimg src="plus.jpg" height="55" width="70" &gt<br>
+	 &lth3 style="color:white;font-size:18pt;"&gtDonor Detail Form&lt/h3&gt&lt/div&gt<br>
+	 &lth4&gtDonor's Detail&lt/h4&gt<br>
+	 &ltpre style="font-size:16pt;"&gt Donor's no:	&ltinput type="text" name="no"&gt<br>					Date:	&ltinput type="text" name="date"&gt&ltbr&gt<br>
+Blood Group:	&ltselect name="group"&gt&ltoption&gtselect&lt/option&gt&ltoption&gtb+ve&lt/option&gt&ltoption&gto+ve&lt/option&gt&ltoption&gtb-ve&lt/option&gt&lt/select&gt					     country:	&ltselect name="country"&gt&ltoption&gtselect&lt/option&gt&ltoption&gtIndia&lt/option&gt&ltoption&gtChina&lt/option&gt&ltoption&gtNepal&lt/option&gt&lt/select&gt &ltbr&gt <br>                       
+	Age:	&ltinput type="text" name="age"&gtYear    Sex:&ltselect name="gender"&gt&ltoption&gtselect&lt/option&gt&ltoption&gtmale&lt/option&gt&ltoption&gtfemale&lt/option&gt&lt/select&gt	       state:	&ltinput name="state" list="state"&gt&ltdatalist id="state"&gt&ltoption&gtselect&lt/option&gt&ltoption&gtTamilnadu&lt/option&gt&ltoption&gtAndra&lt/option&gt&ltoption&gtKerala&lt/option&gt&lt/datalist&gt  &ltbr&gt<br>
+       Name:	&ltinput type="text" name="name" size="50"&gt	        City:	&ltinput name="city" list="city"&gt&ltdatalist id="city"&gt&ltoption&gtNamakkal&lt/option&gt&ltoption&gtSalem&lt/option&gt&lt/datalist&gt&ltbr&gt							      Mobile:	&ltinput type="tel" pattern="[0-9]{10}" name="mobile"&gt <br>
+    Address:	&lttextarea rows="5" cols="50" name="address"&gt&lt/textarea&gt	       Email:	&ltinput type="email" name="email"&gt&ltbr&gt<br>
+   Phone(H): 	&ltinput type="text" name="ph"&gt(0)&ltinput type="text" name="ph1"&gt  <br>            
 
-	 &lthr&gt												&ltinput type="submit" name="submit" value="save"&gt &ltinput type="submit" value="cancel" name="submit1"&gt&ltinput type="submit" name="submit2" value="retrieve"&gt&lt/pre&gt&lt/form&gt
-	 &lt?php
-		$servername="localhost";
-		$user = 'root';
-		$password = '';
-		$mysql_database = 'wt';
-	$db = mysqli_connect($servername, $user, $password,$mysql_database);
-	if (!$db) {
-      die("Connection failed: " . mysqli_connect_error());
-			}
-	if (isset($_POST['submit']))
-	 {     
-	$donor=$_POST['no'];
-    $date=$_POST['date'];
-	$bg=$_POST['group'];
-	$country=$_POST['country'];
-	$age=$_POST['age'];
-	$gender=$_POST['gender'];
-	$name=$_POST['name'];
-    $city=$_POST['city'];
-	$address=$_POST['address'];
-	$email=$_POST['email'];
-	$mobile=$_POST['mobile'];
+	 &lthr&gt												&ltinput type="submit" name="submit" value="save"&gt &ltinput type="submit" value="cancel" name="submit1"&gt&ltinput type="submit" name="submit2" value="retrieve"&gt&lt/pre&gt&lt/form&gt<br>
+	 &lt?php<br>
+		$servername="localhost";<br>
+		$user = 'root';<br>
+		$password = '';<br>
+		$mysql_database = 'wt';<br>
+	$db = mysqli_connect($servername, $user, $password,$mysql_database);<br>
+	if (!$db) {<br>
+      die("Connection failed: " . mysqli_connect_error());<br>
+			}<br>
+	if (isset($_POST['submit']))<br>
+	 {<br>     
+	$donor=$_POST['no'];<br>
+    $date=$_POST['date'];<br>
+	$bg=$_POST['group'];<br>
+	$country=$_POST['country'];<br>
+	$age=$_POST['age'];<br>
+	$gender=$_POST['gender'];<br>
+	$name=$_POST['name'];<br>
+    $city=$_POST['city'];<br>
+	$address=$_POST['address'];<br>
+	$email=$_POST['email'];<br>
+
+	$mobile=$_POST['mobile'];<br>
 	
-	$ph=$_POST['ph'];
-	$ph1=$_POST['ph1'];
+	$ph=$_POST['ph'];<br>
+	$ph1=$_POST['ph1'];<br>
 	
-		$sql="INSERT INTO donor(donorid,date,bloodgroup,country,age,gender,name,city,address,email,mobile,ph,ph1)VALUES('$donor','$date','$bg','$country','$age','$gender','$name','$city','$address','$email','$mobile','$ph','$ph1')";
-		if(mysqli_query($db,$sql)){
-			echo "Successful";
-		}
-		else{
-			echo "&ltscript type='text/javascript'&gtalert('Not stored');&lt/script&gt";exit;
-		}
-		//echo"&ltscript type='text/javascript'&gtalert('registered successfully');&lt/script&gt";exit;
-	}
-	if(isset($_POST['submit2']))
-	{
-		$sql1="SELECT * from donor";
-		echo "&lttable border=1&gt";
-				echo "&lttr&gt&ltth&gtDONORID&lt/th&gt&ltth&gtDATE&lt/th&gt&ltth&gtBLOODGROUP&lt/th&gt&ltth&gtCOUNTRY&lt/th&gt&ltth&gtAGE&lt/th&gt&ltth&gtGENDER&lt/th&gt&ltth&gtNAME&lt/th&gt&ltth&gtCITY&lt/th&gt&ltth&gtADDRESS&lt/th&gt&ltth&gtEMAIL&lt/th&gt&ltth&gtMOBILE&lt/th&gt&ltth&gtPH&lt/th&gt&ltth&gtPH1&lt/th&gt&lt/tr&gt";
-		$query=mysqli_query($db,$sql1);
-		if((mysqli_num_rows($query))!=0)
-		{
-			while ($row = mysqli_fetch_assoc($query))
-			{
+		$sql="INSERT INTO donor(donorid,date,bloodgroup,country,age,gender,name,city,address,email,mobile,ph,ph1)VALUES('$donor','$date','$bg','$country','$age','$gender','$name','$city','$address','$email','$mobile','$ph','$ph1')";<br>
+		if(mysqli_query($db,$sql)){<br>
+			echo "Successful";<br>
+		}<br>
+		else{<br>
+			echo "&ltscript type='text/javascript'&gtalert('Not stored');&lt/script&gt";exit;<br>
+		}<br>
+		//echo"&ltscript type='text/javascript'&gtalert('registered successfully');&lt/script&gt";exit;<br>
+	}<br>
+	if(isset($_POST['submit2']))<br>
+	{<br>
+		$sql1="SELECT * from donor";<br>
+		echo "&lttable border=1&gt";<br>
+				echo "&lttr&gt&ltth&gtDONORID&lt/th&gt&ltth&gtDATE&lt/th&gt&ltth&gtBLOODGROUP&lt/th&gt&ltth&gtCOUNTRY&lt/th&gt&ltth&gtAGE&lt/th&gt&ltth&gtGENDER&lt/th&gt&ltth&gtNAME&lt/th&gt&ltth&gtCITY&lt/th&gt&ltth&gtADDRESS&lt/th&gt&ltth&gtEMAIL&lt/th&gt&ltth&gtMOBILE&lt/th&gt&ltth&gtPH&lt/th&gt&ltth&gtPH1&lt/th&gt&lt/tr&gt";<br>
+		$query=mysqli_query($db,$sql1);<br>
+		if((mysqli_num_rows($query))!=0)<br>
+		{<br>
+			while ($row = mysqli_fetch_assoc($query))<br>
+			{<br>
 				
-				echo "&lttr&gt&lttd&gt".$row["donorid"]."&lt/td&gt&lttd&gt".$row["date"]."&lt/td&gt&lttd&gt".$row["bloodgroup"]."&lt/td&gt&lttd&gt".$row["country"]."&lt/td&gt&lttd&gt".$row["age"]."&lt/td&gt&lttd&gt".$row["gender"]."&lt/td&gt&lttd&gt".$row["name"]."&lt/td&gt&lttd&gt".$row["city"]."&lt/td&gt&lttd&gt".$row["address"]."&lt/td&gt&lttd&gt".$row["email"]."&lt/td&gt&lttd&gt".$row["mobile"]."&lt/td&gt&lttd&gt".$row["ph"]."&lt/td&gt&lttd&gt".$row["ph1"]."&lt/td&gt&lt/tr&gt";
+				echo "&lttr&gt&lttd&gt".$row["donorid"]."&lt/td&gt&lttd&gt".$row["date"]."&lt/td&gt&lttd&gt".$row["bloodgroup"]."&lt/td&gt&lttd&gt".$row["country"]."&lt/td&gt&lttd&gt".$row["age"]."&lt/td&gt&lttd&gt".$row["gender"]."&lt/td&gt&lttd&gt".$row["name"]."&lt/td&gt&lttd&gt".$row["city"]."&lt/td&gt&lttd&gt".$row["address"]."&lt/td&gt&lttd&gt".$row["email"]."&lt/td&gt&lttd&gt".$row["mobile"]."&lt/td&gt&lttd&gt".$row["ph"]."&lt/td&gt&lttd&gt".$row["ph1"]."&lt/td&gt&lt/tr&gt";<br>
 				
-			}
-		}
-	}
-	mysqli_close($db);
-	?&gt
-&lt/form&gt
-&lt/body&gt
-&lt/html&gt
+			}<br>
+		}<br>
+	}<br>
+	mysqli_close($db);<br>
+	?&gt<br>
+&lt/form&gt<br>
+&lt/body&gt<br>
+&lt/html&gt<br>
