@@ -1895,6 +1895,116 @@ if(isset($_POST['withsubmit']))<br>
 ?&gt<br>
 &lt/body&gt<br>
 &lt/html&gt<br>
+<img src="bank1.jpg" height="500" width="700"><br>
+<h3>QUEST 14:-	LIBRARY MANAGEMENT
+a)Create a webpage for library management with menu layout as shown below
+b)Set a label with auto focus in username, use placeholders in all fields.
+c)Store the detailsin database using MySQL and perform delete operation on  any data in database.</h3><br>
+<img src="lib.jpg"><br>
+&lthtml&gt<br>
+&lthead&gt<br>
+&lttitle&gt 14th question&lt/title&gt<br>
+&lt/head&gt<br>
+&ltstyle&gt<br>
+h<br>
+{<br>
+	position:absolute;<br>
+	top:140px;<br>
+	left:180px;<br>
+}<br>
+div<br>
+{<br>
+	background-color:white;<br>
+	background-size:600px 200px;<br><br>
+}<br>
+
+.box1<br>
+{
+	position:absolute;<br>
+	background-image:url('alg.jpg');<br>
+	background-size:500px 1200px;<br>
+	background-repeat:no-repeat;<br>
+	top:130px;<br>
+	left:180px;<br><br>	
+}<br>
+
+.box<br>
+{<br>
+	top:150px;<br>
+	position:absolute;<br>
+	left:350px;<br>
+	background-color:yellow;<br>
+	background-size:500px 500px;<br>
+	height:200px;<br>
+	width:300px;<br>
+	
+}<br>
+
+p{<br>
+	font-size:16pt;<br>
+	color:green;<br>
+	}<br>
+&lt/style&gt<br>
+&ltbody &gt&ltform method="post"&gt<br>
+	&ltimg src="klogo2.png" align="left" height="100" width="100"&gt&ltdiv&gt<br>
+	&lth2 style="text-align:center;color:maroon;line-height:1"&gtONLINE BOOK STORE&lt/h2&gt<br>
+	&lta href="home.php"&gtHome&lt/a&gt&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<br>
+	&lta href="home.php"&gtLogin&lt/a&gt&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<br>
+	&lta href="home.php"&gtRegistration&lt/a&gt&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<br>
+	&lta href="home.php"&gtCatalogue&lt/a&gt&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<br>
+	&lta href="home.php"&gtCart&lt/a&gt&ltbr&gt&ltbr&gt&ltbr&gt&ltbr&gt&lthr&gt&lt/div&gt<br>
+	&lta href="home.php"&gtCSE&lt/a&gt&ltbr&gt&ltbr&gt&ltbr&gt&ltbr&gt&ltbr&gt<br>
+	&lta href="home.php"&gtECE&lt/a&gt&ltbr&gt&ltbr&gt&ltbr&gt&ltbr&gt&ltbr&gt<br>
+	&lta href="home.php"&gtEEE&lt/a&gt&ltbr&gt&ltbr&gt&ltbr&gt&ltbr&gt&ltbr&gt<br>
+	&lta href="home.php"&gtCivil&lt/a&gt&ltbr&gt&ltbr&gt&ltbr&gt&ltbr&gt&ltbr&gt<br>
+	&lth&gt&lthr  width="1" size="500"&gt&lt/h&gt<br>
+	&ltaside class="box1"&gt<br>
+	
+			&ltdiv class="box"&gt<br>
+			&ltpre&gt&ltp&gt   Login  &ltinput type="text" name="name" placeholder="Username"&gt&ltbr&gt<br><br>
+Password  &ltinput type="password" name="pass" placeholder="Enter Password"&gt&ltbr&gt&lt/p&gt<br>
+	  &ltinput type="submit" value="submit" name="submit"&gt   &ltinput type="submit" value="Reset" name="submit1"&gt&lt/pre&gt<br>
+	  &lt/div&gt&ltbr&gt&ltbr&gt<br>
+	  name:&ltinput type="text" name="name1"&gt&ltbr&gt&ltbr&gt<br>
+	  &ltinput type="submit" name="submit2" value="delete"&gt&ltbr&gt<br>
+&lt/aside&gt<br>
+	&lt/form&gt<br>
+	&lt?php<br>
+		$servername="localhost";<br>
+		$user = 'root';<br>
+		$password = '';<br>
+		$mysql_database = 'wt';<br>
+	$db = mysqli_connect($servername, $user, $password,$mysql_database);<br>
+	if (!$db) {<br>
+      die("Connection failed: " . mysqli_connect_error());<br>
+			}<br>
+	  
+		if (isset($_POST['submit']))<br>
+	{	<br>
+		$user=$_POST['name'];<br>
+		$pass=$_POST['pass'];<br>
+		$sql="INSERT INTO signin(username,password)values('$user','$pass')";<br>
+		if(mysqli_query($db,$sql)){<br>
+			echo "Successful";<br>
+		}<br>
+		else{<br>
+			echo "&ltscript type='text/javascript'&gtalert('Not stored');&lt/script&gt";exit;<br>
+		}<br>
+	}		<br><br>
+		if (isset($_POST['submit2']))<br>
+		{<br>
+			
+			$name=$_POST['name1'];<br>
+			$sq2 = "DELETE  FROM signin WHERE username='$name'";<br>
+			mysqli_query($db,$sq2);<br>
+			echo "*****deleted*****";<br>
+		}<br>
+	
+	mysqli_close($db);<br>
+	?&gt<br>
+&lt/body&gt<br>
+&lt/html&gt<br>
+<img src="out3.jpg" height="500" width="700">
 
 
 
