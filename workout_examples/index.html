@@ -479,3 +479,124 @@ echo "0 results";<br>
 <h3>OUTPUT:</h3>
 <img src="train1.png"><br>
 <img src="train2.png">
+<h3>QUSET:=11STUDENT MARKS MANAGEMENT
+Develop a website for Student Marks Management. Create a database named &quot;Student&quot; with
+a table &quot;Stud&quot; with fields &quot;Name&quot;, &quot;Rollno&quot;, &quot;Mark1”, &quot;Mark2&quot; and “Mark3” using MYSQL.
+Create the below form entries: Name (6 characters), Roll Number (4digits), Mark1 (Non-
+Negative), Mark2 (Non-Negative), Mark3 (Non-Negative) using JavaScript and validate the
+entries as mentioned. Use a button event to redirect the form page to another page which
+shows the total marks of the student. Also, update the mark of any particular rollno.</h3>
+<br>
+&lthtml&gt<br>
+&lthead&gt<br>
+&ltscript&gt<br>
+function check()<br>
+{<br>
+	var name=document.getElementById('name').value; <br>
+	var n=name.length; <br>
+	var roll=document.getElementById('roll').value; <br>
+	var r=roll.length; <br>
+	var m1=document.getElementById('m1').value; <br>
+	var mark1=m1.length; <br>
+	var m2=document.getElementById('m2').value; <br>
+	var mark2=m2.length; <br>
+	var m3=document.getElementById('m3').value; <br>
+	var mark3=m3.length; <br>
+	if(!(n==6)) <br>
+	 alert("name must be equal to 6 chars");<br>
+	if(isNaN(roll)) <br>
+	 alert("Roll num must be a number");<br>
+	if(!(r==4)) <br>
+	 alert("Roll num must be equal to 4");<br>
+	if(isNaN(m1)) <br>
+	 alert("Mark must be a number");<br>
+	if(isNaN(m2)) <br>
+	 alert("mark must be a number");<br>
+	if(isNaN(m3)) <br>
+	 alert("mark must be a number");<br>
+	if(m1&lt0) <br>
+	 alert("Mark must be a non-negative num");<br>
+	if(m2&lt0) <br>
+	 alert("Mark must be a non-negative num");<br>
+	if(m3&lt0) <br>
+	 alert("Mark must be a non-negative num");<br>
+	
+}<br>
+&lt/script&gt<br>
+&lt/head&gt<br>
+&ltbody&gt<br>
+&ltform method="post"action="tot.php"&gt<br>
+Name:&ltinput type="text"name="name"id="name"&gt&ltbr&gt&ltbr&gt<br>
+Roll:&ltinput type="text"name="roll"id="roll"&gt&ltbr&gt&ltbr&gt<br>
+Mark1:&ltinput type="number"name="m1"id="m1"&gt&ltbr&gt&ltbr&gt<br>
+Mark2:&ltinput type="number"name="m2"id="m2"&gt&ltbr&gt&ltbr&gt<br>
+Mark3:&ltinput type="number"name="m3"id="m3"&gt&ltbr&gt&ltbr&gt<br>
+&ltinput type="submit"value="submit"name="submit"onclick="check()"&gt    &ltinput type="submit"value="Update"name="update"onclick="check()"&gt<br>
+&lt/form&gt<br>
+&lt/body&gt<br>
+&lt/html&gt<br>
+<b>tot.php</b>
+&lthtml&gt<br>
+&ltbody&gt<br>
+&ltform method="post"&gt<br>
+&lt/body&gt<br>
+&lt/html&gt<br>
+&lt?php<br>
+$server='localhost'; <br>
+$user='root'; <br>
+$pass=''; <br>
+$database='lab'; <br>
+$db=mysqli_connect($server,$user,$pass,$database); <br>
+if(!$db) <br>
+{<br>
+	echo"not connected";die; <br>
+}<br>
+if(isset($_POST['submit'])) <br>
+{<br>
+	$name=$_POST['name']; <br>
+	$roll=$_POST['roll']; <br>
+	$m1=$_POST['m1']; <br>
+	$m2=$_POST['m2']; <br>
+	$m3=$_POST['m3']; <br>
+	$tot=$m1+$m2+$m3; <br>
+	$sql="insert into q11(name,roll,m1,m2,m3,tot)values('$name','$roll','$m1','$m2','$m3','$tot')"; <br>
+	$query=mysqli_query($db,$sql); <br>
+	$sql="select * from q11 where roll='$roll'";<br>
+	$query=mysqli_query($db,$sql); <br>
+	if(mysqli_num_rows($query)!=0) <br>
+	{<br>
+		while($row=mysqli_fetch_array($query)) <br>
+		{<br>
+			echo"Data stored&ltbr&gt";<br>
+			echo"Total:".$row['tot']; <br>
+		}<br>
+	}	<br>
+}<br>
+if(isset($_POST['update'])) <br>
+{<br>
+	$name=$_POST['name']; <br>
+	$roll=$_POST['roll']; <br>
+	$m1=$_POST['m1']; <br>
+	$m2=$_POST['m2']; <br>
+	$m3=$_POST['m3']; <br>
+	$tot=$m1+$m2+$m3; <br>
+	$sql2="update q11 set name='$name',m1='$m1',m2='$m2',m3='$m3',tot='$tot' where roll='$roll' ";<br>
+	$query1=mysqli_query($db,$sql2); <br>
+	$sql3="select * from q11 where roll='$roll'";<br>
+	$query2=mysqli_query($db,$sql3); <br>
+	if(mysqli_num_rows($query2)!=0) <br>
+	{<br>
+		while($row=mysqli_fetch_array($query2)) <br>
+		{<br>
+			echo"Data updated&ltbr&gt";<br>
+			echo"Total:".$row['tot']; <br>
+		}<br>
+	}	<br>
+}<br>
+mysqli_close($db); <br>
+?&gt<br>
+<h3>OUTPUT:</h3>
+<img src="aq11.jpg">
+<img src="bq11.jpg">
+<img src="cq11.jpg">
+<img src="dq11.jpg">
