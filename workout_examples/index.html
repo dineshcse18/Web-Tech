@@ -2005,7 +2005,87 @@ Password  &ltinput type="password" name="pass" placeholder="Enter Password"&gt&l
 &lt/body&gt<br>
 &lt/html&gt<br>
 <img src="out3.jpg" height="500" width="700">
+<h3>QUEST:-9 A local university has asked you to create an HTML document that allows prospective
+students to provide feedback about their campus visit. Your HTML document should contain
+a form with text boxes for a name, address and e-mail. Provide checkboxes that allow
+prospective students to indicate what they liked most about the campus. The checkboxes
+should include: students, location, campus, atmosphere, and sports. Also, provide radio
+buttons that ask the prospective students how they became interested in the university.
+Options should include: friends, television, Internet and other. In addition, provide a text area
+for additional comments, a submit button and a reset button. On submit the feedback details
+should be validated and added to database using mysql.</h3>
+<html>
+<body>
+<pre>
+&lthtml&gt
+&lthead&gt
+&lt/head&gt
+&ltbody&gt
+&ltform method="post"&gt
+Name:&ltinput type="text"name="name"&gt&ltbr&gt&ltbr&gt
+Address:&ltinput type="text"name="add"&gt&ltbr&gt&ltbr&gt
+Email:&ltinput type="text"name="email"&gt&ltbr&gt&ltbr&gt
+Liked the most:Student&ltinput type="checkbox"value="students"name="ch[]"&gtLocation&ltinput type="checkbox"value="location"name="ch[]"&gtCampus&ltinput type="checkbox"value="campus"name="ch[]"&gtAtmosphere&ltinput type="checkbox"value="atmosphere"name="ch[]"&gtSports&ltinput type="checkbox"value="sports"name="ch[]"&gt&ltbr&gt&ltbr&gt
+Interested in university:Friends&ltinput type="radio"value="friends"name="rd"&gtTV&ltinput type="radio"value="tv"name="rd"&gtInternet&ltinput type="radio"value="internet"name="rd"&gtOther&ltinput type="radio"value="other"name="rd"&gt&ltbr&gt&ltbr&gt
+Additional comments:&lttextarea rows="4"cols="30"name="comments"&gt&lt/textarea&gt
+&ltinput type="submit"name="submit"value="Submit"&gt   &ltinput type="submit"name="reset"value="Reset"&gt   
+&lt/form&gt
+&lt?php
+$server='localhost';
+$user='root';
+$pass='';
+$database='lab';
+$db=mysqli_connect($server,$user,$pass,$database);
+if(!$db)
+{
+	die;
+}
+if(isset($_POST['submit']))
+{
+	$name=$_POST['name'];
+	$add=$_POST['add'];
+	$email=$_POST['email'];
+	$like=$_POST['ch'];
+	$chk="";
+	foreach ($like as $chk1)
+	{
+			$chk.=$chk1.",";
+	}
+	$inter=$_POST['rd'];
+	$comments=$_POST['comments'];
+	if(preg_match("/\b^[[:alpha:]]*$\b/",$name))
+	{
+		echo"correct name&ltbr&gt";
+	}
+	else
+	{
+		echo"wrong name";die;
+	}
+	if(preg_match("/^[A-Za-z0-9_\-.]+[@][A-Za-z]+[.][A-Za-z]{2,4}$/",$email))
+	{
+		echo"correct email&ltbr&gt";
+	}
+	else
+	{
+		echo"wrong email";
+		die;
+	}
+	$sql="insert into q9 (name,address,email,liked,inter,comments)values('$name','$add','$email','$chk','$inter','$comments')";
+	$query=mysqli_query($db,$sql);
+	if($query)
+	{
+		echo"stored";
+	}
+}
+?&gt
+&lt/body&gt
+&lt/html&gt
 
+</pre>
+<h3>OUTPUT:</h3>
+<img src="q9.jpg">
+</body>
+</html>
 
 
 
