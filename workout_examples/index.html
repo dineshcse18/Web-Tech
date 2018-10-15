@@ -2088,6 +2088,45 @@ if(isset($_POST['submit']))
 </pre>
 <h3>OUTPUT:</h3>
 <img src="q9.jpg">
+<hr>
+<b>create a login page with two fields Name and Roll num and perform the folowing tasks.A)On clicking 'submit' set the Name and Roll num as session variables. B) Display the session variables in another page.</b>
+<pre>
+<h2>sess1.php</h2>
+&lt?php
+session_start();
+if (isset($_POST['submit']))
+{
+$_SESSION["name1"] = $_POST['name'];
+$_SESSION["roll1"] = $_POST['roll'];
+echo "Session variables are set.";
+}
+?&gt
+&lthtml&gt
+&ltbody&gt
+&ltform  method="post"&gt
+	Name:&ltinput type="text" name="name"&gt&ltbr&gt
+	Roll num:&ltinput type="text" name="roll"&gt&ltbr&gt
+	&ltinput type="submit" name="submit" value="submit"&gt&ltbr&gt&ltbr&gt
+
+&lt/form&gt
+
+&lt/body&gt
+&lt/html&gt
+<br><br>
+<h2>sess2.php</h2>
+&lt?php
+session_start();
+echo "This session is handled by:" . $_SESSION["name1"] . ".&ltbr&gt";
+echo "with roll num:" . $_SESSION["roll1"] . ".";
+?&gt
+&lthtml&gt
+&ltbody&gt
+&lt/body&gt
+&lt/html&gt
+</pre>
+<h2>OUTPUT</h2>
+<img src="z1.jpg">
+<img src="z2.jpg">
 </body>
 </html>
 
