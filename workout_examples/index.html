@@ -2129,6 +2129,44 @@ echo "with roll num:" . $_SESSION["roll1"] . ".";
 <img src="z2.jpg">
 </body>
 </html>
+	<hr>
+<b>create a login page with two fields Name,Rollno,Email and Password.On submit set all the four fields with its values as cookies for the 
+	duration of 10days.Create PHP script named 'readcookies.php' to display all the stored key value pair of cookies.</b>
 
+&lthtml&gt
+&ltbody&gt
+&ltform method="post" action="readcookies.php"&gt
+Name:&ltinput type="text" name="name"&gt&ltbr&gt
+RollNo:&ltinput type="text" name="rollno"&gt&ltbr&gt
+Email:&ltinput type="email" name="email"&gt&ltbr&gt
+Password:&ltinput type="password" name="pwd"&gt&ltbr&gt
+&ltinput type="submit" value="submit"&gt
+&lt/form&gt
+&lt?php
+$name = "name";
+$name_value = $_POST['name'];
+$rollno = "rollno";
+$rollno_value = $_POST['rollno'];
+$email = "email";
+$email_value = $_POST['email'];
+$pwd = "pwd";
+$pwd_value = $_POST['pwd'];
+setcookie($name, $name_value, time() + (86400 * 10), "/");
+setcookie($rollno, $rollno_value, time() + (86400 * 10), "/");
+setcookie($email, $email_value, time() + (86400 * 10), "/");
+setcookie($pwd, $pwd_value, time() + (86400 * 10), "/");
+echo "&lth3&gt The key value pair of values stored in cookies is:&lt/h3&gt";
+echo $name.":".$_COOKIE[$name]."&ltbr&gt";
+echo $rollno.":".$_COOKIE[$rollno]."&ltbr&gt";
+echo $email.":".$_COOKIE[$email]."&ltbr&gt";
+echo $pwd.":".$_COOKIE[$pwd]."&ltbr&gt";
+?&gt
+&lt/body&gt
+&lt/html&gt
+</pre>
+<h2>OUTPUT</h2>
+<img src="Screenshot(48).png">
+</body>
+</html>
 
 
