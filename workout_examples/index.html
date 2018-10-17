@@ -2135,11 +2135,11 @@ echo "with roll num:" . $_SESSION["roll1"] . ".";
 
 &lthtml&gt<br>
 &ltbody&gt<br>
-&ltform method="post" action="readcookies.php"&gt<br>
-Name:&ltinput type="text" name="name"&gt&ltbr&gt<br>
-RollNo:&ltinput type="text" name="rollno"&gt&ltbr&gt<br>
-Email:&ltinput type="email" name="email"&gt&ltbr&gt<br>
-Password:&ltinput type="password" name="pwd"&gt&ltbr&gt<br>
+&ltform method="post" action="readcookies.php"&gt
+Name:&ltinput type="text" name="name"&gt&ltbr&gt
+RollNo:&ltinput type="text" name="rollno"&gt&ltbr&gt
+Email:&ltinput type="email" name="email"&gt&ltbr&gt
+Password:&ltinput type="password" name="pwd"&gt&ltbr&gt
 &ltinput type="submit" value="submit"&gt<br>
 &lt/form&gt<br>
 &lt?php<br>
@@ -2156,10 +2156,10 @@ setcookie($rollno, $rollno_value, time() + (86400 * 10), "/");<br>
 setcookie($email, $email_value, time() + (86400 * 10), "/");<br>
 setcookie($pwd, $pwd_value, time() + (86400 * 10), "/");<br>
 echo "&lth3&gt The key value pair of values stored in cookies is:&lt/h3&gt";<br>
-echo $name.":".$_COOKIE[$name]."&ltbr&gt";<br>
-echo $rollno.":".$_COOKIE[$rollno]."&ltbr&gt";<br>
-echo $email.":".$_COOKIE[$email]."&ltbr&gt";<br>
-echo $pwd.":".$_COOKIE[$pwd]."&ltbr&gt";<br>
+echo $name.":".$_COOKIE[$name]."&ltbr&gt";
+echo $rollno.":".$_COOKIE[$rollno]."&ltbr&gt";
+echo $email.":".$_COOKIE[$email]."&ltbr&gt";
+echo $pwd.":".$_COOKIE[$pwd]."&ltbr&gt";
 ?&gt<br>
 &lt/body&gt<br>
 &lt/html&gt<br>
